@@ -1,0 +1,955 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB0188C51FC3C83D00A8130B /* CreateGameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0188C41FC3C83D00A8130B /* CreateGameTableViewController.m */; };
+		BB0188C81FC4CB3900A8130B /* StoreKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0188C61FC4CB3800A8130B /* StoreKitManager.m */; };
+		BB0188CC1FC4CB5500A8130B /* KFKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0188CA1FC4CB5400A8130B /* KFKeychain.m */; };
+		BB0188D21FC4CFE700A8130B /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0188D11FC4CFE700A8130B /* SettingsTableViewController.m */; };
+		BB2129A81FA7AA640070348E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2129A71FA7AA640070348E /* AppDelegate.m */; };
+		BB2129AB1FA7AA640070348E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2129AA1FA7AA640070348E /* ViewController.m */; };
+		BB2129AE1FA7AA640070348E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB2129AC1FA7AA640070348E /* Main.storyboard */; };
+		BB2129B01FA7AA640070348E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB2129AF1FA7AA640070348E /* Assets.xcassets */; };
+		BB2129B31FA7AA640070348E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB2129B11FA7AA640070348E /* LaunchScreen.storyboard */; };
+		BB2129B61FA7AA640070348E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2129B51FA7AA640070348E /* main.m */; };
+		BB2129C01FA7AA640070348E /* PokerChipsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2129BF1FA7AA640070348E /* PokerChipsTests.m */; };
+		BB2129CB1FA7AA650070348E /* PokerChipsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2129CA1FA7AA650070348E /* PokerChipsUITests.m */; };
+		BB2129DA1FA7AC7B0070348E /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2129D91FA7AC7B0070348E /* CustomButton.m */; };
+		BB26A9DD20F3C4910045FBAB /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = BB26A9CF20F3C4900045FBAB /* bitstream.c */; };
+		BB26A9DE20F3C4910045FBAB /* qrencode.c in Sources */ = {isa = PBXBuildFile; fileRef = BB26A9D120F3C4900045FBAB /* qrencode.c */; };
+		BB26A9DF20F3C4910045FBAB /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = BB26A9D320F3C4900045FBAB /* split.c */; };
+		BB26A9E020F3C4910045FBAB /* qrinput.c in Sources */ = {isa = PBXBuildFile; fileRef = BB26A9D520F3C4900045FBAB /* qrinput.c */; };
+		BB26A9E120F3C4910045FBAB /* mask.c in Sources */ = {isa = PBXBuildFile; fileRef = BB26A9D720F3C4900045FBAB /* mask.c */; };
+		BB26A9E220F3C4910045FBAB /* qrspec.c in Sources */ = {isa = PBXBuildFile; fileRef = BB26A9D820F3C4900045FBAB /* qrspec.c */; };
+		BB26A9E320F3C4910045FBAB /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = BB26A9DB20F3C4900045FBAB /* rscode.c */; };
+		BB26A9E420F3C4910045FBAB /* UIImage+MDQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = BB26A9DC20F3C4900045FBAB /* UIImage+MDQRCode.m */; };
+		BB26A9E620F3C6420045FBAB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB26A9E520F3C6420045FBAB /* Main_iPad.storyboard */; };
+		BB3FB7341FAD7614002EF421 /* BetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3FB7331FAD7614002EF421 /* BetViewController.m */; };
+		BB5603621FC7602C006965F3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5603611FC7602C006965F3 /* StoreKit.framework */; };
+		BB5A42731FFB2DBD00109A92 /* CustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5A42721FFB2DBD00109A92 /* CustomLabel.m */; };
+		BB782EE31FAFBCFD00CFA34E /* ChipObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BB782EE21FAFBCFD00CFA34E /* ChipObject.m */; };
+		BB782EE81FB1886D00CFA34E /* NHAlignmentFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BB782EE61FB1886D00CFA34E /* NHAlignmentFlowLayout.m */; };
+		BB782EEB1FB242BD00CFA34E /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB782EEA1FB242BD00CFA34E /* QRViewController.m */; };
+		BB960F0F1FB67DB400109898 /* AuthenticationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BB960F0E1FB67DB400109898 /* AuthenticationObject.m */; };
+		BB960F141FB7967000109898 /* AddChipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB960F131FB7967000109898 /* AddChipsViewController.m */; };
+		BB960F171FB7A66E00109898 /* UserListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB960F161FB7A66E00109898 /* UserListTableViewController.m */; };
+		BB960F1A1FB7A69B00109898 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB960F191FB7A69B00109898 /* UserTableViewCell.m */; };
+		BB960F1D1FB7A71B00109898 /* PlayerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BB960F1C1FB7A71B00109898 /* PlayerObject.m */; };
+		BB960F201FB7CB7900109898 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BB960F1F1FB7CB7900109898 /* GameObject.m */; };
+		BB960F261FB7CF9D00109898 /* LoadGameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB960F251FB7CF9D00109898 /* LoadGameTableViewController.m */; };
+		BB960F291FB8E21300109898 /* ManualEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB960F281FB8E21300109898 /* ManualEntryViewController.m */; };
+		BB960F2C1FB8ED0E00109898 /* BlankPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB960F2B1FB8ED0E00109898 /* BlankPopupViewController.m */; };
+		BB960F2F1FB93CE700109898 /* CustomButtonWithBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = BB960F2E1FB93CE700109898 /* CustomButtonWithBackground.m */; };
+		BBCD09621FAD195800013527 /* NetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCD09611FAD195700013527 /* NetworkHandler.m */; };
+		BBCD09661FAD242700013527 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCD09651FAD242700013527 /* ScanViewController.m */; };
+		BBD6450D20F54F7700E3EA8C /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD6450C20F54F7700E3EA8C /* GoogleMobileAds.framework */; };
+		BBF297A61FB3B00D000BAB28 /* PokerChipView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF297A51FB3B00D000BAB28 /* PokerChipView.m */; };
+		BBF297A91FB57374000BAB28 /* UserCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF297A81FB57374000BAB28 /* UserCreationViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB2129BC1FA7AA640070348E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB21299B1FA7AA640070348E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB2129A21FA7AA640070348E;
+			remoteInfo = PokerChips;
+		};
+		BB2129C71FA7AA650070348E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB21299B1FA7AA640070348E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB2129A21FA7AA640070348E;
+			remoteInfo = PokerChips;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB0188C31FC3C83D00A8130B /* CreateGameTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateGameTableViewController.h; sourceTree = "<group>"; };
+		BB0188C41FC3C83D00A8130B /* CreateGameTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateGameTableViewController.m; sourceTree = "<group>"; };
+		BB0188C61FC4CB3800A8130B /* StoreKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreKitManager.m; sourceTree = "<group>"; };
+		BB0188C71FC4CB3800A8130B /* StoreKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreKitManager.h; sourceTree = "<group>"; };
+		BB0188CA1FC4CB5400A8130B /* KFKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFKeychain.m; sourceTree = "<group>"; };
+		BB0188CB1FC4CB5400A8130B /* KFKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFKeychain.h; sourceTree = "<group>"; };
+		BB0188D01FC4CFE700A8130B /* SettingsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		BB0188D11FC4CFE700A8130B /* SettingsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		BB2129A31FA7AA640070348E /* PokerChips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerChips.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB2129A61FA7AA640070348E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BB2129A71FA7AA640070348E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BB2129A91FA7AA640070348E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BB2129AA1FA7AA640070348E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BB2129AD1FA7AA640070348E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BB2129AF1FA7AA640070348E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB2129B21FA7AA640070348E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BB2129B41FA7AA640070348E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB2129B51FA7AA640070348E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB2129BB1FA7AA640070348E /* PokerChipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerChipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB2129BF1FA7AA640070348E /* PokerChipsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokerChipsTests.m; sourceTree = "<group>"; };
+		BB2129C11FA7AA650070348E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB2129C61FA7AA650070348E /* PokerChipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerChipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB2129CA1FA7AA650070348E /* PokerChipsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokerChipsUITests.m; sourceTree = "<group>"; };
+		BB2129CC1FA7AA650070348E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB2129D81FA7AC7B0070348E /* CustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		BB2129D91FA7AC7B0070348E /* CustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		BB26A9CB20F3C4900045FBAB /* UIImage+MDQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MDQRCode.h"; sourceTree = "<group>"; };
+		BB26A9CD20F3C4900045FBAB /* mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mask.h; sourceTree = "<group>"; };
+		BB26A9CE20F3C4900045FBAB /* qrinput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrinput.h; sourceTree = "<group>"; };
+		BB26A9CF20F3C4900045FBAB /* bitstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitstream.c; sourceTree = "<group>"; };
+		BB26A9D120F3C4900045FBAB /* qrencode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrencode.c; sourceTree = "<group>"; };
+		BB26A9D220F3C4900045FBAB /* qrspec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrspec.h; sourceTree = "<group>"; };
+		BB26A9D320F3C4900045FBAB /* split.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = split.c; sourceTree = "<group>"; };
+		BB26A9D420F3C4900045FBAB /* rscode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rscode.h; sourceTree = "<group>"; };
+		BB26A9D520F3C4900045FBAB /* qrinput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrinput.c; sourceTree = "<group>"; };
+		BB26A9D620F3C4900045FBAB /* bitstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitstream.h; sourceTree = "<group>"; };
+		BB26A9D720F3C4900045FBAB /* mask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mask.c; sourceTree = "<group>"; };
+		BB26A9D820F3C4900045FBAB /* qrspec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrspec.c; sourceTree = "<group>"; };
+		BB26A9D920F3C4900045FBAB /* qrencode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrencode.h; sourceTree = "<group>"; };
+		BB26A9DA20F3C4900045FBAB /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
+		BB26A9DB20F3C4900045FBAB /* rscode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rscode.c; sourceTree = "<group>"; };
+		BB26A9DC20F3C4900045FBAB /* UIImage+MDQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MDQRCode.m"; sourceTree = "<group>"; };
+		BB26A9E520F3C6420045FBAB /* Main_iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		BB3FB7321FAD7614002EF421 /* BetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BetViewController.h; sourceTree = "<group>"; };
+		BB3FB7331FAD7614002EF421 /* BetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BetViewController.m; sourceTree = "<group>"; };
+		BB5603611FC7602C006965F3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BB5A42711FFB2DBD00109A92 /* CustomLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomLabel.h; sourceTree = "<group>"; };
+		BB5A42721FFB2DBD00109A92 /* CustomLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomLabel.m; sourceTree = "<group>"; };
+		BB782EE11FAFBCFD00CFA34E /* ChipObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChipObject.h; sourceTree = "<group>"; };
+		BB782EE21FAFBCFD00CFA34E /* ChipObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChipObject.m; sourceTree = "<group>"; };
+		BB782EE51FB1634C00CFA34E /* Defines.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.pch; sourceTree = "<group>"; };
+		BB782EE61FB1886D00CFA34E /* NHAlignmentFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHAlignmentFlowLayout.m; sourceTree = "<group>"; };
+		BB782EE71FB1886D00CFA34E /* NHAlignmentFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHAlignmentFlowLayout.h; sourceTree = "<group>"; };
+		BB782EE91FB242BD00CFA34E /* QRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRViewController.h; sourceTree = "<group>"; };
+		BB782EEA1FB242BD00CFA34E /* QRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRViewController.m; sourceTree = "<group>"; };
+		BB960F0D1FB67DB400109898 /* AuthenticationObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationObject.h; sourceTree = "<group>"; };
+		BB960F0E1FB67DB400109898 /* AuthenticationObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenticationObject.m; sourceTree = "<group>"; };
+		BB960F121FB7967000109898 /* AddChipsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddChipsViewController.h; sourceTree = "<group>"; };
+		BB960F131FB7967000109898 /* AddChipsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddChipsViewController.m; sourceTree = "<group>"; };
+		BB960F151FB7A66E00109898 /* UserListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListTableViewController.h; sourceTree = "<group>"; };
+		BB960F161FB7A66E00109898 /* UserListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserListTableViewController.m; sourceTree = "<group>"; };
+		BB960F181FB7A69B00109898 /* UserTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
+		BB960F191FB7A69B00109898 /* UserTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
+		BB960F1B1FB7A71B00109898 /* PlayerObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerObject.h; sourceTree = "<group>"; };
+		BB960F1C1FB7A71B00109898 /* PlayerObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerObject.m; sourceTree = "<group>"; };
+		BB960F1E1FB7CB7900109898 /* GameObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		BB960F1F1FB7CB7900109898 /* GameObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
+		BB960F241FB7CF9D00109898 /* LoadGameTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadGameTableViewController.h; sourceTree = "<group>"; };
+		BB960F251FB7CF9D00109898 /* LoadGameTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadGameTableViewController.m; sourceTree = "<group>"; };
+		BB960F271FB8E21300109898 /* ManualEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManualEntryViewController.h; sourceTree = "<group>"; };
+		BB960F281FB8E21300109898 /* ManualEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManualEntryViewController.m; sourceTree = "<group>"; };
+		BB960F2A1FB8ED0E00109898 /* BlankPopupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlankPopupViewController.h; sourceTree = "<group>"; };
+		BB960F2B1FB8ED0E00109898 /* BlankPopupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlankPopupViewController.m; sourceTree = "<group>"; };
+		BB960F2D1FB93CE700109898 /* CustomButtonWithBackground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomButtonWithBackground.h; sourceTree = "<group>"; };
+		BB960F2E1FB93CE700109898 /* CustomButtonWithBackground.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomButtonWithBackground.m; sourceTree = "<group>"; };
+		BBCD09601FAD195700013527 /* NetworkHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkHandler.h; sourceTree = "<group>"; };
+		BBCD09611FAD195700013527 /* NetworkHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkHandler.m; sourceTree = "<group>"; };
+		BBCD09641FAD242700013527 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		BBCD09651FAD242700013527 /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		BBD6450C20F54F7700E3EA8C /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		BBF297A41FB3B00D000BAB28 /* PokerChipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokerChipView.h; sourceTree = "<group>"; };
+		BBF297A51FB3B00D000BAB28 /* PokerChipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokerChipView.m; sourceTree = "<group>"; };
+		BBF297A71FB57374000BAB28 /* UserCreationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserCreationViewController.h; sourceTree = "<group>"; };
+		BBF297A81FB57374000BAB28 /* UserCreationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserCreationViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB2129A01FA7AA640070348E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBD6450D20F54F7700E3EA8C /* GoogleMobileAds.framework in Frameworks */,
+				BB5603621FC7602C006965F3 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB2129B81FA7AA640070348E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB2129C31FA7AA650070348E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EF6A6DA157F62AB0060C09A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBD6450C20F54F7700E3EA8C /* GoogleMobileAds.framework */,
+				BB5603611FC7602C006965F3 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB0188C91FC4CB5400A8130B /* KFKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				BB0188CA1FC4CB5400A8130B /* KFKeychain.m */,
+				BB0188CB1FC4CB5400A8130B /* KFKeychain.h */,
+			);
+			path = KFKeychain;
+			sourceTree = "<group>";
+		};
+		BB21299A1FA7AA640070348E = {
+			isa = PBXGroup;
+			children = (
+				BB2129A51FA7AA640070348E /* PokerChips */,
+				BB2129BE1FA7AA640070348E /* PokerChipsTests */,
+				BB2129C91FA7AA650070348E /* PokerChipsUITests */,
+				BB2129A41FA7AA640070348E /* Products */,
+				4EF6A6DA157F62AB0060C09A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BB2129A41FA7AA640070348E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB2129A31FA7AA640070348E /* PokerChips.app */,
+				BB2129BB1FA7AA640070348E /* PokerChipsTests.xctest */,
+				BB2129C61FA7AA650070348E /* PokerChipsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB2129A51FA7AA640070348E /* PokerChips */ = {
+			isa = PBXGroup;
+			children = (
+				BB26A9CA20F3C4900045FBAB /* QR */,
+				BB0188C91FC4CB5400A8130B /* KFKeychain */,
+				BB2129A61FA7AA640070348E /* AppDelegate.h */,
+				BB2129A71FA7AA640070348E /* AppDelegate.m */,
+				BBF297A71FB57374000BAB28 /* UserCreationViewController.h */,
+				BBF297A81FB57374000BAB28 /* UserCreationViewController.m */,
+				BB2129A91FA7AA640070348E /* ViewController.h */,
+				BB2129AA1FA7AA640070348E /* ViewController.m */,
+				BBCD09641FAD242700013527 /* ScanViewController.h */,
+				BBCD09651FAD242700013527 /* ScanViewController.m */,
+				BB3FB7321FAD7614002EF421 /* BetViewController.h */,
+				BB3FB7331FAD7614002EF421 /* BetViewController.m */,
+				BB960F241FB7CF9D00109898 /* LoadGameTableViewController.h */,
+				BB960F251FB7CF9D00109898 /* LoadGameTableViewController.m */,
+				BB782EE51FB1634C00CFA34E /* Defines.pch */,
+				BB960F111FB7964100109898 /* Popups */,
+				BB782EE41FAFBD0B00CFA34E /* Objects */,
+				BBCD09631FAD196100013527 /* Networking */,
+				BB2129DC1FA7AC870070348E /* Custom UI Elements */,
+				BB2129AC1FA7AA640070348E /* Main.storyboard */,
+				BB26A9E520F3C6420045FBAB /* Main_iPad.storyboard */,
+				BB2129AF1FA7AA640070348E /* Assets.xcassets */,
+				BB2129B11FA7AA640070348E /* LaunchScreen.storyboard */,
+				BB2129B41FA7AA640070348E /* Info.plist */,
+				BB2129B51FA7AA640070348E /* main.m */,
+			);
+			path = PokerChips;
+			sourceTree = "<group>";
+		};
+		BB2129BE1FA7AA640070348E /* PokerChipsTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB2129BF1FA7AA640070348E /* PokerChipsTests.m */,
+				BB2129C11FA7AA650070348E /* Info.plist */,
+			);
+			path = PokerChipsTests;
+			sourceTree = "<group>";
+		};
+		BB2129C91FA7AA650070348E /* PokerChipsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB2129CA1FA7AA650070348E /* PokerChipsUITests.m */,
+				BB2129CC1FA7AA650070348E /* Info.plist */,
+			);
+			path = PokerChipsUITests;
+			sourceTree = "<group>";
+		};
+		BB2129DC1FA7AC870070348E /* Custom UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				BB782EE71FB1886D00CFA34E /* NHAlignmentFlowLayout.h */,
+				BB782EE61FB1886D00CFA34E /* NHAlignmentFlowLayout.m */,
+				BB2129D81FA7AC7B0070348E /* CustomButton.h */,
+				BB2129D91FA7AC7B0070348E /* CustomButton.m */,
+				BB960F2D1FB93CE700109898 /* CustomButtonWithBackground.h */,
+				BB960F2E1FB93CE700109898 /* CustomButtonWithBackground.m */,
+				BB5A42711FFB2DBD00109A92 /* CustomLabel.h */,
+				BB5A42721FFB2DBD00109A92 /* CustomLabel.m */,
+			);
+			path = "Custom UI Elements";
+			sourceTree = "<group>";
+		};
+		BB26A9CA20F3C4900045FBAB /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				BB26A9CC20F3C4900045FBAB /* libqrencode */,
+				BB26A9CB20F3C4900045FBAB /* UIImage+MDQRCode.h */,
+				BB26A9DC20F3C4900045FBAB /* UIImage+MDQRCode.m */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		BB26A9CC20F3C4900045FBAB /* libqrencode */ = {
+			isa = PBXGroup;
+			children = (
+				BB26A9CD20F3C4900045FBAB /* mask.h */,
+				BB26A9CE20F3C4900045FBAB /* qrinput.h */,
+				BB26A9CF20F3C4900045FBAB /* bitstream.c */,
+				BB26A9D020F3C4900045FBAB /* QRCreator */,
+				BB26A9D120F3C4900045FBAB /* qrencode.c */,
+				BB26A9D220F3C4900045FBAB /* qrspec.h */,
+				BB26A9D320F3C4900045FBAB /* split.c */,
+				BB26A9D420F3C4900045FBAB /* rscode.h */,
+				BB26A9D520F3C4900045FBAB /* qrinput.c */,
+				BB26A9D620F3C4900045FBAB /* bitstream.h */,
+				BB26A9D720F3C4900045FBAB /* mask.c */,
+				BB26A9D820F3C4900045FBAB /* qrspec.c */,
+				BB26A9D920F3C4900045FBAB /* qrencode.h */,
+				BB26A9DA20F3C4900045FBAB /* split.h */,
+				BB26A9DB20F3C4900045FBAB /* rscode.c */,
+			);
+			path = libqrencode;
+			sourceTree = "<group>";
+		};
+		BB26A9D020F3C4900045FBAB /* QRCreator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QRCreator;
+			sourceTree = "<group>";
+		};
+		BB782EE41FAFBD0B00CFA34E /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				BB782EE11FAFBCFD00CFA34E /* ChipObject.h */,
+				BB782EE21FAFBCFD00CFA34E /* ChipObject.m */,
+				BBF297A41FB3B00D000BAB28 /* PokerChipView.h */,
+				BBF297A51FB3B00D000BAB28 /* PokerChipView.m */,
+				BB960F0D1FB67DB400109898 /* AuthenticationObject.h */,
+				BB960F0E1FB67DB400109898 /* AuthenticationObject.m */,
+				BB960F181FB7A69B00109898 /* UserTableViewCell.h */,
+				BB960F191FB7A69B00109898 /* UserTableViewCell.m */,
+				BB960F1B1FB7A71B00109898 /* PlayerObject.h */,
+				BB960F1C1FB7A71B00109898 /* PlayerObject.m */,
+				BB960F1E1FB7CB7900109898 /* GameObject.h */,
+				BB960F1F1FB7CB7900109898 /* GameObject.m */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		BB960F111FB7964100109898 /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				BB0188C31FC3C83D00A8130B /* CreateGameTableViewController.h */,
+				BB0188C41FC3C83D00A8130B /* CreateGameTableViewController.m */,
+				BB782EE91FB242BD00CFA34E /* QRViewController.h */,
+				BB782EEA1FB242BD00CFA34E /* QRViewController.m */,
+				BB960F121FB7967000109898 /* AddChipsViewController.h */,
+				BB960F131FB7967000109898 /* AddChipsViewController.m */,
+				BB960F151FB7A66E00109898 /* UserListTableViewController.h */,
+				BB960F161FB7A66E00109898 /* UserListTableViewController.m */,
+				BB960F271FB8E21300109898 /* ManualEntryViewController.h */,
+				BB960F281FB8E21300109898 /* ManualEntryViewController.m */,
+				BB960F2A1FB8ED0E00109898 /* BlankPopupViewController.h */,
+				BB960F2B1FB8ED0E00109898 /* BlankPopupViewController.m */,
+				BB0188D01FC4CFE700A8130B /* SettingsTableViewController.h */,
+				BB0188D11FC4CFE700A8130B /* SettingsTableViewController.m */,
+			);
+			path = Popups;
+			sourceTree = "<group>";
+		};
+		BBCD09631FAD196100013527 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BBCD09601FAD195700013527 /* NetworkHandler.h */,
+				BBCD09611FAD195700013527 /* NetworkHandler.m */,
+				BB0188C71FC4CB3800A8130B /* StoreKitManager.h */,
+				BB0188C61FC4CB3800A8130B /* StoreKitManager.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB2129A21FA7AA640070348E /* PokerChips */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB2129CF1FA7AA650070348E /* Build configuration list for PBXNativeTarget "PokerChips" */;
+			buildPhases = (
+				BB21299F1FA7AA640070348E /* Sources */,
+				BB2129A01FA7AA640070348E /* Frameworks */,
+				BB2129A11FA7AA640070348E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokerChips;
+			productName = PokerChips;
+			productReference = BB2129A31FA7AA640070348E /* PokerChips.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB2129BA1FA7AA640070348E /* PokerChipsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB2129D21FA7AA650070348E /* Build configuration list for PBXNativeTarget "PokerChipsTests" */;
+			buildPhases = (
+				F879CB2A825279425BDA2F95 /* [CP] Check Pods Manifest.lock */,
+				BB2129B71FA7AA640070348E /* Sources */,
+				BB2129B81FA7AA640070348E /* Frameworks */,
+				BB2129B91FA7AA640070348E /* Resources */,
+				7D178D3F616FC79A6592B3A8 /* [CP] Embed Pods Frameworks */,
+				73E06D30E2C846C7D6FF4817 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB2129BD1FA7AA640070348E /* PBXTargetDependency */,
+			);
+			name = PokerChipsTests;
+			productName = PokerChipsTests;
+			productReference = BB2129BB1FA7AA640070348E /* PokerChipsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BB2129C51FA7AA650070348E /* PokerChipsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB2129D51FA7AA650070348E /* Build configuration list for PBXNativeTarget "PokerChipsUITests" */;
+			buildPhases = (
+				F24A0823C3D77B3FD6A760E7 /* [CP] Check Pods Manifest.lock */,
+				BB2129C21FA7AA650070348E /* Sources */,
+				BB2129C31FA7AA650070348E /* Frameworks */,
+				BB2129C41FA7AA650070348E /* Resources */,
+				EA9A461AC183C7A88A6B5904 /* [CP] Embed Pods Frameworks */,
+				835CCEEC611B9EB702B9D5BB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB2129C81FA7AA650070348E /* PBXTargetDependency */,
+			);
+			name = PokerChipsUITests;
+			productName = PokerChipsUITests;
+			productReference = BB2129C61FA7AA650070348E /* PokerChipsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB21299B1FA7AA640070348E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Alex Coundouriotis";
+				TargetAttributes = {
+					BB2129A21FA7AA640070348E = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
+					};
+					BB2129BA1FA7AA640070348E = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BB2129A21FA7AA640070348E;
+					};
+					BB2129C51FA7AA650070348E = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BB2129A21FA7AA640070348E;
+					};
+				};
+			};
+			buildConfigurationList = BB21299E1FA7AA640070348E /* Build configuration list for PBXProject "PokerChips" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB21299A1FA7AA640070348E;
+			productRefGroup = BB2129A41FA7AA640070348E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB2129A21FA7AA640070348E /* PokerChips */,
+				BB2129BA1FA7AA640070348E /* PokerChipsTests */,
+				BB2129C51FA7AA650070348E /* PokerChipsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB2129A11FA7AA640070348E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB2129B31FA7AA640070348E /* LaunchScreen.storyboard in Resources */,
+				BB26A9E620F3C6420045FBAB /* Main_iPad.storyboard in Resources */,
+				BB2129B01FA7AA640070348E /* Assets.xcassets in Resources */,
+				BB2129AE1FA7AA640070348E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB2129B91FA7AA640070348E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB2129C41FA7AA650070348E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		73E06D30E2C846C7D6FF4817 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokerChipsTests/Pods-PokerChipsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D178D3F616FC79A6592B3A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokerChipsTests/Pods-PokerChipsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		835CCEEC611B9EB702B9D5BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokerChipsUITests/Pods-PokerChipsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA9A461AC183C7A88A6B5904 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokerChipsUITests/Pods-PokerChipsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F24A0823C3D77B3FD6A760E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PokerChipsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F879CB2A825279425BDA2F95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PokerChipsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB21299F1FA7AA640070348E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB960F201FB7CB7900109898 /* GameObject.m in Sources */,
+				BB960F2C1FB8ED0E00109898 /* BlankPopupViewController.m in Sources */,
+				BB960F291FB8E21300109898 /* ManualEntryViewController.m in Sources */,
+				BB26A9E120F3C4910045FBAB /* mask.c in Sources */,
+				BB26A9E220F3C4910045FBAB /* qrspec.c in Sources */,
+				BB26A9DD20F3C4910045FBAB /* bitstream.c in Sources */,
+				BB26A9E420F3C4910045FBAB /* UIImage+MDQRCode.m in Sources */,
+				BB960F1D1FB7A71B00109898 /* PlayerObject.m in Sources */,
+				BB960F141FB7967000109898 /* AddChipsViewController.m in Sources */,
+				BBF297A61FB3B00D000BAB28 /* PokerChipView.m in Sources */,
+				BB0188CC1FC4CB5500A8130B /* KFKeychain.m in Sources */,
+				BB2129DA1FA7AC7B0070348E /* CustomButton.m in Sources */,
+				BB960F2F1FB93CE700109898 /* CustomButtonWithBackground.m in Sources */,
+				BB960F261FB7CF9D00109898 /* LoadGameTableViewController.m in Sources */,
+				BB26A9E020F3C4910045FBAB /* qrinput.c in Sources */,
+				BB960F1A1FB7A69B00109898 /* UserTableViewCell.m in Sources */,
+				BB3FB7341FAD7614002EF421 /* BetViewController.m in Sources */,
+				BB782EE31FAFBCFD00CFA34E /* ChipObject.m in Sources */,
+				BBF297A91FB57374000BAB28 /* UserCreationViewController.m in Sources */,
+				BBCD09661FAD242700013527 /* ScanViewController.m in Sources */,
+				BB2129AB1FA7AA640070348E /* ViewController.m in Sources */,
+				BB5A42731FFB2DBD00109A92 /* CustomLabel.m in Sources */,
+				BB26A9E320F3C4910045FBAB /* rscode.c in Sources */,
+				BB26A9DF20F3C4910045FBAB /* split.c in Sources */,
+				BB0188C51FC3C83D00A8130B /* CreateGameTableViewController.m in Sources */,
+				BB960F171FB7A66E00109898 /* UserListTableViewController.m in Sources */,
+				BB2129B61FA7AA640070348E /* main.m in Sources */,
+				BB2129A81FA7AA640070348E /* AppDelegate.m in Sources */,
+				BB782EEB1FB242BD00CFA34E /* QRViewController.m in Sources */,
+				BB0188C81FC4CB3900A8130B /* StoreKitManager.m in Sources */,
+				BB26A9DE20F3C4910045FBAB /* qrencode.c in Sources */,
+				BB0188D21FC4CFE700A8130B /* SettingsTableViewController.m in Sources */,
+				BB960F0F1FB67DB400109898 /* AuthenticationObject.m in Sources */,
+				BBCD09621FAD195800013527 /* NetworkHandler.m in Sources */,
+				BB782EE81FB1886D00CFA34E /* NHAlignmentFlowLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB2129B71FA7AA640070348E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB2129C01FA7AA640070348E /* PokerChipsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB2129C21FA7AA650070348E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB2129CB1FA7AA650070348E /* PokerChipsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB2129BD1FA7AA640070348E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB2129A21FA7AA640070348E /* PokerChips */;
+			targetProxy = BB2129BC1FA7AA640070348E /* PBXContainerItemProxy */;
+		};
+		BB2129C81FA7AA650070348E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB2129A21FA7AA640070348E /* PokerChips */;
+			targetProxy = BB2129C71FA7AA650070348E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB2129AC1FA7AA640070348E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB2129AD1FA7AA640070348E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BB2129B11FA7AA640070348E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB2129B21FA7AA640070348E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB2129CD1FA7AA650070348E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BB2129CE1FA7AA650070348E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB2129D01FA7AA650070348E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNCN9TJFT3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = PokerChips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.acapplications.pocket-chips";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB2129D11FA7AA650070348E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNCN9TJFT3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = PokerChips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.acapplications.pocket-chips";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BB2129D31FA7AA650070348E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNCN9TJFT3;
+				INFOPLIST_FILE = PokerChipsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acapplications.PokerChipsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokerChips.app/PokerChips";
+			};
+			name = Debug;
+		};
+		BB2129D41FA7AA650070348E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNCN9TJFT3;
+				INFOPLIST_FILE = PokerChipsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acapplications.PokerChipsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokerChips.app/PokerChips";
+			};
+			name = Release;
+		};
+		BB2129D61FA7AA650070348E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNCN9TJFT3;
+				INFOPLIST_FILE = PokerChipsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acapplications.PokerChipsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PokerChips;
+			};
+			name = Debug;
+		};
+		BB2129D71FA7AA650070348E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNCN9TJFT3;
+				INFOPLIST_FILE = PokerChipsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acapplications.PokerChipsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PokerChips;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB21299E1FA7AA640070348E /* Build configuration list for PBXProject "PokerChips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB2129CD1FA7AA650070348E /* Debug */,
+				BB2129CE1FA7AA650070348E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB2129CF1FA7AA650070348E /* Build configuration list for PBXNativeTarget "PokerChips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB2129D01FA7AA650070348E /* Debug */,
+				BB2129D11FA7AA650070348E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB2129D21FA7AA650070348E /* Build configuration list for PBXNativeTarget "PokerChipsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB2129D31FA7AA650070348E /* Debug */,
+				BB2129D41FA7AA650070348E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB2129D51FA7AA650070348E /* Build configuration list for PBXNativeTarget "PokerChipsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB2129D61FA7AA650070348E /* Debug */,
+				BB2129D71FA7AA650070348E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB21299B1FA7AA640070348E /* Project object */;
+}

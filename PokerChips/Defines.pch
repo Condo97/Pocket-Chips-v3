@@ -1,0 +1,16 @@
+//
+//  Defines.pch
+//  PokerChips
+//
+//  Created by Alex Coundouriotis on 11/6/17.
+//  Copyright © 2017 Alex Coundouriotis. All rights reserved.
+//
+
+#ifndef Defines_pch
+#define Defines_pch
+
+//#define SOCKET_IP_ADDRESS @"172.16.20.114"
+//#define SOCKET_IP_ADDRESS @"localhost"
+#define SOCKET_IP_ADDRESS @"159.89.241.52"
+
+#endif
