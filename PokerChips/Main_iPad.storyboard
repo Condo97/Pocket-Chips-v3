@@ -13,7 +13,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pocket Chips-->
         <scene sceneID="bBJ-Ym-L7V">
             <objects>
                 <viewController id="2nt-QO-VFV" customClass="ViewController" sceneMemberID="viewController">
@@ -117,7 +117,7 @@ Username asdfa sdf adf asdf asdf </string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xnl-uL-uy9"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tbF-xL-vBV">
+                    <navigationItem key="navigationItem" title="Pocket Chips" id="tbF-xL-vBV">
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="FWZ-el-dde">
                             <connections>
                                 <action selector="settingsButton:" destination="2nt-QO-VFV" id="WG3-4F-kqN"/>
