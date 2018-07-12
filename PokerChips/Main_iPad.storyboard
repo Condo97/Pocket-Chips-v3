@@ -94,8 +94,9 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C8f-Ue-fW2" customClass="CustomLabel">
                                 <rect key="frame" x="35" y="49.5" width="698" height="84"/>
-                                <string key="text">
-Username asdfa sdf adf asdf asdf </string>
+                                <string key="text" base64-UTF8="YES">
+CiA
+</string>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

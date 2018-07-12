@@ -49,6 +49,7 @@
     
     self.blur = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
     [self.blur setFrame:self.view.frame];
+    
     [self.blur setHidden:YES];
     [self.blur setAlpha:0.0];
     [self.view addSubview:self.blur];
@@ -64,6 +65,16 @@
     self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeQRView)];
     [self.view addGestureRecognizer:self.tap];
     [self.tap setEnabled:NO];
+    
+    if(@available(iOS 11.0, *)) {
+        UIWindow *window = UIApplication.sharedApplication.keyWindow;
+        CGFloat topPadding = window.safeAreaInsets.top;
+        CGFloat bottomPadding = window.safeAreaInsets.bottom;
+        CGRect blurFrame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size
+                                      .height + topPadding + bottomPadding);
+        [self.blur setFrame:blurFrame];
+        [self.addChipsBlur setFrame:blurFrame];
+    }
     
     QRViewController *bvc = self.childViewControllers[0];
     //BetViewController *bvc = (BetViewController *)nav;
@@ -134,6 +145,11 @@
         [self.betChipsView addSubview:self.betBlackChip];
         [self.betChipsView addSubview:self.betPurpleChip];
     }
+    
+    [self.view bringSubviewToFront:self.addChipsBlur];
+    [self.view bringSubviewToFront:self.addChipsView];
+    [self.view bringSubviewToFront:self.blur];
+    [self.view bringSubviewToFront:self.qrCodeView];
     
     [self updateView];
 }

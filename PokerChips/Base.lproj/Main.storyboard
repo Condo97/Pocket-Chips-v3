@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="KBC-ce-03a" customClass="CustomLabel">
-                                <rect key="frame" x="35" y="88" width="305" height="110"/>
+                                <rect key="frame" x="50" y="97.666666666666671" width="275" height="62.333333333333329"/>
                                 <string key="text">Welcome
 </string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
@@ -50,12 +50,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="2" translatesAutoresizingMaskIntoConstraints="NO" id="IBf-M8-dxh" customClass="CustomLabel">
-                                <rect key="frame" x="35" y="88" width="305" height="110"/>
+                                <rect key="frame" x="50" y="88" width="275" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="ac0-bJ-1vl"/>
                                 </constraints>
-                                <string key="text">
-Username asdf asdf asdf </string>
+                                <string key="text" base64-UTF8="YES">
+Cg
+</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
