@@ -34,10 +34,14 @@
     [self.addChipsView setHidden:YES];
     [self.addChipsView setAlpha:0.0];
     
-    if(self.view.frame.size.width == 375)
-        [self.playerChipsHeightConstraint setConstant:190];
-    else if(self.view.frame.size.width == 414)
-        [self.playerChipsHeightConstraint setConstant:210];
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        if(self.view.frame.size.height == 736)
+            [self.addChipsTopConstraint setConstant:37];
+        else if(self.view.frame.size.height == 667)
+            [self.addChipsTopConstraint setConstant:27];
+        else if(self.view.frame.size.height <= 568)
+            [self.addChipsTopConstraint setConstant:23];
+    }
     
     if(self.view.frame.size.height > 740)
         [self.betChipsCenterYConstraint setConstant:-15];
@@ -103,49 +107,6 @@
     NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
     [self.nh writeData:data];
     
-    //iPhone Only Chip stuff
-    
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        //Chips (player and bet) setup
-        self.playerRedChip = [[PokerChipView alloc] initWithFrame:CGRectMake(0, 0, 100, 100) andImage:[UIImage imageNamed:@"chip0"]];
-        self.playerBlueChip = [[PokerChipView alloc] initWithFrame:CGRectMake(self.playerChipsView.frame.size.width / 2 - 50, 0, 100, 100) andImage:[UIImage imageNamed:@"chip1"]];
-        self.playerChipGreen = [[PokerChipView alloc] initWithFrame:CGRectMake(self.playerChipsView.frame.size.width - 100, 0, 100, 100) andImage:[UIImage imageNamed:@"chip2"]];
-        self.playerChipBlack = [[PokerChipView alloc] initWithFrame:CGRectMake(self.playerChipsView.frame.size.width / 3 - 50, self.playerChipsView.frame.size.height - 100, 100, 100) andImage:[UIImage imageNamed:@"chip3"]];
-        self.playerChipPurple = [[PokerChipView alloc] initWithFrame:CGRectMake(2 * self.playerChipsView.frame.size.width / 3 - 50, self.playerChipsView.frame.size.height - 100, 100, 100) andImage:[UIImage imageNamed:@"chip4"]];
-        [self.playerChipsView addSubview:self.playerRedChip];
-        [self.playerChipsView addSubview:self.playerBlueChip];
-        [self.playerChipsView addSubview:self.playerChipGreen];
-        [self.playerChipsView addSubview:self.playerChipBlack];
-        [self.playerChipsView addSubview:self.playerChipPurple];
-        
-        self.addChipsButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        
-        if(self.view.frame.size.height > 740)
-            [self.addChipsButton setFrame:CGRectMake(self.view.frame.size.width / 2.0 - ((self.view.frame.size.width * 0.203) / 2.0), self.view.frame.size.height * (1275.0 / 1920.0) - 35.0, (self.view.frame.size.width * 0.203), 50)];
-        else
-            [self.addChipsButton setFrame:CGRectMake(self.view.frame.size.width / 2.0 - ((self.view.frame.size.width * 0.203) / 2.0), self.view.frame.size.height * (1275.0 / 1920.0) - 15.0, (self.view.frame.size.width * 0.203), 50)];
-        
-        [self.addChipsButton addTarget:self action:@selector(addChipButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-        [self.addChipsButton setTitle:@"+ Chips" forState:UIControlStateNormal]; //Add Chips
-        [self.addChipsButton.titleLabel setFont:[UIFont systemFontOfSize:17.0 weight:UIFontWeightSemibold]];
-        [self.addChipsButton.titleLabel setMinimumScaleFactor:0.1];
-        [self.addChipsButton.titleLabel setAdjustsFontSizeToFitWidth:YES];
-        [self.addChipsButton.titleLabel setBaselineAdjustment:UIBaselineAdjustmentAlignCenters];
-        [self.view addSubview:self.addChipsButton];
-        [self.view insertSubview:self.addChipsButton belowSubview:self.qrCodeView];
-        
-        self.betRedChip = [[PokerChipView alloc] initWithFrame:CGRectMake(0, 55 / 2, 55, 55) andImage:[UIImage imageNamed:@"chip0Minus"]];
-        self.betBlueChip = [[PokerChipView alloc] initWithFrame:CGRectMake(self.betChipsView.frame.size.width / 2 - (55 / 2), 0, 55, 55) andImage:[UIImage imageNamed:@"chip1Minus"]];
-        self.betGreenChip = [[PokerChipView alloc] initWithFrame:CGRectMake(self.betChipsView.frame.size.width - 55, (55 / 2), 55, 55) andImage:[UIImage imageNamed:@"chip2Minus"]];
-        self.betBlackChip = [[PokerChipView alloc] initWithFrame:CGRectMake(self.betChipsView.frame.size.width / 3 - (55 / 2), self.betChipsView.frame.size.height - 55, 55, 55) andImage:[UIImage imageNamed:@"chip3Minus"]];
-        self.betPurpleChip = [[PokerChipView alloc] initWithFrame:CGRectMake(2 * self.betChipsView.frame.size.width / 3 - (55 / 2), self.betChipsView.frame.size.height - 55, 55, 55) andImage:[UIImage imageNamed:@"chip4Minus"]];
-        [self.betChipsView addSubview:self.betRedChip];
-        [self.betChipsView addSubview:self.betBlueChip];
-        [self.betChipsView addSubview:self.betGreenChip];
-        [self.betChipsView addSubview:self.betBlackChip];
-        [self.betChipsView addSubview:self.betPurpleChip];
-    }
-    
     [self.view bringSubviewToFront:self.addChipsBlur];
     [self.view bringSubviewToFront:self.addChipsView];
     [self.view bringSubviewToFront:self.blur];
@@ -168,6 +129,44 @@
     [self.potChipsArray[2] setText:[NSString stringWithFormat:@"%ld", (long)self.potChips.green]];
     [self.potChipsArray[3] setText:[NSString stringWithFormat:@"%ld", (long)self.potChips.black]];
     [self.potChipsArray[4] setText:[NSString stringWithFormat:@"%ld", (long)self.potChips.purple]];
+    
+    [self.padPlayerRedLabel setText:[NSString stringWithFormat:@"%.0f", self.playerChips.red]];
+    [self.padPlayerBlueLabel setText:[NSString stringWithFormat:@"%.0f",self.playerChips.blue]];
+    [self.padPlayerGreenLabel setText:[NSString stringWithFormat:@"%.0f",self.playerChips.green]];
+    [self.padPlayerGrayLabel setText:[NSString stringWithFormat:@"%.0f",self.playerChips.black]];
+    [self.padPlayerPurpleLabel setText:[NSString stringWithFormat:@"%.0f",self.playerChips.purple]];
+    
+    [self.padBetRedLabel setText:[NSString stringWithFormat:@"%.0f",self.chipsToBet.red]];
+    [self.padBetBlueLabel setText:[NSString stringWithFormat:@"%.0f",self.chipsToBet.blue]];
+    [self.padBetGreenLabel setText:[NSString stringWithFormat:@"%.0f",self.chipsToBet.green]];
+    [self.padBetGrayLabel setText:[NSString stringWithFormat:@"%.0f",self.chipsToBet.black]];
+    [self.padBetPurpleLabel setText:[NSString stringWithFormat:@"%.0f",self.chipsToBet.purple]];
+    
+    //To Bet
+    if(self.chipsToBet.red == 0)
+        [self.padBetRed setHidden:YES];
+    else
+        [self.padBetRed setHidden:NO];
+    
+    if(self.chipsToBet.blue == 0)
+        [self.padBetBlue setHidden:YES];
+    else
+        [self.padBetBlue setHidden:NO];
+    
+    if(self.chipsToBet.green == 0)
+        [self.padBetGreen setHidden:YES];
+    else
+        [self.padBetGreen setHidden:NO];
+    
+    if(self.chipsToBet.black == 0)
+        [self.padBetGray setHidden:YES];
+    else
+        [self.padBetGray setHidden:NO];
+    
+    if(self.chipsToBet.purple == 0)
+        [self.padBetPurple setHidden:YES];
+    else
+        [self.padBetPurple setHidden:NO];
     
     //Pot chips
     if(self.potChips.red == 0)
@@ -194,84 +193,6 @@
         [self.potPurple setHidden:YES];
     else
         [self.potPurple setHidden:NO];
-    
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        [self.playerRedChip setLabelTextWithDouble:self.playerChips.red];
-        [self.playerBlueChip setLabelTextWithDouble:self.playerChips.blue];
-        [self.playerChipGreen setLabelTextWithDouble:self.playerChips.green];
-        [self.playerChipBlack setLabelTextWithDouble:self.playerChips.black];
-        [self.playerChipPurple setLabelTextWithDouble:self.playerChips.purple];
-        
-        [self.betRedChip setLabelTextWithDouble:self.chipsToBet.red];
-        [self.betBlueChip setLabelTextWithDouble:self.chipsToBet.blue];
-        [self.betGreenChip setLabelTextWithDouble:self.chipsToBet.green];
-        [self.betBlackChip setLabelTextWithDouble:self.chipsToBet.black];
-        [self.betPurpleChip setLabelTextWithDouble:self.chipsToBet.purple];
-        
-        //To Bet
-        if(self.chipsToBet.red == 0)
-            [self.betRedChip setHidden:YES];
-        else
-            [self.betRedChip setHidden:NO];
-        
-        if(self.chipsToBet.blue == 0)
-            [self.betBlueChip setHidden:YES];
-        else
-            [self.betBlueChip setHidden:NO];
-        
-        if(self.chipsToBet.green == 0)
-            [self.betGreenChip setHidden:YES];
-        else
-            [self.betGreenChip setHidden:NO];
-        
-        if(self.chipsToBet.black == 0)
-            [self.betBlackChip setHidden:YES];
-        else
-            [self.betBlackChip setHidden:NO];
-        
-        if(self.chipsToBet.purple == 0)
-            [self.betPurpleChip setHidden:YES];
-        else
-            [self.betPurpleChip setHidden:NO];
-    } else {
-        [self.padPlayerRedLabel setText:[NSString stringWithFormat:@"%.0f", self.playerChips.red]];
-        [self.padPlayerBlueLabel setText:[NSString stringWithFormat:@"%.0f",self.playerChips.blue]];
-        [self.padPlayerGreenLabel setText:[NSString stringWithFormat:@"%.0f",self.playerChips.green]];
-        [self.padPlayerGrayLabel setText:[NSString stringWithFormat:@"%.0f",self.playerChips.black]];
-        [self.padPlayerPurpleLabel setText:[NSString stringWithFormat:@"%.0f",self.playerChips.purple]];
-        
-        [self.padBetRedLabel setText:[NSString stringWithFormat:@"%.0f",self.chipsToBet.red]];
-        [self.padBetBlueLabel setText:[NSString stringWithFormat:@"%.0f",self.chipsToBet.blue]];
-        [self.padBetGreenLabel setText:[NSString stringWithFormat:@"%.0f",self.chipsToBet.green]];
-        [self.padBetGrayLabel setText:[NSString stringWithFormat:@"%.0f",self.chipsToBet.black]];
-        [self.padBetPurpleLabel setText:[NSString stringWithFormat:@"%.0f",self.chipsToBet.purple]];
-        
-        //To Bet
-        if(self.chipsToBet.red == 0)
-            [self.padBetRed setHidden:YES];
-        else
-            [self.padBetRed setHidden:NO];
-        
-        if(self.chipsToBet.blue == 0)
-            [self.padBetBlue setHidden:YES];
-        else
-            [self.padBetBlue setHidden:NO];
-        
-        if(self.chipsToBet.green == 0)
-            [self.padBetGreen setHidden:YES];
-        else
-            [self.padBetGreen setHidden:NO];
-        
-        if(self.chipsToBet.black == 0)
-            [self.padBetGray setHidden:YES];
-        else
-            [self.padBetGray setHidden:NO];
-        
-        if(self.chipsToBet.purple == 0)
-            [self.padBetPurple setHidden:YES];
-        else
-            [self.padBetPurple setHidden:NO];
-    }
 }
 
 - (IBAction)qrCodeButton:(id)sender {
@@ -299,160 +220,82 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     for(UITouch *touch in touches) {
-        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-            if(touch.view == self.betRedChip) {
-                [self.betRedChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip0MinusSelected"]]];
-            } else if(touch.view == self.betBlueChip) {
-                [self.betBlueChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip1MinusSelected"]]];
-            } else if(touch.view == self.betGreenChip) {
-                [self.betGreenChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip2MinusSelected"]]];
-            } else if(touch.view == self.betBlackChip) {
-                [self.betBlackChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip3MinusSelected"]]];
-            } else if(touch.view == self.betPurpleChip) {
-                [self.betPurpleChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip4MinusSelected"]]];
-            } else if(touch.view == self.playerRedChip && self.playerChips.red > 0) {
-                [self.playerRedChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip0Selected"]]];
-            } else if(touch.view == self.playerBlueChip && self.playerChips.blue > 0) {
-                [self.playerBlueChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip1Selected"]]];
-            } else if(touch.view == self.playerChipGreen && self.playerChips.green > 0) {
-                [self.playerChipGreen setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip2Selected"]]];
-            } else if(touch.view == self.playerChipBlack && self.playerChips.black > 0) {
-                [self.playerChipBlack setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip3Selected"]]];
-            } else if(touch.view == self.playerChipPurple && self.playerChips.purple > 0) {
-                [self.playerChipPurple setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip4Selected"]]];
-            }
-        } else {
-            if(touch.view == self.padBetRed) {
-                [self.padBetRedImage setImage:[UIImage imageNamed:@"chip0MinusSelected"]];
-            } else if(touch.view == self.padBetBlue) {
-                [self.padBetBlueImage setImage:[UIImage imageNamed:@"chip1MinusSelected"]];
-            } else if(touch.view == self.padBetGreen) {
-                [self.padBetGreenImage setImage:[UIImage imageNamed:@"chip2MinusSelected"]];
-            } else if(touch.view == self.padBetGray) {
-                [self.padBetGrayImage setImage:[UIImage imageNamed:@"chip3MinusSelected"]];
-            } else if(touch.view == self.padBetPurple) {
-                [self.padBetPurpleImage setImage:[UIImage imageNamed:@"chip4MinusSelected"]];
-            } else if(touch.view == self.padBetRed && self.playerChips.red > 0) {
-                [self.padBetRedImage setImage:[UIImage imageNamed:@"chip0Selected"]];
-            } else if(touch.view == self.padBetBlue && self.playerChips.blue > 0) {
-                [self.padBetBlueImage setImage:[UIImage imageNamed:@"chip1Selected"]];
-            } else if(touch.view == self.padBetGreen && self.playerChips.green > 0) {
-                [self.padBetGreenImage setImage:[UIImage imageNamed:@"chip2Selected"]];
-            } else if(touch.view == self.padBetGray && self.playerChips.black > 0) {
-                [self.padBetGrayImage setImage:[UIImage imageNamed:@"chip3Selected"]];
-            } else if(touch.view == self.padBetPurple && self.playerChips.purple > 0) {
-                [self.padBetPurpleImage setImage:[UIImage imageNamed:@"chip4Selected"]];
-            }
+        if(touch.view == self.padBetRed) {
+            [self.padBetRedImage setImage:[UIImage imageNamed:@"chip0MinusSelected"]];
+        } else if(touch.view == self.padBetBlue) {
+            [self.padBetBlueImage setImage:[UIImage imageNamed:@"chip1MinusSelected"]];
+        } else if(touch.view == self.padBetGreen) {
+            [self.padBetGreenImage setImage:[UIImage imageNamed:@"chip2MinusSelected"]];
+        } else if(touch.view == self.padBetGray) {
+            [self.padBetGrayImage setImage:[UIImage imageNamed:@"chip3MinusSelected"]];
+        } else if(touch.view == self.padBetPurple) {
+            [self.padBetPurpleImage setImage:[UIImage imageNamed:@"chip4MinusSelected"]];
+        } else if(touch.view == self.padBetRed && self.playerChips.red > 0) {
+            [self.padBetRedImage setImage:[UIImage imageNamed:@"chip0Selected"]];
+        } else if(touch.view == self.padBetBlue && self.playerChips.blue > 0) {
+            [self.padBetBlueImage setImage:[UIImage imageNamed:@"chip1Selected"]];
+        } else if(touch.view == self.padBetGreen && self.playerChips.green > 0) {
+            [self.padBetGreenImage setImage:[UIImage imageNamed:@"chip2Selected"]];
+        } else if(touch.view == self.padBetGray && self.playerChips.black > 0) {
+            [self.padBetGrayImage setImage:[UIImage imageNamed:@"chip3Selected"]];
+        } else if(touch.view == self.padBetPurple && self.playerChips.purple > 0) {
+            [self.padBetPurpleImage setImage:[UIImage imageNamed:@"chip4Selected"]];
         }
     }
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     for(UITouch *touch in touches) {
-        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-            if(touch.view == self.betRedChip) {
-                [self.chipsToBet setRed:self.chipsToBet.red - 1];
-                [self.playerChips setRed:self.playerChips.red + 1];
-                [self.betRedChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip0Minus"]]];
-                [self updateView];
-            } else if(touch.view == self.betBlueChip) {
-                [self.chipsToBet setBlue:self.chipsToBet.blue - 1];
-                [self.playerChips setBlue:self.playerChips.blue + 1];
-                [self.betBlueChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip1Minus"]]];
-                [self updateView];
-            } else if(touch.view == self.betGreenChip) {
-                [self.chipsToBet setGreen:self.chipsToBet.green - 1];
-                [self.playerChips setGreen:self.playerChips.green + 1];
-                [self.betGreenChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip2Minus"]]];
-                [self updateView];
-            } else if(touch.view == self.betBlackChip) {
-                [self.chipsToBet setBlack:self.chipsToBet.black - 1];
-                [self.playerChips setBlack:self.playerChips.black + 1];
-                [self.betBlackChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip3Minus"]]];
-                [self updateView];
-            } else if(touch.view == self.betPurpleChip) {
-                [self.chipsToBet setPurple:self.chipsToBet.purple - 1];
-                [self.playerChips setPurple:self.playerChips.purple + 1];
-                [self.betPurpleChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip4Minus"]]];
-                [self updateView];
-            } else if(touch.view == self.playerRedChip && self.playerChips.red > 0) {
-                [self.chipsToBet setRed:self.chipsToBet.red + 1];
-                [self.playerChips setRed:self.playerChips.red - 1];
-                [self.playerRedChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip0"]]];
-                [self updateView];
-            } else if(touch.view == self.playerBlueChip && self.playerChips.blue > 0) {
-                [self.chipsToBet setBlue:self.chipsToBet.blue + 1];
-                [self.playerChips setBlue:self.playerChips.blue - 1];
-                [self.playerBlueChip setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip1"]]];
-                [self updateView];
-            } else if(touch.view == self.playerChipGreen && self.playerChips.green > 0) {
-                [self.chipsToBet setGreen:self.chipsToBet.green + 1];
-                [self.playerChips setGreen:self.playerChips.green - 1];
-                [self.playerChipGreen setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip2"]]];
-                [self updateView];
-            } else if(touch.view == self.playerChipBlack && self.playerChips.black > 0) {
-                [self.chipsToBet setBlack:self.chipsToBet.black + 1];
-                [self.playerChips setBlack:self.playerChips.black - 1];
-                [self.playerChipBlack setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip3"]]];
-                [self updateView];
-            } else if(touch.view == self.playerChipPurple && self.playerChips.purple > 0) {
-                [self.chipsToBet setPurple:self.chipsToBet.purple + 1];
-                [self.playerChips setPurple:self.playerChips.purple - 1];
-                [self.playerChipPurple setImageImageView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chip4"]]];
-                [self updateView];
-            }
-        } else {
-            if(touch.view == self.padBetRed) {
-                [self.chipsToBet setRed:self.chipsToBet.red - 1];
-                [self.playerChips setRed:self.playerChips.red + 1];
-                [self.padBetRedImage setImage:[UIImage imageNamed:@"chip0Minus"]];
-                [self updateView];
-            } else if(touch.view == self.padBetBlue) {
-                [self.chipsToBet setBlue:self.chipsToBet.blue - 1];
-                [self.playerChips setBlue:self.playerChips.blue + 1];
-                [self.padBetBlueImage setImage:[UIImage imageNamed:@"chip1Minus"]];
-                [self updateView];
-            } else if(touch.view == self.padBetGreen) {
-                [self.chipsToBet setGreen:self.chipsToBet.green - 1];
-                [self.playerChips setGreen:self.playerChips.green + 1];
-                [self.padBetGreenImage setImage:[UIImage imageNamed:@"chip2Minus"]];
-                [self updateView];
-            } else if(touch.view == self.padBetGray) {
-                [self.chipsToBet setBlack:self.chipsToBet.black - 1];
-                [self.playerChips setBlack:self.playerChips.black + 1];
-                [self.padBetGrayImage setImage:[UIImage imageNamed:@"chip3Minus"]];
-                [self updateView];
-            } else if(touch.view == self.padBetPurple) {
-                [self.chipsToBet setPurple:self.chipsToBet.purple - 1];
-                [self.playerChips setPurple:self.playerChips.purple + 1];
-                [self.padBetPurpleImage setImage:[UIImage imageNamed:@"chip4Minus"]];
-                [self updateView];
-            } else if(touch.view == self.padPlayerRed && self.playerChips.red > 0) {
-                [self.chipsToBet setRed:self.chipsToBet.red + 1];
-                [self.playerChips setRed:self.playerChips.red - 1];
-                [self.padPlayerRedImage setImage:[UIImage imageNamed:@"chip0"]];
-                [self updateView];
-            } else if(touch.view == self.padPlayerBlue && self.playerChips.blue > 0) {
-                [self.chipsToBet setBlue:self.chipsToBet.blue + 1];
-                [self.playerChips setBlue:self.playerChips.blue - 1];
-                [self.padPlayerBlueImage setImage:[UIImage imageNamed:@"chip1"]];
-                [self updateView];
-            } else if(touch.view == self.padPlayerGreen && self.playerChips.green > 0) {
-                [self.chipsToBet setGreen:self.chipsToBet.green + 1];
-                [self.playerChips setGreen:self.playerChips.green - 1];
-                [self.padPlayerGreenImage setImage:[UIImage imageNamed:@"chip2"]];
-                [self updateView];
-            } else if(touch.view == self.padPlayerGray && self.playerChips.black > 0) {
-                [self.chipsToBet setBlack:self.chipsToBet.black + 1];
-                [self.playerChips setBlack:self.playerChips.black - 1];
-                [self.padPlayerGrayImage setImage:[UIImage imageNamed:@"chip3"]];
-                [self updateView];
-            } else if(touch.view == self.padPlayerPurple && self.playerChips.purple > 0) {
-                [self.chipsToBet setPurple:self.chipsToBet.purple + 1];
-                [self.playerChips setPurple:self.playerChips.purple - 1];
-                [self.padPlayerPurpleImage setImage:[UIImage imageNamed:@"chip4"]];
-                [self updateView];
-            }
+        if(touch.view == self.padBetRed) {
+            [self.chipsToBet setRed:self.chipsToBet.red - 1];
+            [self.playerChips setRed:self.playerChips.red + 1];
+            [self.padBetRedImage setImage:[UIImage imageNamed:@"chip0Minus"]];
+            [self updateView];
+        } else if(touch.view == self.padBetBlue) {
+            [self.chipsToBet setBlue:self.chipsToBet.blue - 1];
+            [self.playerChips setBlue:self.playerChips.blue + 1];
+            [self.padBetBlueImage setImage:[UIImage imageNamed:@"chip1Minus"]];
+            [self updateView];
+        } else if(touch.view == self.padBetGreen) {
+            [self.chipsToBet setGreen:self.chipsToBet.green - 1];
+            [self.playerChips setGreen:self.playerChips.green + 1];
+            [self.padBetGreenImage setImage:[UIImage imageNamed:@"chip2Minus"]];
+            [self updateView];
+        } else if(touch.view == self.padBetGray) {
+            [self.chipsToBet setBlack:self.chipsToBet.black - 1];
+            [self.playerChips setBlack:self.playerChips.black + 1];
+            [self.padBetGrayImage setImage:[UIImage imageNamed:@"chip3Minus"]];
+            [self updateView];
+        } else if(touch.view == self.padBetPurple) {
+            [self.chipsToBet setPurple:self.chipsToBet.purple - 1];
+            [self.playerChips setPurple:self.playerChips.purple + 1];
+            [self.padBetPurpleImage setImage:[UIImage imageNamed:@"chip4Minus"]];
+            [self updateView];
+        } else if(touch.view == self.padPlayerRed && self.playerChips.red > 0) {
+            [self.chipsToBet setRed:self.chipsToBet.red + 1];
+            [self.playerChips setRed:self.playerChips.red - 1];
+            [self.padPlayerRedImage setImage:[UIImage imageNamed:@"chip0"]];
+            [self updateView];
+        } else if(touch.view == self.padPlayerBlue && self.playerChips.blue > 0) {
+            [self.chipsToBet setBlue:self.chipsToBet.blue + 1];
+            [self.playerChips setBlue:self.playerChips.blue - 1];
+            [self.padPlayerBlueImage setImage:[UIImage imageNamed:@"chip1"]];
+            [self updateView];
+        } else if(touch.view == self.padPlayerGreen && self.playerChips.green > 0) {
+            [self.chipsToBet setGreen:self.chipsToBet.green + 1];
+            [self.playerChips setGreen:self.playerChips.green - 1];
+            [self.padPlayerGreenImage setImage:[UIImage imageNamed:@"chip2"]];
+            [self updateView];
+        } else if(touch.view == self.padPlayerGray && self.playerChips.black > 0) {
+            [self.chipsToBet setBlack:self.chipsToBet.black + 1];
+            [self.playerChips setBlack:self.playerChips.black - 1];
+            [self.padPlayerGrayImage setImage:[UIImage imageNamed:@"chip3"]];
+            [self updateView];
+        } else if(touch.view == self.padPlayerPurple && self.playerChips.purple > 0) {
+            [self.chipsToBet setPurple:self.chipsToBet.purple + 1];
+            [self.playerChips setPurple:self.playerChips.purple - 1];
+            [self.padPlayerPurpleImage setImage:[UIImage imageNamed:@"chip4"]];
+            [self updateView];
         }
     }
 }

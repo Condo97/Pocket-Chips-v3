@@ -37,14 +37,12 @@
 @property (weak, nonatomic) IBOutlet UIView *potBlack;
 @property (weak, nonatomic) IBOutlet UIView *potPurple;
 
-@property (strong, nonatomic) PokerChipView *betRedChip, *betBlueChip, *betGreenChip, *betBlackChip, *betPurpleChip, *playerRedChip, *playerBlueChip, *playerChipGreen, *playerChipBlack, *playerChipPurple;
-
 @property (weak, nonatomic) IBOutlet UIView *qrCodeView;
 @property (weak, nonatomic) IBOutlet UIView *addChipsView;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *profileButton;
-
-@property (strong, nonatomic) UIButton *addChipsButton;
+@property (weak, nonatomic) IBOutlet UIButton *addChipsButtonOutlet;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *addChipsTopConstraint;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *playerChipsHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *betChipsCenterYConstraint;

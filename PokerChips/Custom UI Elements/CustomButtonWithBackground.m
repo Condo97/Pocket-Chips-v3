@@ -23,7 +23,7 @@
     [label setText:self.titleLabel.text];
     [label setTextAlignment:NSTextAlignmentCenter];
     [label setTextColor:[UIColor whiteColor]];
-    [label setFont:[UIFont systemFontOfSize:17.0 weight:UIFontWeightSemibold]];
+    [label setFont:[UIFont systemFontOfSize:self.titleLabel.font.pointSize weight:UIFontWeightSemibold]];
     [self addSubview:label];
     [self bringSubviewToFront:label];
     
