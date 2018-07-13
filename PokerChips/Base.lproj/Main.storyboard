@@ -470,7 +470,7 @@ Cg
                                 <rect key="frame" x="0.0" y="202" width="375" height="84.666666666666686"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94q-yP-sh6" customClass="CustomButtonWithBackground">
-                                        <rect key="frame" x="0.0" y="25" width="165.33333333333334" height="35"/>
+                                        <rect key="frame" x="210" y="25" width="165" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="Wbt-w2-mH5"/>
@@ -484,7 +484,7 @@ Cg
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waJ-AH-DYu" customClass="CustomButtonWithBackground">
-                                        <rect key="frame" x="210.33333333333337" y="25" width="164.66666666666663" height="35"/>
+                                        <rect key="frame" x="0.0" y="25" width="165" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="2gm-bO-tIo"/>
@@ -500,18 +500,18 @@ Cg
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="waJ-AH-DYu" firstAttribute="leading" secondItem="94q-yP-sh6" secondAttribute="trailing" constant="45" id="70C-Eg-UaO"/>
-                                    <constraint firstItem="94q-yP-sh6" firstAttribute="leading" secondItem="n6C-zP-DFz" secondAttribute="leading" id="HEw-cY-CIy"/>
+                                    <constraint firstItem="waJ-AH-DYu" firstAttribute="leading" secondItem="n6C-zP-DFz" secondAttribute="leading" id="1aW-eg-Vjf"/>
+                                    <constraint firstItem="94q-yP-sh6" firstAttribute="trailing" secondItem="n6C-zP-DFz" secondAttribute="trailing" id="HEw-cY-CIy"/>
                                     <constraint firstItem="94q-yP-sh6" firstAttribute="width" secondItem="waJ-AH-DYu" secondAttribute="width" id="Hwa-6S-2Og"/>
+                                    <constraint firstItem="94q-yP-sh6" firstAttribute="leading" secondItem="waJ-AH-DYu" secondAttribute="trailing" constant="45" id="LQd-BI-bj2"/>
                                     <constraint firstItem="waJ-AH-DYu" firstAttribute="centerY" secondItem="n6C-zP-DFz" secondAttribute="centerY" id="tWF-El-P7n"/>
                                     <constraint firstItem="waJ-AH-DYu" firstAttribute="centerY" secondItem="94q-yP-sh6" secondAttribute="centerY" id="yO2-3I-Sf7"/>
-                                    <constraint firstAttribute="trailing" secondItem="waJ-AH-DYu" secondAttribute="trailing" id="znH-XF-Aqs"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4N9-jf-xJ7">
                                 <rect key="frame" x="0.0" y="88" width="375" height="114"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enb-yK-jVW">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enb-yK-jVW" customClass="ChipView">
                                         <rect key="frame" x="219" y="46" width="63" height="62.666666666666657"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip3" translatesAutoresizingMaskIntoConstraints="NO" id="wH6-4R-RwW">
@@ -536,8 +536,12 @@ Cg
                                             <constraint firstAttribute="width" secondItem="enb-yK-jVW" secondAttribute="height" multiplier="1:1" id="j7N-wY-uNa"/>
                                             <constraint firstItem="baf-Sd-zme" firstAttribute="centerX" secondItem="wH6-4R-RwW" secondAttribute="centerX" id="tE9-m2-yUT"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="wH6-4R-RwW" id="TkF-ph-qiN"/>
+                                            <outlet property="chipLabel" destination="baf-Sd-zme" id="uSq-91-0tp"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eB7-Pz-Cy7">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eB7-Pz-Cy7" customClass="ChipView">
                                         <rect key="frame" x="93" y="46" width="63" height="62.666666666666657"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip1" translatesAutoresizingMaskIntoConstraints="NO" id="cEX-rg-D0T">
@@ -562,8 +566,12 @@ Cg
                                             <constraint firstItem="FR5-Hl-2FG" firstAttribute="top" secondItem="eB7-Pz-Cy7" secondAttribute="top" constant="19" id="pIb-w7-9fG"/>
                                             <constraint firstAttribute="width" secondItem="eB7-Pz-Cy7" secondAttribute="height" multiplier="1:1" id="qvH-EP-3o1"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="cEX-rg-D0T" id="29b-4b-AS1"/>
+                                            <outlet property="chipLabel" destination="FR5-Hl-2FG" id="jPp-1B-uPh"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7Q-61-eVF">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7Q-61-eVF" customClass="ChipView">
                                         <rect key="frame" x="272" y="7.9999999999999964" width="62.666666666666686" height="62.666666666666657"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip4" translatesAutoresizingMaskIntoConstraints="NO" id="Uth-jr-wto">
@@ -588,8 +596,12 @@ Cg
                                             <constraint firstItem="0L0-fM-2OG" firstAttribute="top" secondItem="R7Q-61-eVF" secondAttribute="top" constant="19" id="tGB-hM-NLd"/>
                                             <constraint firstItem="0L0-fM-2OG" firstAttribute="centerX" secondItem="R7Q-61-eVF" secondAttribute="centerX" id="ugN-4r-UJ3"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="Uth-jr-wto" id="8wn-UE-hXL"/>
+                                            <outlet property="chipLabel" destination="0L0-fM-2OG" id="q87-bL-gDz"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n2-QE-cga">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n2-QE-cga" customClass="ChipView">
                                         <rect key="frame" x="40" y="7.9999999999999964" width="63" height="62.666666666666657"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip0" translatesAutoresizingMaskIntoConstraints="NO" id="iIP-6F-pfQ">
@@ -614,8 +626,12 @@ Cg
                                             <constraint firstItem="BBb-Yr-Krc" firstAttribute="centerY" secondItem="iIP-6F-pfQ" secondAttribute="centerY" id="l84-jg-hiI"/>
                                             <constraint firstItem="iIP-6F-pfQ" firstAttribute="top" secondItem="0n2-QE-cga" secondAttribute="top" id="slf-tF-APi"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="iIP-6F-pfQ" id="Hu7-p0-ymd"/>
+                                            <outlet property="chipLabel" destination="BBb-Yr-Krc" id="wBP-Tc-4uO"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPq-S3-pfe">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPq-S3-pfe" customClass="ChipView">
                                         <rect key="frame" x="156" y="60" width="63" height="62.666666666666657"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip2" translatesAutoresizingMaskIntoConstraints="NO" id="0TV-2q-pOQ">
@@ -642,6 +658,10 @@ Cg
                                             <constraint firstItem="aFz-UA-HA6" firstAttribute="leading" secondItem="bPq-S3-pfe" secondAttribute="leading" constant="19" id="whA-nH-qG7"/>
                                             <constraint firstItem="0TV-2q-pOQ" firstAttribute="centerY" secondItem="bPq-S3-pfe" secondAttribute="centerY" id="ySp-62-Js8"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="0TV-2q-pOQ" id="DyR-8E-pJr"/>
+                                            <outlet property="chipLabel" destination="aFz-UA-HA6" id="4VW-7j-SLR"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -710,7 +730,7 @@ Cg
                                         <color key="textColor" white="1" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gnt-6k-Efr">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gnt-6k-Efr" customClass="ChipView">
                                         <rect key="frame" x="70" y="110.33333333333331" width="75" height="74.666666666666686"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="chip3Minus" translatesAutoresizingMaskIntoConstraints="NO" id="8Gd-bg-It2">
@@ -739,8 +759,12 @@ Cg
                                             <constraint firstItem="L5B-uk-jnj" firstAttribute="centerY" secondItem="Gnt-6k-Efr" secondAttribute="centerY" id="nsF-uJ-9mD"/>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="75" id="r6o-H6-Obz"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="8Gd-bg-It2" id="3V8-Qf-wG8"/>
+                                            <outlet property="chipLabel" destination="L5B-uk-jnj" id="384-ov-8DV"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVW-mH-zYP">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVW-mH-zYP" customClass="ChipView">
                                         <rect key="frame" x="30.000000000000007" y="46.999999999999993" width="74.666666666666686" height="74.333333333333314"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip0Minus" translatesAutoresizingMaskIntoConstraints="NO" id="ccN-Yd-IDB">
@@ -769,8 +793,12 @@ Cg
                                             <constraint firstItem="Jd9-tS-v4J" firstAttribute="centerX" secondItem="nVW-mH-zYP" secondAttribute="centerX" id="U0p-gb-qRZ"/>
                                             <constraint firstItem="ccN-Yd-IDB" firstAttribute="leading" secondItem="nVW-mH-zYP" secondAttribute="leading" id="inA-x2-QRj"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="ccN-Yd-IDB" id="6SZ-ww-mRt"/>
+                                            <outlet property="chipLabel" destination="Jd9-tS-v4J" id="Aqt-W4-BYg"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiL-pv-3kP">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiL-pv-3kP" customClass="ChipView">
                                         <rect key="frame" x="112.66666666666669" y="7" width="74" height="74.333333333333329"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip1Minus" translatesAutoresizingMaskIntoConstraints="NO" id="4dS-q4-Tu3">
@@ -799,8 +827,12 @@ Cg
                                             <constraint firstItem="4dS-q4-Tu3" firstAttribute="top" secondItem="PiL-pv-3kP" secondAttribute="top" id="lVJ-aJ-7ub"/>
                                             <constraint firstItem="Xz6-Hg-mFs" firstAttribute="centerY" secondItem="PiL-pv-3kP" secondAttribute="centerY" id="tD5-CF-4Cb"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="4dS-q4-Tu3" id="1RM-4f-CuT"/>
+                                            <outlet property="chipLabel" destination="Xz6-Hg-mFs" id="Mrf-6T-sYs"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5p-xU-WIB">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5p-xU-WIB" customClass="ChipView">
                                         <rect key="frame" x="155" y="110" width="75" height="75"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="chip4Minus" translatesAutoresizingMaskIntoConstraints="NO" id="3Wt-bB-mx9">
@@ -829,8 +861,12 @@ Cg
                                             <constraint firstItem="3Wt-bB-mx9" firstAttribute="leading" secondItem="f5p-xU-WIB" secondAttribute="leading" id="rP8-LI-tb2"/>
                                             <constraint firstAttribute="bottom" secondItem="3Wt-bB-mx9" secondAttribute="bottom" id="yp3-kY-No7"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="3Wt-bB-mx9" id="hXf-8J-f6v"/>
+                                            <outlet property="chipLabel" destination="JWw-Cc-aQV" id="HHP-oW-a0C"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adr-8Y-wkS">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adr-8Y-wkS" customClass="ChipView">
                                         <rect key="frame" x="193.66666666666669" y="47" width="74" height="74"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip2Minus" translatesAutoresizingMaskIntoConstraints="NO" id="Z5t-5D-sYL">
@@ -859,6 +895,10 @@ Cg
                                             <constraint firstAttribute="width" secondItem="Adr-8Y-wkS" secondAttribute="height" multiplier="1:1" id="cn5-SY-GOF"/>
                                             <constraint firstAttribute="trailing" secondItem="Z5t-5D-sYL" secondAttribute="trailing" id="iwy-Hs-jte"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="Z5t-5D-sYL" id="WEF-Ad-Zs0"/>
+                                            <outlet property="chipLabel" destination="bkI-YN-2TA" id="BVo-T4-tzI"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -906,7 +946,7 @@ Cg
                                             <constraint firstAttribute="width" constant="2" id="syV-wO-EJo"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuA-ho-fOQ">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuA-ho-fOQ" customClass="ChipView">
                                         <rect key="frame" x="18.999999999999993" y="0.0" width="112.33333333333331" height="112.33333333333333"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip0" translatesAutoresizingMaskIntoConstraints="NO" id="AxU-h9-Ph9">
@@ -931,8 +971,12 @@ Cg
                                             <constraint firstAttribute="trailing" secondItem="AxU-h9-Ph9" secondAttribute="trailing" id="u0g-9S-Kda"/>
                                             <constraint firstItem="8DK-Wx-TTp" firstAttribute="leading" secondItem="KuA-ho-fOQ" secondAttribute="leading" constant="35" id="ztm-jT-0Rj"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="AxU-h9-Ph9" id="Kfc-U2-Kt5"/>
+                                            <outlet property="chipLabel" destination="8DK-Wx-TTp" id="gVc-NW-Yfo"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaI-F2-ACR">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaI-F2-ACR" customClass="ChipView">
                                         <rect key="frame" x="131.33333333333334" y="0.0" width="113" height="112.33333333333333"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip1" translatesAutoresizingMaskIntoConstraints="NO" id="tnG-hV-ap2">
@@ -957,8 +1001,12 @@ Cg
                                             <constraint firstAttribute="bottom" secondItem="tnG-hV-ap2" secondAttribute="bottom" id="u1r-tT-8mi"/>
                                             <constraint firstItem="tnG-hV-ap2" firstAttribute="leading" secondItem="eaI-F2-ACR" secondAttribute="leading" id="zcy-E3-552"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="tnG-hV-ap2" id="cTD-FN-ei7"/>
+                                            <outlet property="chipLabel" destination="n5u-Cd-h0B" id="wOZ-Kb-FvJ"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3L-Dk-Tul">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3L-Dk-Tul" customClass="ChipView">
                                         <rect key="frame" x="244.33333333333334" y="0.0" width="112.66666666666666" height="113"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip2" translatesAutoresizingMaskIntoConstraints="NO" id="Zx1-29-mlm">
@@ -983,8 +1031,12 @@ Cg
                                             <constraint firstAttribute="bottom" secondItem="Zx1-29-mlm" secondAttribute="bottom" id="svu-Lb-czm"/>
                                             <constraint firstAttribute="trailing" secondItem="lzu-ld-7Hk" secondAttribute="trailing" constant="35" id="t4B-ZZ-UWg"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="Zx1-29-mlm" id="xwT-gz-Ded"/>
+                                            <outlet property="chipLabel" destination="lzu-ld-7Hk" id="cY5-m6-faG"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h17-bx-A5a">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h17-bx-A5a" customClass="ChipView">
                                         <rect key="frame" x="192.66666666666666" y="87.333333333333371" width="112.66666666666666" height="112.66666666666669"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip4" translatesAutoresizingMaskIntoConstraints="NO" id="BqC-iT-j31">
@@ -1009,8 +1061,12 @@ Cg
                                             <constraint firstAttribute="width" secondItem="h17-bx-A5a" secondAttribute="height" multiplier="1:1" id="mFO-5b-Zeo"/>
                                             <constraint firstAttribute="trailing" secondItem="iSL-1q-P0m" secondAttribute="trailing" constant="35" id="pSt-vM-Ow5"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="BqC-iT-j31" id="xCd-yn-vkK"/>
+                                            <outlet property="chipLabel" destination="iSL-1q-P0m" id="zNm-J9-Xo7"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ww-ux-MyN">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ww-ux-MyN" customClass="ChipView">
                                         <rect key="frame" x="69.666666666666671" y="87.333333333333371" width="113.00000000000001" height="112.66666666666669"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip3" translatesAutoresizingMaskIntoConstraints="NO" id="wCu-2h-jjC">
@@ -1035,6 +1091,10 @@ Cg
                                             <constraint firstAttribute="bottom" secondItem="Vtq-GS-uoZ" secondAttribute="bottom" constant="35" id="XbW-xR-ugP"/>
                                             <constraint firstItem="Vtq-GS-uoZ" firstAttribute="top" secondItem="2Ww-ux-MyN" secondAttribute="top" constant="35" id="rdd-Xt-4D0"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="wCu-2h-jjC" id="DZx-MH-wTB"/>
+                                            <outlet property="chipLabel" destination="Vtq-GS-uoZ" id="eyN-IS-FK6"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1121,35 +1181,15 @@ Cg
                         <outlet property="dealerPurple" destination="0L0-fM-2OG" id="nln-5M-3DX"/>
                         <outlet property="dealerRed" destination="BBb-Yr-Krc" id="IEH-iw-Unc"/>
                         <outlet property="padBetBlue" destination="PiL-pv-3kP" id="MDr-gW-u8d"/>
-                        <outlet property="padBetBlueImage" destination="4dS-q4-Tu3" id="nho-Tm-NMK"/>
-                        <outlet property="padBetBlueLabel" destination="Xz6-Hg-mFs" id="jqC-ge-Jj9"/>
                         <outlet property="padBetGray" destination="Gnt-6k-Efr" id="yDR-QD-67H"/>
-                        <outlet property="padBetGrayImage" destination="8Gd-bg-It2" id="Cd1-r4-vaW"/>
-                        <outlet property="padBetGrayLabel" destination="L5B-uk-jnj" id="HAI-dv-DX3"/>
                         <outlet property="padBetGreen" destination="Adr-8Y-wkS" id="oPy-hC-vTd"/>
-                        <outlet property="padBetGreenImage" destination="Z5t-5D-sYL" id="2V6-9Z-xGb"/>
-                        <outlet property="padBetGreenLabel" destination="bkI-YN-2TA" id="kDg-A6-Akc"/>
                         <outlet property="padBetPurple" destination="f5p-xU-WIB" id="Tq2-hD-N3t"/>
-                        <outlet property="padBetPurpleImage" destination="3Wt-bB-mx9" id="cv1-bw-4bX"/>
-                        <outlet property="padBetPurpleLabel" destination="JWw-Cc-aQV" id="OSV-LA-dqq"/>
                         <outlet property="padBetRed" destination="nVW-mH-zYP" id="a3O-7O-dVz"/>
-                        <outlet property="padBetRedImage" destination="ccN-Yd-IDB" id="KGM-5c-3cN"/>
-                        <outlet property="padBetRedLabel" destination="Jd9-tS-v4J" id="BXD-R2-NN0"/>
                         <outlet property="padPlayerBlue" destination="eaI-F2-ACR" id="AKC-yd-h9u"/>
-                        <outlet property="padPlayerBlueImage" destination="tnG-hV-ap2" id="Hhf-a5-d0u"/>
-                        <outlet property="padPlayerBlueLabel" destination="n5u-Cd-h0B" id="ktZ-uV-c2u"/>
                         <outlet property="padPlayerGray" destination="2Ww-ux-MyN" id="T62-4W-ZBC"/>
-                        <outlet property="padPlayerGrayImage" destination="wCu-2h-jjC" id="9V5-xQ-amp"/>
-                        <outlet property="padPlayerGrayLabel" destination="Vtq-GS-uoZ" id="BvF-TJ-2fb"/>
                         <outlet property="padPlayerGreen" destination="R3L-Dk-Tul" id="4yG-zB-uF1"/>
-                        <outlet property="padPlayerGreenImage" destination="Zx1-29-mlm" id="Jta-ut-zyN"/>
-                        <outlet property="padPlayerGreenLabel" destination="lzu-ld-7Hk" id="peI-dS-nVR"/>
                         <outlet property="padPlayerPurple" destination="h17-bx-A5a" id="F7w-ER-YCh"/>
-                        <outlet property="padPlayerPurpleImage" destination="BqC-iT-j31" id="Ntt-Ka-OiK"/>
-                        <outlet property="padPlayerPurpleLabel" destination="iSL-1q-P0m" id="AWD-He-4ZS"/>
                         <outlet property="padPlayerRed" destination="KuA-ho-fOQ" id="6X1-1c-tvG"/>
-                        <outlet property="padPlayerRedImage" destination="AxU-h9-Ph9" id="FIK-ZF-KMO"/>
-                        <outlet property="padPlayerRedLabel" destination="8DK-Wx-TTp" id="ldr-4d-DFj"/>
                         <outlet property="playerChipsView" destination="w4m-Z5-51I" id="Mq8-Ct-5Bc"/>
                         <outlet property="potBlack" destination="enb-yK-jVW" id="Cis-vn-62I"/>
                         <outlet property="potBlue" destination="eB7-Pz-Cy7" id="5Ga-cD-drE"/>
@@ -2474,7 +2514,7 @@ Cg
         <image name="toBet" width="900" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FEL-bq-Qbw"/>
+        <segue reference="mf8-f4-CHV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.28627450980392155" green="0.51764705882352935" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

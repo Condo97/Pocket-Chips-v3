@@ -1039,7 +1039,7 @@ CiA
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9k-dN-5aG">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3V0-Jg-c3r">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3V0-Jg-c3r" customClass="ChipView">
                                                 <rect key="frame" x="0.0" y="60" width="125" height="125"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip0Minus" translatesAutoresizingMaskIntoConstraints="NO" id="oFG-AM-rKh">
@@ -1066,8 +1066,12 @@ CiA
                                                     <constraint firstItem="jNt-ci-lg8" firstAttribute="centerY" secondItem="3V0-Jg-c3r" secondAttribute="centerY" id="doz-mE-mhX"/>
                                                     <constraint firstItem="oFG-AM-rKh" firstAttribute="leading" secondItem="3V0-Jg-c3r" secondAttribute="leading" id="nU8-dF-kfg"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="chip" destination="oFG-AM-rKh" id="2mg-Tv-5tj"/>
+                                                    <outlet property="chipLabel" destination="jNt-ci-lg8" id="Nfj-K8-bdN"/>
+                                                </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1G-g7-MSK">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1G-g7-MSK" customClass="ChipView">
                                                 <rect key="frame" x="138" y="0.0" width="125" height="125"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip1Minus" translatesAutoresizingMaskIntoConstraints="NO" id="Z53-za-Jn3">
@@ -1094,8 +1098,12 @@ CiA
                                                     <constraint firstItem="Z53-za-Jn3" firstAttribute="top" secondItem="d1G-g7-MSK" secondAttribute="top" id="q3C-hk-MFG"/>
                                                     <constraint firstAttribute="width" secondItem="d1G-g7-MSK" secondAttribute="height" multiplier="1:1" id="tLS-eC-8f7"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="chip" destination="Z53-za-Jn3" id="cT1-6D-uuv"/>
+                                                    <outlet property="chipLabel" destination="B5o-bt-Pjb" id="yjO-fB-RCy"/>
+                                                </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfD-dS-e3v">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfD-dS-e3v" customClass="ChipView">
                                                 <rect key="frame" x="205" y="167" width="125" height="125"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip4Minus" translatesAutoresizingMaskIntoConstraints="NO" id="vPk-LU-3ma">
@@ -1122,8 +1130,12 @@ CiA
                                                     <constraint firstItem="zpD-PP-2bb" firstAttribute="centerY" secondItem="QfD-dS-e3v" secondAttribute="centerY" id="k1O-Fs-GT5"/>
                                                     <constraint firstAttribute="trailing" secondItem="vPk-LU-3ma" secondAttribute="trailing" id="x3M-Af-X49"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="chip" destination="vPk-LU-3ma" id="Eeu-Ca-kcD"/>
+                                                    <outlet property="chipLabel" destination="zpD-PP-2bb" id="X6n-yM-EMf"/>
+                                                </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="273-Ma-XHP">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="273-Ma-XHP" customClass="ChipView">
                                                 <rect key="frame" x="70" y="167" width="125" height="125"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip3Minus" translatesAutoresizingMaskIntoConstraints="NO" id="Cd8-gn-BVE">
@@ -1150,8 +1162,12 @@ CiA
                                                     <constraint firstItem="dAU-r6-8Yy" firstAttribute="centerY" secondItem="273-Ma-XHP" secondAttribute="centerY" id="qW5-dI-xja"/>
                                                     <constraint firstAttribute="width" secondItem="273-Ma-XHP" secondAttribute="height" multiplier="1:1" id="rAF-6s-hS3"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="chip" destination="Cd8-gn-BVE" id="1ma-Rx-Fgj"/>
+                                                    <outlet property="chipLabel" destination="dAU-r6-8Yy" id="fb0-8G-jRi"/>
+                                                </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiK-nv-EcY">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiK-nv-EcY" customClass="ChipView">
                                                 <rect key="frame" x="275" y="60" width="125" height="125"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip2Minus" translatesAutoresizingMaskIntoConstraints="NO" id="9qc-AP-3kk">
@@ -1178,6 +1194,10 @@ CiA
                                                     <constraint firstItem="VTd-XE-eLX" firstAttribute="centerY" secondItem="OiK-nv-EcY" secondAttribute="centerY" id="cpH-0q-SOu"/>
                                                     <constraint firstAttribute="bottom" secondItem="9qc-AP-3kk" secondAttribute="bottom" id="vig-Qp-dVH"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="chip" destination="9qc-AP-3kk" id="yQk-PA-UeD"/>
+                                                    <outlet property="chipLabel" destination="VTd-XE-eLX" id="oSc-8q-p3U"/>
+                                                </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Bet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3X-R6-xCb">
                                                 <rect key="frame" x="150" y="129.5" width="101" height="42"/>
@@ -1289,7 +1309,7 @@ CiA
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htx-Kj-wJd">
                                 <rect key="frame" x="0.0" y="792" width="768" height="168"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EsB-nm-BxO">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EsB-nm-BxO" customClass="ChipView">
                                         <rect key="frame" x="25.5" y="21" width="124.5" height="125"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip0" translatesAutoresizingMaskIntoConstraints="NO" id="38S-hR-ZQc">
@@ -1316,8 +1336,12 @@ CiA
                                             <constraint firstItem="7Ag-50-JZw" firstAttribute="centerX" secondItem="EsB-nm-BxO" secondAttribute="centerX" id="nnb-hO-iD7"/>
                                             <constraint firstItem="7Ag-50-JZw" firstAttribute="centerY" secondItem="EsB-nm-BxO" secondAttribute="centerY" id="rPW-Ob-k7A"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="38S-hR-ZQc" id="VHx-8z-eaw"/>
+                                            <outlet property="chipLabel" destination="7Ag-50-JZw" id="Px5-uU-8FL"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Am-R1-beO">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Am-R1-beO" customClass="ChipView">
                                         <rect key="frame" x="321.5" y="21" width="125" height="125"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip2" translatesAutoresizingMaskIntoConstraints="NO" id="7E7-Pr-IsG">
@@ -1344,8 +1368,12 @@ CiA
                                             <constraint firstAttribute="width" secondItem="1Am-R1-beO" secondAttribute="height" multiplier="1:1" id="nJB-TT-XLs"/>
                                             <constraint firstAttribute="trailing" secondItem="7E7-Pr-IsG" secondAttribute="trailing" id="vKs-2I-UoJ"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="7E7-Pr-IsG" id="IGd-hr-mjl"/>
+                                            <outlet property="chipLabel" destination="jPA-uT-sty" id="kXW-0d-5GI"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZE-jc-iHb">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZE-jc-iHb" customClass="ChipView">
                                         <rect key="frame" x="617.5" y="21" width="125" height="125.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip4" translatesAutoresizingMaskIntoConstraints="NO" id="sEb-zE-D9U">
@@ -1372,8 +1400,12 @@ CiA
                                             <constraint firstItem="sEb-zE-D9U" firstAttribute="top" secondItem="EZE-jc-iHb" secondAttribute="top" id="ZYX-t3-nrg"/>
                                             <constraint firstAttribute="trailing" secondItem="sEb-zE-D9U" secondAttribute="trailing" id="zCw-XM-wKZ"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="sEb-zE-D9U" id="wEg-RB-xyS"/>
+                                            <outlet property="chipLabel" destination="WH7-66-DUO" id="0Dt-eH-qhm"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYu-rb-prL">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYu-rb-prL" customClass="ChipView">
                                         <rect key="frame" x="467.5" y="21" width="125" height="125.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip3" translatesAutoresizingMaskIntoConstraints="NO" id="lcH-KJ-R24">
@@ -1400,8 +1432,12 @@ CiA
                                             <constraint firstAttribute="trailing" secondItem="lcH-KJ-R24" secondAttribute="trailing" id="zR3-fe-HFE"/>
                                             <constraint firstItem="jR6-ac-V9n" firstAttribute="centerY" secondItem="FYu-rb-prL" secondAttribute="centerY" id="zYV-Xv-MMa"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="lcH-KJ-R24" id="izf-ht-G9n"/>
+                                            <outlet property="chipLabel" destination="jR6-ac-V9n" id="gQ8-7G-yQw"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPS-M5-AVE">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPS-M5-AVE" customClass="ChipView">
                                         <rect key="frame" x="175" y="21" width="125.5" height="125.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip1" translatesAutoresizingMaskIntoConstraints="NO" id="0Nv-2w-dri">
@@ -1428,6 +1464,10 @@ CiA
                                             <constraint firstItem="9jo-Tz-c59" firstAttribute="centerY" secondItem="oPS-M5-AVE" secondAttribute="centerY" id="sMX-Ou-VmG"/>
                                             <constraint firstItem="0Nv-2w-dri" firstAttribute="leading" secondItem="oPS-M5-AVE" secondAttribute="leading" id="vmK-g6-ldE"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="0Nv-2w-dri" id="hFw-G9-EOJ"/>
+                                            <outlet property="chipLabel" destination="9jo-Tz-c59" id="RWK-PQ-0oF"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1453,7 +1493,7 @@ CiA
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maF-40-CWY">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="250"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jed-vh-W4y">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jed-vh-W4y" customClass="ChipView">
                                         <rect key="frame" x="42" y="8" width="137" height="137"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip0" translatesAutoresizingMaskIntoConstraints="NO" id="7RH-EO-9Lg">
@@ -1480,8 +1520,12 @@ CiA
                                             <constraint firstAttribute="bottom" secondItem="7RH-EO-9Lg" secondAttribute="bottom" id="wet-Dt-f6P"/>
                                             <constraint firstAttribute="trailing" secondItem="7RH-EO-9Lg" secondAttribute="trailing" id="yAf-wV-Gse"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="7RH-EO-9Lg" id="gYE-3F-RTz"/>
+                                            <outlet property="chipLabel" destination="YCF-Tb-cP2" id="3HN-fx-0R5"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7C5-eK-y6W">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7C5-eK-y6W" customClass="ChipView">
                                         <rect key="frame" x="315.5" y="105.5" width="137" height="136.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip2" translatesAutoresizingMaskIntoConstraints="NO" id="bpX-zW-q1Y">
@@ -1508,8 +1552,12 @@ CiA
                                             <constraint firstAttribute="bottom" secondItem="bpX-zW-q1Y" secondAttribute="bottom" id="m9h-eH-A3h"/>
                                             <constraint firstItem="bpX-zW-q1Y" firstAttribute="top" secondItem="7C5-eK-y6W" secondAttribute="top" id="nrs-cf-5LO"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="bpX-zW-q1Y" id="akA-ul-BbS"/>
+                                            <outlet property="chipLabel" destination="HeF-By-mOr" id="Sql-wX-sMc"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lq4-J5-9aJ">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lq4-J5-9aJ" customClass="ChipView">
                                         <rect key="frame" x="589" y="8" width="137" height="137"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip4" translatesAutoresizingMaskIntoConstraints="NO" id="41T-1q-k05">
@@ -1536,8 +1584,12 @@ CiA
                                             <constraint firstItem="41T-1q-k05" firstAttribute="top" secondItem="Lq4-J5-9aJ" secondAttribute="top" id="Y2K-2u-jWP"/>
                                             <constraint firstAttribute="trailing" secondItem="41T-1q-k05" secondAttribute="trailing" id="zb9-EF-n0B"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="41T-1q-k05" id="CkM-DS-xkm"/>
+                                            <outlet property="chipLabel" destination="2Ce-Tr-mD3" id="430-bt-3aG"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3X-km-d8I">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3X-km-d8I" customClass="ChipView">
                                         <rect key="frame" x="444.5" y="73.5" width="136.5" height="136.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip3" translatesAutoresizingMaskIntoConstraints="NO" id="Mdm-Yn-uQA">
@@ -1564,8 +1616,12 @@ CiA
                                             <constraint firstAttribute="bottom" secondItem="Mdm-Yn-uQA" secondAttribute="bottom" id="tHM-6G-Wsq"/>
                                             <constraint firstItem="XQf-W7-E4c" firstAttribute="centerY" secondItem="b3X-km-d8I" secondAttribute="centerY" id="vin-28-suT"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="Mdm-Yn-uQA" id="EDs-aQ-IPh"/>
+                                            <outlet property="chipLabel" destination="XQf-W7-E4c" id="DD2-Ok-b9w"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ru-5D-B48">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ru-5D-B48" customClass="ChipView">
                                         <rect key="frame" x="187" y="73.5" width="136.5" height="136.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip1" translatesAutoresizingMaskIntoConstraints="NO" id="hRI-rZ-yjp">
@@ -1592,6 +1648,10 @@ CiA
                                             <constraint firstItem="hRI-rZ-yjp" firstAttribute="leading" secondItem="8ru-5D-B48" secondAttribute="leading" id="PWr-GT-U77"/>
                                             <constraint firstAttribute="bottom" secondItem="hRI-rZ-yjp" secondAttribute="bottom" id="llK-y0-9ai"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chip" destination="hRI-rZ-yjp" id="gNZ-nf-uTV"/>
+                                            <outlet property="chipLabel" destination="Rv8-eL-CUe" id="ciS-Fi-pUi"/>
+                                        </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVg-79-2hh">
                                         <rect key="frame" x="357" y="49" width="55" height="42"/>
@@ -1709,35 +1769,15 @@ CiA
                         <outlet property="dealerPurple" destination="2Ce-Tr-mD3" id="P9N-9B-MiT"/>
                         <outlet property="dealerRed" destination="YCF-Tb-cP2" id="MfP-lq-CEh"/>
                         <outlet property="padBetBlue" destination="d1G-g7-MSK" id="cBu-G4-T0D"/>
-                        <outlet property="padBetBlueImage" destination="Z53-za-Jn3" id="vWy-cL-PBa"/>
-                        <outlet property="padBetBlueLabel" destination="B5o-bt-Pjb" id="AZF-To-yA1"/>
                         <outlet property="padBetGray" destination="273-Ma-XHP" id="HS6-ya-yQL"/>
-                        <outlet property="padBetGrayImage" destination="Cd8-gn-BVE" id="xbQ-9J-TyT"/>
-                        <outlet property="padBetGrayLabel" destination="dAU-r6-8Yy" id="0cU-5H-IhX"/>
                         <outlet property="padBetGreen" destination="OiK-nv-EcY" id="hPg-px-XQP"/>
-                        <outlet property="padBetGreenImage" destination="9qc-AP-3kk" id="Im7-Xp-jdL"/>
-                        <outlet property="padBetGreenLabel" destination="VTd-XE-eLX" id="yjh-zY-s0y"/>
                         <outlet property="padBetPurple" destination="QfD-dS-e3v" id="5TD-vn-nry"/>
-                        <outlet property="padBetPurpleImage" destination="vPk-LU-3ma" id="Vc4-bL-xxK"/>
-                        <outlet property="padBetPurpleLabel" destination="zpD-PP-2bb" id="YNq-zu-OGp"/>
                         <outlet property="padBetRed" destination="3V0-Jg-c3r" id="vqw-gW-JpJ"/>
-                        <outlet property="padBetRedImage" destination="oFG-AM-rKh" id="VME-CR-zbu"/>
-                        <outlet property="padBetRedLabel" destination="jNt-ci-lg8" id="rGd-ME-MVG"/>
                         <outlet property="padPlayerBlue" destination="oPS-M5-AVE" id="svU-za-YHq"/>
-                        <outlet property="padPlayerBlueImage" destination="0Nv-2w-dri" id="sgx-S7-FvR"/>
-                        <outlet property="padPlayerBlueLabel" destination="9jo-Tz-c59" id="yWA-Bf-9nk"/>
                         <outlet property="padPlayerGray" destination="FYu-rb-prL" id="PlW-8M-aa3"/>
-                        <outlet property="padPlayerGrayImage" destination="lcH-KJ-R24" id="8IS-Jg-isL"/>
-                        <outlet property="padPlayerGrayLabel" destination="jR6-ac-V9n" id="k8N-SB-1gF"/>
                         <outlet property="padPlayerGreen" destination="1Am-R1-beO" id="hOh-p1-qZ6"/>
-                        <outlet property="padPlayerGreenImage" destination="7E7-Pr-IsG" id="LxS-ex-VuA"/>
-                        <outlet property="padPlayerGreenLabel" destination="jPA-uT-sty" id="A81-5u-lfo"/>
                         <outlet property="padPlayerPurple" destination="EZE-jc-iHb" id="6kM-Zc-mks"/>
-                        <outlet property="padPlayerPurpleImage" destination="sEb-zE-D9U" id="KzS-0T-qIv"/>
-                        <outlet property="padPlayerPurpleLabel" destination="WH7-66-DUO" id="J4w-8N-eSx"/>
                         <outlet property="padPlayerRed" destination="EsB-nm-BxO" id="nkt-QY-kY1"/>
-                        <outlet property="padPlayerRedImage" destination="38S-hR-ZQc" id="if3-gr-hBl"/>
-                        <outlet property="padPlayerRedLabel" destination="7Ag-50-JZw" id="5mY-TV-Odv"/>
                         <outlet property="playerChipsView" destination="htx-Kj-wJd" id="L8G-mc-Znp"/>
                         <outlet property="potBlack" destination="b3X-km-d8I" id="RAK-9O-vCo"/>
                         <outlet property="potBlue" destination="8ru-5D-B48" id="LYI-dx-OuN"/>

@@ -11,8 +11,8 @@
 #import "ChipObject.h"
 #import "Defines.pch"
 #import "QRViewController.h"
-#import "PokerChipView.h"
 #import "AddChipsViewController.h"
+#import "ChipView.h"
 
 @interface BetViewController : UIViewController <QRViewControllerDelegate, NetworkHandlerDataSource, AddChipsViewControllerDelegate>
 
@@ -31,11 +31,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *dealerBlack;
 @property (weak, nonatomic) IBOutlet UILabel *dealerPurple;
 
-@property (weak, nonatomic) IBOutlet UIView *potRed;
-@property (weak, nonatomic) IBOutlet UIView *potBlue;
-@property (weak, nonatomic) IBOutlet UIView *potGreen;
-@property (weak, nonatomic) IBOutlet UIView *potBlack;
-@property (weak, nonatomic) IBOutlet UIView *potPurple;
+@property (weak, nonatomic) IBOutlet ChipView *potRed;
+@property (weak, nonatomic) IBOutlet ChipView *potBlue;
+@property (weak, nonatomic) IBOutlet ChipView *potGreen;
+@property (weak, nonatomic) IBOutlet ChipView *potBlack;
+@property (weak, nonatomic) IBOutlet ChipView *potPurple;
 
 @property (weak, nonatomic) IBOutlet UIView *qrCodeView;
 @property (weak, nonatomic) IBOutlet UIView *addChipsView;
@@ -48,40 +48,16 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *betChipsCenterYConstraint;
 
 //iPad Stuff
-@property (weak, nonatomic) IBOutlet UIView *padBetRed;
-@property (weak, nonatomic) IBOutlet UIView *padBetBlue;
-@property (weak, nonatomic) IBOutlet UIView *padBetGreen;
-@property (weak, nonatomic) IBOutlet UIView *padBetGray;
-@property (weak, nonatomic) IBOutlet UIView *padBetPurple;
+@property (weak, nonatomic) IBOutlet ChipView *padBetRed;
+@property (weak, nonatomic) IBOutlet ChipView *padBetBlue;
+@property (weak, nonatomic) IBOutlet ChipView *padBetGreen;
+@property (weak, nonatomic) IBOutlet ChipView *padBetGray;
+@property (weak, nonatomic) IBOutlet ChipView *padBetPurple;
 
-@property (weak, nonatomic) IBOutlet UILabel *padBetRedLabel;
-@property (weak, nonatomic) IBOutlet UILabel *padBetBlueLabel;
-@property (weak, nonatomic) IBOutlet UILabel *padBetGreenLabel;
-@property (weak, nonatomic) IBOutlet UILabel *padBetGrayLabel;
-@property (weak, nonatomic) IBOutlet UILabel *padBetPurpleLabel;
-
-@property (weak, nonatomic) IBOutlet UIImageView *padBetRedImage;
-@property (weak, nonatomic) IBOutlet UIImageView *padBetBlueImage;
-@property (weak, nonatomic) IBOutlet UIImageView *padBetGreenImage;
-@property (weak, nonatomic) IBOutlet UIImageView *padBetGrayImage;
-@property (weak, nonatomic) IBOutlet UIImageView *padBetPurpleImage;
-
-@property (weak, nonatomic) IBOutlet UIView *padPlayerRed;
-@property (weak, nonatomic) IBOutlet UIView *padPlayerBlue;
-@property (weak, nonatomic) IBOutlet UIView *padPlayerGreen;
-@property (weak, nonatomic) IBOutlet UIView *padPlayerGray;
-@property (weak, nonatomic) IBOutlet UIView *padPlayerPurple;
-
-@property (weak, nonatomic) IBOutlet UILabel *padPlayerRedLabel;
-@property (weak, nonatomic) IBOutlet UILabel *padPlayerBlueLabel;
-@property (weak, nonatomic) IBOutlet UILabel *padPlayerGreenLabel;
-@property (weak, nonatomic) IBOutlet UILabel *padPlayerGrayLabel;
-@property (weak, nonatomic) IBOutlet UILabel *padPlayerPurpleLabel;
-
-@property (weak, nonatomic) IBOutlet UIImageView *padPlayerRedImage;
-@property (weak, nonatomic) IBOutlet UIImageView *padPlayerBlueImage;
-@property (weak, nonatomic) IBOutlet UIImageView *padPlayerGreenImage;
-@property (weak, nonatomic) IBOutlet UIImageView *padPlayerGrayImage;
-@property (weak, nonatomic) IBOutlet UIImageView *padPlayerPurpleImage;
+@property (weak, nonatomic) IBOutlet ChipView *padPlayerRed;
+@property (weak, nonatomic) IBOutlet ChipView *padPlayerBlue;
+@property (weak, nonatomic) IBOutlet ChipView *padPlayerGreen;
+@property (weak, nonatomic) IBOutlet ChipView *padPlayerGray;
+@property (weak, nonatomic) IBOutlet ChipView *padPlayerPurple;
 
 @end

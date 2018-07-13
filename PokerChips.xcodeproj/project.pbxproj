@@ -45,10 +45,10 @@
 		BB960F291FB8E21300109898 /* ManualEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB960F281FB8E21300109898 /* ManualEntryViewController.m */; };
 		BB960F2C1FB8ED0E00109898 /* BlankPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB960F2B1FB8ED0E00109898 /* BlankPopupViewController.m */; };
 		BB960F2F1FB93CE700109898 /* CustomButtonWithBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = BB960F2E1FB93CE700109898 /* CustomButtonWithBackground.m */; };
+		BB9AD1CF20F80FBB008F1914 /* ChipView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9AD1CE20F80FBB008F1914 /* ChipView.m */; };
 		BBCD09621FAD195800013527 /* NetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCD09611FAD195700013527 /* NetworkHandler.m */; };
 		BBCD09661FAD242700013527 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCD09651FAD242700013527 /* ScanViewController.m */; };
 		BBD6450D20F54F7700E3EA8C /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD6450C20F54F7700E3EA8C /* GoogleMobileAds.framework */; };
-		BBF297A61FB3B00D000BAB28 /* PokerChipView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF297A51FB3B00D000BAB28 /* PokerChipView.m */; };
 		BBF297A91FB57374000BAB28 /* UserCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF297A81FB57374000BAB28 /* UserCreationViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -145,13 +145,13 @@
 		BB960F2B1FB8ED0E00109898 /* BlankPopupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlankPopupViewController.m; sourceTree = "<group>"; };
 		BB960F2D1FB93CE700109898 /* CustomButtonWithBackground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomButtonWithBackground.h; sourceTree = "<group>"; };
 		BB960F2E1FB93CE700109898 /* CustomButtonWithBackground.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomButtonWithBackground.m; sourceTree = "<group>"; };
+		BB9AD1CD20F80FBB008F1914 /* ChipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChipView.h; sourceTree = "<group>"; };
+		BB9AD1CE20F80FBB008F1914 /* ChipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChipView.m; sourceTree = "<group>"; };
 		BBCD09601FAD195700013527 /* NetworkHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkHandler.h; sourceTree = "<group>"; };
 		BBCD09611FAD195700013527 /* NetworkHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkHandler.m; sourceTree = "<group>"; };
 		BBCD09641FAD242700013527 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		BBCD09651FAD242700013527 /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		BBD6450C20F54F7700E3EA8C /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		BBF297A41FB3B00D000BAB28 /* PokerChipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokerChipView.h; sourceTree = "<group>"; };
-		BBF297A51FB3B00D000BAB28 /* PokerChipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokerChipView.m; sourceTree = "<group>"; };
 		BBF297A71FB57374000BAB28 /* UserCreationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserCreationViewController.h; sourceTree = "<group>"; };
 		BBF297A81FB57374000BAB28 /* UserCreationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserCreationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -331,8 +331,6 @@
 			children = (
 				BB782EE11FAFBCFD00CFA34E /* ChipObject.h */,
 				BB782EE21FAFBCFD00CFA34E /* ChipObject.m */,
-				BBF297A41FB3B00D000BAB28 /* PokerChipView.h */,
-				BBF297A51FB3B00D000BAB28 /* PokerChipView.m */,
 				BB960F0D1FB67DB400109898 /* AuthenticationObject.h */,
 				BB960F0E1FB67DB400109898 /* AuthenticationObject.m */,
 				BB960F181FB7A69B00109898 /* UserTableViewCell.h */,
@@ -341,6 +339,8 @@
 				BB960F1C1FB7A71B00109898 /* PlayerObject.m */,
 				BB960F1E1FB7CB7900109898 /* GameObject.h */,
 				BB960F1F1FB7CB7900109898 /* GameObject.m */,
+				BB9AD1CD20F80FBB008F1914 /* ChipView.h */,
+				BB9AD1CE20F80FBB008F1914 /* ChipView.m */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -624,13 +624,13 @@
 				BB960F201FB7CB7900109898 /* GameObject.m in Sources */,
 				BB960F2C1FB8ED0E00109898 /* BlankPopupViewController.m in Sources */,
 				BB960F291FB8E21300109898 /* ManualEntryViewController.m in Sources */,
+				BB9AD1CF20F80FBB008F1914 /* ChipView.m in Sources */,
 				BB26A9E120F3C4910045FBAB /* mask.c in Sources */,
 				BB26A9E220F3C4910045FBAB /* qrspec.c in Sources */,
 				BB26A9DD20F3C4910045FBAB /* bitstream.c in Sources */,
 				BB26A9E420F3C4910045FBAB /* UIImage+MDQRCode.m in Sources */,
 				BB960F1D1FB7A71B00109898 /* PlayerObject.m in Sources */,
 				BB960F141FB7967000109898 /* AddChipsViewController.m in Sources */,
-				BBF297A61FB3B00D000BAB28 /* PokerChipView.m in Sources */,
 				BB0188CC1FC4CB5500A8130B /* KFKeychain.m in Sources */,
 				BB2129DA1FA7AC7B0070348E /* CustomButton.m in Sources */,
 				BB960F2F1FB93CE700109898 /* CustomButtonWithBackground.m in Sources */,
