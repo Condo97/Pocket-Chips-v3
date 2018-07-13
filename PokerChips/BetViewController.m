@@ -176,10 +176,16 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     for(UITouch *touch in touches) {
+        //Change images and animate
         for(int i = 0; i < self.betChipsArray.count; i++) {
             ChipView *chip = self.betChipsArray[i];
             if(touch.view == chip) {
                 [chip.chip setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chip%dMinusSelected", i]]];
+                
+                [UIView animateWithDuration:0.05 animations:^{
+                    [chip setTransform:CGAffineTransformMakeScale(0.9, 0.9)];
+                }];
+                
                 break;
             }
         }
@@ -189,6 +195,11 @@
             ChipView *chip = self.playerChipsArray[i];
             if(touch.view == chip && parallelPlayerChips[i] > 0) {
                 [chip.chip setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chip%dSelected", i]]];
+                
+                [UIView animateWithDuration:0.05 animations:^{
+                    [chip setTransform:CGAffineTransformMakeScale(0.9, 0.9)];
+                }];
+                
                 break;
             }
         }
@@ -197,64 +208,66 @@
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     for(UITouch *touch in touches) {
+        //Adjust chips after tap
+        if(touch.view == self.padBetRed) {
+            [self.chipsToBet setRed:self.chipsToBet.red - 1];
+            [self.playerChips setRed:self.playerChips.red + 1];
+        } else if(touch.view == self.padBetBlue) {
+            [self.chipsToBet setBlue:self.chipsToBet.blue - 1];
+            [self.playerChips setBlue:self.playerChips.blue + 1];
+        } else if(touch.view == self.padBetGreen) {
+            [self.chipsToBet setGreen:self.chipsToBet.green - 1];
+            [self.playerChips setGreen:self.playerChips.green + 1];
+        } else if(touch.view == self.padBetGray) {
+            [self.chipsToBet setBlack:self.chipsToBet.black - 1];
+            [self.playerChips setBlack:self.playerChips.black + 1];
+        } else if(touch.view == self.padBetPurple) {
+            [self.chipsToBet setPurple:self.chipsToBet.purple - 1];
+            [self.playerChips setPurple:self.playerChips.purple + 1];
+        } else if(touch.view == self.padPlayerRed && self.playerChips.red > 0) {
+            [self.chipsToBet setRed:self.chipsToBet.red + 1];
+            [self.playerChips setRed:self.playerChips.red - 1];
+        } else if(touch.view == self.padPlayerBlue && self.playerChips.blue > 0) {
+            [self.chipsToBet setBlue:self.chipsToBet.blue + 1];
+            [self.playerChips setBlue:self.playerChips.blue - 1];
+        } else if(touch.view == self.padPlayerGreen && self.playerChips.green > 0) {
+            [self.chipsToBet setGreen:self.chipsToBet.green + 1];
+            [self.playerChips setGreen:self.playerChips.green - 1];
+        } else if(touch.view == self.padPlayerGray && self.playerChips.black > 0) {
+            [self.chipsToBet setBlack:self.chipsToBet.black + 1];
+            [self.playerChips setBlack:self.playerChips.black - 1];
+        } else if(touch.view == self.padPlayerPurple && self.playerChips.purple > 0) {
+            [self.chipsToBet setPurple:self.chipsToBet.purple + 1];
+            [self.playerChips setPurple:self.playerChips.purple - 1];
+        }
+        
+        //Change images and animate
         for(int i = 0; i < self.betChipsArray.count; i++) {
             ChipView *chip = self.betChipsArray[i];
             if(touch.view == chip) {
                 [chip.chip setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chip%dMinus", i]]];
+                
+                [UIView animateWithDuration:0.05 animations:^{
+                    [chip setTransform:CGAffineTransformIdentity];
+                }];
+                
                 break;
             }
         }
         
         double parallelPlayerChips[] = {self.playerChips.red, self.playerChips.blue, self.playerChips.green, self.playerChips.black, self.playerChips.purple};
         for(int i = 0; i < self.playerChipsArray.count; i++) {
-            ChipView *chip = self.playerChipsArray[i];
-            if(touch.view == chip && parallelPlayerChips[i] > 0) {
+            if(parallelPlayerChips[i] > 0) {
+                ChipView *chip = self.playerChipsArray[i];
                 [chip.chip setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chip%d", i]]];
-                break;
+                
+                [UIView animateWithDuration:0.05 animations:^{
+                    [chip setTransform:CGAffineTransformIdentity];
+                }];
             }
         }
         
-        if(touch.view == self.padBetRed) {
-            [self.chipsToBet setRed:self.chipsToBet.red - 1];
-            [self.playerChips setRed:self.playerChips.red + 1];
-            [self updateView];
-        } else if(touch.view == self.padBetBlue) {
-            [self.chipsToBet setBlue:self.chipsToBet.blue - 1];
-            [self.playerChips setBlue:self.playerChips.blue + 1];
-            [self updateView];
-        } else if(touch.view == self.padBetGreen) {
-            [self.chipsToBet setGreen:self.chipsToBet.green - 1];
-            [self.playerChips setGreen:self.playerChips.green + 1];
-            [self updateView];
-        } else if(touch.view == self.padBetGray) {
-            [self.chipsToBet setBlack:self.chipsToBet.black - 1];
-            [self.playerChips setBlack:self.playerChips.black + 1];
-            [self updateView];
-        } else if(touch.view == self.padBetPurple) {
-            [self.chipsToBet setPurple:self.chipsToBet.purple - 1];
-            [self.playerChips setPurple:self.playerChips.purple + 1];
-            [self updateView];
-        } else if(touch.view == self.padPlayerRed && self.playerChips.red > 0) {
-            [self.chipsToBet setRed:self.chipsToBet.red + 1];
-            [self.playerChips setRed:self.playerChips.red - 1];
-            [self updateView];
-        } else if(touch.view == self.padPlayerBlue && self.playerChips.blue > 0) {
-            [self.chipsToBet setBlue:self.chipsToBet.blue + 1];
-            [self.playerChips setBlue:self.playerChips.blue - 1];
-            [self updateView];
-        } else if(touch.view == self.padPlayerGreen && self.playerChips.green > 0) {
-            [self.chipsToBet setGreen:self.chipsToBet.green + 1];
-            [self.playerChips setGreen:self.playerChips.green - 1];
-            [self updateView];
-        } else if(touch.view == self.padPlayerGray && self.playerChips.black > 0) {
-            [self.chipsToBet setBlack:self.chipsToBet.black + 1];
-            [self.playerChips setBlack:self.playerChips.black - 1];
-            [self updateView];
-        } else if(touch.view == self.padPlayerPurple && self.playerChips.purple > 0) {
-            [self.chipsToBet setPurple:self.chipsToBet.purple + 1];
-            [self.playerChips setPurple:self.playerChips.purple - 1];
-            [self updateView];
-        }
+        [self updateView];
     }
 }
 
