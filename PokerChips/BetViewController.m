@@ -149,6 +149,18 @@
     [self.potGreen setHidden:(self.potChips.green == 0)];
     [self.potBlack setHidden:(self.potChips.black == 0)];
     [self.potPurple setHidden:(self.potChips.purple == 0)];
+    
+    double parallelPlayerChips[] = {self.playerChips.red, self.playerChips.blue, self.playerChips.green, self.playerChips.black, self.playerChips.purple};
+    for(int i = 0; i < self.playerChipsArray.count; i++) {
+        if(parallelPlayerChips[i] > 0) {
+            ChipView *chip = self.playerChipsArray[i];
+            [chip.chip setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chip%d", i]]];
+            
+            [UIView animateWithDuration:0.05 animations:^{
+                [chip setTransform:CGAffineTransformIdentity];
+            }];
+        }
+    }
 }
 
 - (IBAction)qrCodeButton:(id)sender {
@@ -255,18 +267,6 @@
             }
         }
         
-        double parallelPlayerChips[] = {self.playerChips.red, self.playerChips.blue, self.playerChips.green, self.playerChips.black, self.playerChips.purple};
-        for(int i = 0; i < self.playerChipsArray.count; i++) {
-            if(parallelPlayerChips[i] > 0) {
-                ChipView *chip = self.playerChipsArray[i];
-                [chip.chip setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chip%d", i]]];
-                
-                [UIView animateWithDuration:0.05 animations:^{
-                    [chip setTransform:CGAffineTransformIdentity];
-                }];
-            }
-        }
-        
         [self updateView];
     }
 }
@@ -274,6 +274,10 @@
 - (IBAction)winButton:(id)sender {
     if(self.playerObjectArray.count <= 1 || ![self moreThanOneLoggedIn:self.playerObjectArray]) {
         UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:@"All players must be logged in to claim the pot!\nConnect more people by tapping the QR button on the upper right." preferredStyle:UIAlertControllerStyleAlert];
+        [ac addAction:[UIAlertAction actionWithTitle:@"Done" style:UIAlertActionStyleCancel handler:nil]];
+        [self presentViewController:ac animated:YES completion:nil];
+    } else if(self.potChips.red == 0 && self.potChips.blue == 0 && self.potChips.green == 0 && self.potChips.black == 0 && self.potChips.purple == 0) {
+        UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:@"There's nothing in the pot!" preferredStyle:UIAlertControllerStyleAlert];
         [ac addAction:[UIAlertAction actionWithTitle:@"Done" style:UIAlertActionStyleCancel handler:nil]];
         [self presentViewController:ac animated:YES completion:nil];
     } else {
