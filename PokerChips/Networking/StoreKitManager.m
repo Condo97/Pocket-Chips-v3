@@ -81,7 +81,7 @@
     for (SKPaymentTransaction *transaction in transactions) {
         switch (transaction.transactionState) {
             case SKPaymentTransactionStatePurchasing: {
-                NSLog(@"Purchasing");
+                NSLog(@"Purchasing...");
                 break;
             }
             case SKPaymentTransactionStatePurchased: {
@@ -102,12 +102,12 @@
                 break;
             }
             case SKPaymentTransactionStateRestored: {
-                NSLog(@"Restored ");
+                NSLog(@"Restored!");
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 break;
             }
             case SKPaymentTransactionStateFailed: {
-                NSLog(@"Purchase failed ");
+                NSLog(@"Purchase failed :(");
                 
                 id<StoreKitManagerDelegate> storeKitDeleage = self.delegate;
                 [storeKitDeleage purchaseUnsuccessful];
