@@ -345,7 +345,7 @@
 }
 
 - (void)messageReceived:(NSString *)message {
-    NSLog(@"The Message: %@", message);
+    //NSLog(@"The Message: %@", message);
     if([[message componentsSeparatedByString:@":"][0] isEqualToString:@"ch"]) {
         NSMutableArray *c = [[NSMutableArray alloc] init];
         

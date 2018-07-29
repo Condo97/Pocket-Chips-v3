@@ -132,7 +132,6 @@
         NSString *gameId = @"ga6FF5F942508601F60155B3585A68FA2BA839BEFE8BCB64A77FDA0C88AEAB";
         NSString *userId = [[NSUserDefaults standardUserDefaults] valueForKey:@"userId"];
         NSString *response = [NSString stringWithFormat:@"jg:%@:%@\n", userId, gameId];
-        NSLog(@"%@", response);
         NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
         [self.nh writeData:data];
     } else
@@ -157,7 +156,7 @@
 }
 
 - (void)messageReceived:(NSString *)message {
-    NSLog(@"MESSAGE: %@", message);
+    //NSLog(@"MESSAGE: %@", message);
     if([[message componentsSeparatedByString:@":"][0] isEqualToString:@"us"]) {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setValue:[message componentsSeparatedByString:@":"][1] forKey:@"userId"];

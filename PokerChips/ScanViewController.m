@@ -106,7 +106,6 @@
                     });
                     
                     NSString *response = [NSString stringWithFormat:@"jg:%@:%@\n", self.userId, self.gameId];
-                    NSLog(@"%@", response);
                     NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
                     [self.nh writeData:data];
                     [self.cs stopRunning];
@@ -174,7 +173,6 @@
         if(gameId.length != 0) {
             [self setSentResponse:YES];
             NSString *response = [NSString stringWithFormat:@"jg:%@:%@\n", self.userId, gameId];
-            NSLog(@"%@", response);
             NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
             [self.nh writeData:data];
             [self.cs stopRunning];
