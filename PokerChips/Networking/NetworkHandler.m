@@ -35,6 +35,20 @@
     NSStreamStatus *socketStatus = [self.outputStream streamStatus];
     int status = socketStatus;
     NSLog(@"Stream Status is %i", status);
+    
+    if(status > 2) {
+        UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+        UIViewController *vc = [[UIViewController alloc] init];
+        [vc.view setBackgroundColor:[UIColor clearColor]];
+        [window setRootViewController:vc];
+        [window setWindowLevel:UIWindowLevelAlert + 1];
+        [window makeKeyAndVisible];
+        
+        UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:@"Looks like Pocket Chips is down for service! Please close the app and try again later." preferredStyle:UIAlertControllerStyleAlert];
+        [ac addAction:[UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil]];
+        [vc presentViewController:ac animated:YES completion:nil];
+    }
+    
     return status;
 }
 
@@ -44,6 +58,20 @@
     NSStreamStatus *socketStatus = [self.outputStream streamStatus];
     int status = socketStatus;
     NSLog(@"Stream Status is %i", status);
+    
+    if(status > 2) {
+        UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+        UIViewController *vc = [[UIViewController alloc] init];
+        [vc.view setBackgroundColor:[UIColor clearColor]];
+        [window setRootViewController:vc];
+        [window setWindowLevel:UIWindowLevelAlert + 1];
+        [window makeKeyAndVisible];
+        
+        UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:@"Looks like Pocket Chips is down for service! Please close the app and try again later." preferredStyle:UIAlertControllerStyleAlert];
+        [ac addAction:[UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil]];
+        [vc presentViewController:ac animated:YES completion:nil];
+    }
+    
     return status;
 }
 
