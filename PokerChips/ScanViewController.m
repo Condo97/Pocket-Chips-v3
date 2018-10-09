@@ -23,7 +23,7 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    if(self.view.frame.size.height != 812) {
+    if(self.view.frame.size.height != 812 || self.view.frame.size.height != 896) {
         [self.iPhoneXScan setHidden:YES];
     }
     
