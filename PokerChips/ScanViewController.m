@@ -78,7 +78,7 @@
         AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.cs];
         [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
         [previewLayer setFrame:self.preview.bounds];
-        [previewLayer setCornerRadius:4.0];
+        [previewLayer setCornerRadius:14.0];
         [self.view setClipsToBounds:YES];
         [self.preview.layer addSublayer:previewLayer];
         
