@@ -10,7 +10,8 @@
 
 @interface ChipView : UIView
 
-@property (weak, nonatomic) IBOutlet UIImageView *chip;
-@property (weak, nonatomic) IBOutlet UILabel *chipLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *chip;
+@property (strong, nonatomic) IBOutlet UILabel *chipPrice;
+@property (strong, nonatomic) IBOutlet UILabel *chipCount;
 
 @end

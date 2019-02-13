@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "NetworkHandler.h"
+#import "RoundedView.h"
 
 @interface UserCreationViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet RoundedView *signupView;
 
 @end

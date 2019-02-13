@@ -42,20 +42,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:@" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.!?@#"] invertedSet];
-    
-    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
-    
-    if(range.length + range.location > textField.text.length) {
-        return NO;
-    }
-    
-    NSUInteger newLength = [textField.text length] + [string length] - range.length;
-    
-    return ([string isEqualToString:filtered] && newLength <= 15);
-}
-
 #pragma mark - Table view data source
 
 /*

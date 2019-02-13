@@ -10,6 +10,8 @@
 #import "GameObject.h"
 #import "PlayerObject.h"
 #import "NetworkHandler.h"
+#import "RoundedView.h"
+#import "LoadTableViewCell.h"
 
 #define WIDTH 300
 #define HEIGHT 100
@@ -54,33 +56,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-        
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(25, 25, self.view.frame.size.width - 50, cell.frame.size.height - 50)];
-        [label setText:@"Currently in no games."];
-        [label setTextAlignment:NSTextAlignmentCenter];
-        [label setFont:[UIFont systemFontOfSize:27.0 weight:UIFontWeightSemibold]];
-        [label setAdjustsFontSizeToFitWidth:YES];
-        [label setMinimumScaleFactor:0.01];
-        [label setTextColor:[UIColor whiteColor]];
-        
-        UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Cell"]];
-        [background setFrame:CGRectMake(15, 15, self.view.frame.size.width - 30, cell.frame.size.height - 30)];
+        LoadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        [cell.gameName setText:@"Currently in no games."];
         
         if(self.gameObjects.count != 0) {
-            UILabel *clickHereLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, cell.frame.size.height - 75, self.view.frame.size.width - 50, 75)];
-            [clickHereLabel setTextColor:[UIColor whiteColor]];
-            [clickHereLabel setTextAlignment:NSTextAlignmentCenter];
-            [clickHereLabel setText:@"(Tap to load)"];
-            [clickHereLabel setFont:[UIFont systemFontOfSize:11.0 weight:UIFontWeightRegular]];
+            [cell.gameName setText:(self.gameObjects[indexPath.row]).name];
             
-            [label setText:((GameObject *)self.gameObjects[indexPath.row]).name];
+            NSString *players = @"";
+            if(self.gameObjects[indexPath.row].players.count >= 1) players = [NSString stringWithFormat:@"With %@", self.gameObjects[indexPath.row].players[0]];
+            if(self.gameObjects[indexPath.row].players.count >= 2) players = [NSString stringWithFormat:@"%@, %@", players, self.gameObjects[indexPath.row].players[1]];
+            if(self.gameObjects[indexPath.row].players.count >= 3) players = [NSString stringWithFormat:@"%@, %@", players, self.gameObjects[indexPath.row].players[2]];
+            if(self.gameObjects[indexPath.row].players.count >= 1) players = [NSString stringWithFormat:@"%@.", players];
             
-            [cell addSubview:clickHereLabel];
+            [cell.usersList setText:players];
+        } else {
+            [cell.usersList setText:@""];
+            [cell.tapToLoad setText:@"Create or join a game!"];
         }
-        
-        [cell addSubview:background];
-        [cell addSubview:label];
         
         return cell;
     } else {

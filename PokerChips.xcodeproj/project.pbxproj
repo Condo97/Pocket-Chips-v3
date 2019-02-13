@@ -32,6 +32,7 @@
 		BB3FB7341FAD7614002EF421 /* BetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3FB7331FAD7614002EF421 /* BetViewController.m */; };
 		BB5603621FC7602C006965F3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5603611FC7602C006965F3 /* StoreKit.framework */; };
 		BB5A42731FFB2DBD00109A92 /* CustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5A42721FFB2DBD00109A92 /* CustomLabel.m */; };
+		BB64BA4F220F6F89008B5075 /* RoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB64BA4E220F6F89008B5075 /* RoundedView.m */; };
 		BB782EE31FAFBCFD00CFA34E /* ChipObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BB782EE21FAFBCFD00CFA34E /* ChipObject.m */; };
 		BB782EE81FB1886D00CFA34E /* NHAlignmentFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BB782EE61FB1886D00CFA34E /* NHAlignmentFlowLayout.m */; };
 		BB782EEB1FB242BD00CFA34E /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB782EEA1FB242BD00CFA34E /* QRViewController.m */; };
@@ -49,6 +50,8 @@
 		BBCD09621FAD195800013527 /* NetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCD09611FAD195700013527 /* NetworkHandler.m */; };
 		BBCD09661FAD242700013527 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCD09651FAD242700013527 /* ScanViewController.m */; };
 		BBD6450D20F54F7700E3EA8C /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD6450C20F54F7700E3EA8C /* GoogleMobileAds.framework */; };
+		BBDE466A2213841900E383E9 /* LoadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDE46692213841900E383E9 /* LoadTableViewCell.m */; };
+		BBEEB067220B913400C3709B /* ChipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBEEB066220B913400C3709B /* ChipView.xib */; };
 		BBF297A91FB57374000BAB28 /* UserCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF297A81FB57374000BAB28 /* UserCreationViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +121,8 @@
 		BB5603611FC7602C006965F3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BB5A42711FFB2DBD00109A92 /* CustomLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomLabel.h; sourceTree = "<group>"; };
 		BB5A42721FFB2DBD00109A92 /* CustomLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomLabel.m; sourceTree = "<group>"; };
+		BB64BA4D220F6F88008B5075 /* RoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedView.h; sourceTree = "<group>"; };
+		BB64BA4E220F6F89008B5075 /* RoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedView.m; sourceTree = "<group>"; };
 		BB782EE11FAFBCFD00CFA34E /* ChipObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChipObject.h; sourceTree = "<group>"; };
 		BB782EE21FAFBCFD00CFA34E /* ChipObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChipObject.m; sourceTree = "<group>"; };
 		BB782EE51FB1634C00CFA34E /* Defines.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.pch; sourceTree = "<group>"; };
@@ -152,6 +157,9 @@
 		BBCD09641FAD242700013527 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		BBCD09651FAD242700013527 /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		BBD6450C20F54F7700E3EA8C /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		BBDE46682213841900E383E9 /* LoadTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadTableViewCell.h; sourceTree = "<group>"; };
+		BBDE46692213841900E383E9 /* LoadTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadTableViewCell.m; sourceTree = "<group>"; };
+		BBEEB066220B913400C3709B /* ChipView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChipView.xib; sourceTree = "<group>"; };
 		BBF297A71FB57374000BAB28 /* UserCreationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserCreationViewController.h; sourceTree = "<group>"; };
 		BBF297A81FB57374000BAB28 /* UserCreationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserCreationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,6 +258,7 @@
 				BB2129B11FA7AA640070348E /* LaunchScreen.storyboard */,
 				BB2129B41FA7AA640070348E /* Info.plist */,
 				BB2129B51FA7AA640070348E /* main.m */,
+				BBEEB066220B913400C3709B /* ChipView.xib */,
 			);
 			path = PokerChips;
 			sourceTree = "<group>";
@@ -275,6 +284,8 @@
 		BB2129DC1FA7AC870070348E /* Custom UI Elements */ = {
 			isa = PBXGroup;
 			children = (
+				BB64BA4D220F6F88008B5075 /* RoundedView.h */,
+				BB64BA4E220F6F89008B5075 /* RoundedView.m */,
 				BB782EE71FB1886D00CFA34E /* NHAlignmentFlowLayout.h */,
 				BB782EE61FB1886D00CFA34E /* NHAlignmentFlowLayout.m */,
 				BB2129D81FA7AC7B0070348E /* CustomButton.h */,
@@ -283,6 +294,8 @@
 				BB960F2E1FB93CE700109898 /* CustomButtonWithBackground.m */,
 				BB5A42711FFB2DBD00109A92 /* CustomLabel.h */,
 				BB5A42721FFB2DBD00109A92 /* CustomLabel.m */,
+				BBDE46682213841900E383E9 /* LoadTableViewCell.h */,
+				BBDE46692213841900E383E9 /* LoadTableViewCell.m */,
 			);
 			path = "Custom UI Elements";
 			sourceTree = "<group>";
@@ -494,6 +507,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEEB067220B913400C3709B /* ChipView.xib in Resources */,
 				BB2129B31FA7AA640070348E /* LaunchScreen.storyboard in Resources */,
 				BB26A9E620F3C6420045FBAB /* Main_iPad.storyboard in Resources */,
 				BB2129B01FA7AA640070348E /* Assets.xcassets in Resources */,
@@ -625,6 +639,7 @@
 				BB960F2C1FB8ED0E00109898 /* BlankPopupViewController.m in Sources */,
 				BB960F291FB8E21300109898 /* ManualEntryViewController.m in Sources */,
 				BB9AD1CF20F80FBB008F1914 /* ChipView.m in Sources */,
+				BB64BA4F220F6F89008B5075 /* RoundedView.m in Sources */,
 				BB26A9E120F3C4910045FBAB /* mask.c in Sources */,
 				BB26A9E220F3C4910045FBAB /* qrspec.c in Sources */,
 				BB26A9DD20F3C4910045FBAB /* bitstream.c in Sources */,
@@ -638,6 +653,7 @@
 				BB26A9E020F3C4910045FBAB /* qrinput.c in Sources */,
 				BB960F1A1FB7A69B00109898 /* UserTableViewCell.m in Sources */,
 				BB3FB7341FAD7614002EF421 /* BetViewController.m in Sources */,
+				BBDE466A2213841900E383E9 /* LoadTableViewCell.m in Sources */,
 				BB782EE31FAFBCFD00CFA34E /* ChipObject.m in Sources */,
 				BBF297A91FB57374000BAB28 /* UserCreationViewController.m in Sources */,
 				BBCD09661FAD242700013527 /* ScanViewController.m in Sources */,
@@ -829,7 +845,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acapplications.pocket-chips";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -848,7 +864,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acapplications.pocket-chips";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

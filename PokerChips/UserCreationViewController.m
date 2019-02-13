@@ -29,6 +29,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+}
+
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:@" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.!?@#"] invertedSet];
     

@@ -10,13 +10,13 @@
 
 @interface ChipObject : NSObject
 
-@property (nonatomic) double red, blue, green, black, purple;
+@property (nonatomic) double red, blue, yellow, green, orange;
 
 - (id)init;
-- (id)initWithRed:(double)r blue:(double)b green:(double)g black:(double)bl purple:(double)p;
-- (void)addChipsWithRed:(double)r blue:(double)b green:(double)g black:(double)bl purple:(double)p;
-- (void)removeChipsWithRed:(double)r blue:(double)b green:(double)g black:(double)bl purple:(double)p;
-- (void)setAllChipsWithRed:(double)r blue:(double)b green:(double)g black:(double)bl purple:(double)p;
+- (id)initWithRed:(double)r blue:(double)b yellow:(double)g green:(double)bl orange:(double)p;
+- (void)addChipsWithRed:(double)r blue:(double)b yellow:(double)g green:(double)bl orange:(double)p;
+- (void)removeChipsWithRed:(double)r blue:(double)b yellow:(double)g green:(double)bl orange:(double)p;
+- (void)setAllChipsWithRed:(double)r blue:(double)b yellow:(double)g green:(double)bl orange:(double)p;
 - (void)resetChips;
 
 @end

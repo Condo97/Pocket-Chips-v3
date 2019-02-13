@@ -23,8 +23,18 @@
 @property (weak, nonatomic) IBOutlet UIStepper *blackStepper;
 @property (weak, nonatomic) IBOutlet UIStepper *purpleStepper;
 
+@property (weak, nonatomic) IBOutlet UILabel *redValue;
+@property (weak, nonatomic) IBOutlet UILabel *blueValue;
+@property (weak, nonatomic) IBOutlet UILabel *yellowValue;
+@property (weak, nonatomic) IBOutlet UILabel *greenValue;
+@property (weak, nonatomic) IBOutlet UILabel *orangeValue;
+
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *chipValueSelector;
+
 @property (strong, nonatomic) NetworkHandler *nh;
+
+@property (strong, nonatomic) NSArray<NSArray<NSString *> *> *chipValuesForSelector;
 
 @end

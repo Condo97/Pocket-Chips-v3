@@ -57,6 +57,15 @@
         [self.bannerAd setDelegate:self];
     }
     
+    [[StoreKitManager sharedManager] setDelegate:self];
+    
+    if([[KFKeychain loadObjectForKey:@"adsRemoved"] isEqualToString:@"YES"]) {
+        [self.restorePurchasesLabel removeFromSuperview];
+        [self.removeAdsButton removeFromSuperview];
+        [self.removeAdsButton setTitle:@"Ads Removed!" forState:UIControlStateNormal];
+        [self.bottomView updateConstraints];
+    }
+    
 //    else {
 //        NSString *response = [NSString stringWithFormat:@"li:%@\n", [[NSUserDefaults standardUserDefaults] stringForKey:@"userId"]];
 //        NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
@@ -89,14 +98,6 @@
     self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-0561860165633355/3985395636"];
     [self.interstitial loadRequest:[GADRequest request]];
     [self.interstitial setDelegate:self];
-}
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string  {
-    NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:@" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.!?@#"] invertedSet];
-    
-    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
-    
-    return [string isEqualToString:filtered];
 }
 
 - (IBAction)createGame:(id)sender {
@@ -173,8 +174,8 @@
         NSArray<NSString *> *args = [message componentsSeparatedByString:@":"];
         self.playerId = args[1];
         self.currentGameId = args[2];
-        self.playerChips = [[ChipObject alloc] initWithRed:args[3].doubleValue blue:args[4].doubleValue green:args[5].doubleValue black:args[6].doubleValue purple:args[7].doubleValue];
-        self.potChips = [[ChipObject alloc] initWithRed:args[8].doubleValue blue:args[9].doubleValue green:args[10].doubleValue black:args[11].doubleValue purple:args[12].doubleValue];
+        self.playerChips = [[ChipObject alloc] initWithRed:args[3].doubleValue blue:args[4].doubleValue yellow:args[5].doubleValue green:args[6].doubleValue orange:args[7].doubleValue];
+        self.potChips = [[ChipObject alloc] initWithRed:args[8].doubleValue blue:args[9].doubleValue yellow:args[10].doubleValue green:args[11].doubleValue orange:args[12].doubleValue];
         
         if(!self.finishedScanning) {
             if(self.shouldShowAds) {
@@ -192,7 +193,10 @@
         }
         
     } else if([[message componentsSeparatedByString:@":"][0] isEqualToString:@"ugs"]) {
-        GameObject *g = [[GameObject alloc] initWithIdentifier:[message componentsSeparatedByString:@":"][1] andName:[message componentsSeparatedByString:@":"][2]];
+        NSMutableArray *players = [[NSMutableArray alloc] init];
+        for(int i = 3; i < [message componentsSeparatedByString:@":"].count; i++) [players addObject:[message componentsSeparatedByString:@":"][i]];
+        
+        GameObject *g = [[GameObject alloc] initWithIdentifier:[message componentsSeparatedByString:@":"][1] andName:[message componentsSeparatedByString:@":"][2] andPlayers:players];
         [self.gameObjects addObject:g];
     } else if([[message componentsSeparatedByString:@":"][0] isEqualToString:@"uge"]) {
         if([[message componentsSeparatedByString:@":"][1] isEqualToString:@"1"]) {
@@ -259,7 +263,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"betSegue"]) {
         UINavigationController *nav = [segue destinationViewController];
-        BetViewController *bvc = (BetViewController *)nav;
+        BetViewController *bvc = (BetViewController *)nav.topViewController;
         [bvc setGameId:self.currentGameId];
         [bvc setPlayerId:self.playerId];
         [bvc setPlayerChips:self.playerChips];
@@ -290,7 +294,7 @@
     [self performSegueWithIdentifier:@"settingsSegue" sender:nil];
 }
 
-- (void)interstitialWillDismissScreen:(GADInterstitial *)ad {
+- (void)interstitialDidDismissScreen:(GADInterstitial *)ad {
     [self performSegueWithIdentifier:@"betSegue" sender:nil];
 }
 
@@ -300,5 +304,71 @@
 
 - (IBAction)unwindToMainNoScan:(UIStoryboardSegue *)segue {
 }
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:@" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.!?@#"] invertedSet];
+    
+    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+    
+    if(range.length + range.location > textField.text.length) {
+        return NO;
+    }
+    
+    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+    
+    return ([string isEqualToString:filtered] && newLength <= 15);
+}
+
+- (IBAction)changeNickname:(id)sender {
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Change Nickname" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *save = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UITextField *textField = ac.textFields.firstObject;
+        NSString *response = [NSString stringWithFormat:@"eun:%@:%@\n", [[NSUserDefaults standardUserDefaults] valueForKey:@"userId"], textField.text];
+        NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
+        [self.nh writeData:data];
+    }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    [ac addTextFieldWithConfigurationHandler:^(UITextField *tf) {
+        [tf setPlaceholder:(NSString *)[[NSUserDefaults standardUserDefaults] valueForKey:@"username"]];
+        [tf setDelegate:self];
+    }];
+    [ac addAction:save];
+    [ac addAction:cancel];
+    [self presentViewController:ac animated:YES completion:nil];
+}
+
+/* Remove Ads */
+- (IBAction)removeAds:(id)sender {
+    [self.removeAdsButton setTitle:@"Processing..." forState:UIControlStateNormal];
+    [self.removeAdsButton setEnabled:NO];
+
+    [[StoreKitManager sharedManager] purchase];
+}
+
+- (void)purchaseSuccessful {
+    if([[KFKeychain loadObjectForKey:@"adsRemoved"] isEqualToString:@"YES"]) {
+        [self.restorePurchasesLabel removeFromSuperview];
+        [self.removeAdsButton removeFromSuperview];
+        [self.removeAdsButton setTitle:@"Ads Removed!" forState:UIControlStateNormal];
+        [self.bottomView updateConstraints];
+    } else {
+        [self.restorePurchasesLabel removeFromSuperview];
+        [self.removeAdsButton setEnabled:YES];
+        [self.removeAdsButton setTitle:@"Remove Ads" forState:UIControlStateNormal];
+    }
+}
+
+- (void)purchaseUnsuccessful {
+    if([[KFKeychain loadObjectForKey:@"adsRemoved"] isEqualToString:@"YES"]) {
+        [self.restorePurchasesLabel removeFromSuperview];
+        [self.removeAdsButton removeFromSuperview];
+        [self.removeAdsButton setTitle:@"Ads Removed!" forState:UIControlStateNormal];
+        [self.bottomView updateConstraints];
+    } else {
+        [self.removeAdsButton setEnabled:YES];
+        [self.removeAdsButton setTitle:@"Remove Ads" forState:UIControlStateNormal];
+    }
+}
+
 
 @end

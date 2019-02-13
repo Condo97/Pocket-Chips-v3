@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) NSMutableArray *playerObjectArray;
 
-@property (strong, nonatomic) NSString *userId, *gameId, *playerId; //COMPLETE FUNCTIONALITY
+@property (strong, nonatomic) NSString *userId, *gameId, *playerId, *gameName; //COMPLETE FUNCTIONALITY
 
 @property (strong, nonatomic) NetworkHandler *nh;
 

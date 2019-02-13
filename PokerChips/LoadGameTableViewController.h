@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameObject.h"
 
 @interface LoadGameTableViewController : UITableViewController
 
-@property (strong, nonatomic) NSMutableArray *gameObjects;
+@property (strong, nonatomic) NSMutableArray<GameObject *> *gameObjects;
 @property (strong, nonatomic) NSString *userId;
 
 @end

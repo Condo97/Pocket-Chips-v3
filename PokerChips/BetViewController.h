@@ -19,17 +19,14 @@
 @property (strong, nonatomic) NSString *gameId, *playerId;
 @property (strong, nonatomic) ChipObject *playerChips, *potChips, *chipsToBet;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *qrCodeButton;
+@property (strong, nonatomic) IBOutlet UIView *potView;
+@property (weak, nonatomic) IBOutlet UIButton *qrCodeButton;
+@property (weak, nonatomic) IBOutlet UIButton *profileButton;
+@property (weak, nonatomic) IBOutlet UIButton *exitButton;
 
 @property (weak, nonatomic) IBOutlet UIView *potChipsView;
 @property (weak, nonatomic) IBOutlet UIView *betChipsView;
 @property (weak, nonatomic) IBOutlet UIView *playerChipsView;
-
-@property (weak, nonatomic) IBOutlet UILabel *dealerRed;
-@property (weak, nonatomic) IBOutlet UILabel *dealerBlue;
-@property (weak, nonatomic) IBOutlet UILabel *dealerGreen;
-@property (weak, nonatomic) IBOutlet UILabel *dealerBlack;
-@property (weak, nonatomic) IBOutlet UILabel *dealerPurple;
 
 @property (weak, nonatomic) IBOutlet ChipView *potRed;
 @property (weak, nonatomic) IBOutlet ChipView *potBlue;
@@ -40,24 +37,27 @@
 @property (weak, nonatomic) IBOutlet UIView *qrCodeView;
 @property (weak, nonatomic) IBOutlet UIView *addChipsView;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *profileButton;
 @property (weak, nonatomic) IBOutlet UIButton *addChipsButtonOutlet;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *addChipsTopConstraint;
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *playerChipsHeightConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *betChipsCenterYConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *betTotal;
+@property (weak, nonatomic) IBOutlet UILabel *potTotal;
 
-//iPad Stuff
-@property (weak, nonatomic) IBOutlet ChipView *padBetRed;
-@property (weak, nonatomic) IBOutlet ChipView *padBetBlue;
-@property (weak, nonatomic) IBOutlet ChipView *padBetGreen;
-@property (weak, nonatomic) IBOutlet ChipView *padBetGray;
-@property (weak, nonatomic) IBOutlet ChipView *padBetPurple;
 
-@property (weak, nonatomic) IBOutlet ChipView *padPlayerRed;
-@property (weak, nonatomic) IBOutlet ChipView *padPlayerBlue;
-@property (weak, nonatomic) IBOutlet ChipView *padPlayerGreen;
-@property (weak, nonatomic) IBOutlet ChipView *padPlayerGray;
-@property (weak, nonatomic) IBOutlet ChipView *padPlayerPurple;
+//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *addChipsTopConstraint;
+
+//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *playerChipsHeightConstraint;
+//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *betChipsCenterYConstraint;
+
+@property (weak, nonatomic) IBOutlet ChipView *betRed;
+@property (weak, nonatomic) IBOutlet ChipView *betBlue;
+@property (weak, nonatomic) IBOutlet ChipView *betYellow;
+@property (weak, nonatomic) IBOutlet ChipView *betGreen;
+@property (weak, nonatomic) IBOutlet ChipView *betOrange;
+
+@property (weak, nonatomic) IBOutlet ChipView *playerRed;
+@property (weak, nonatomic) IBOutlet ChipView *playerBlue;
+@property (weak, nonatomic) IBOutlet ChipView *playerYellow;
+@property (weak, nonatomic) IBOutlet ChipView *playerGreen;
+@property (weak, nonatomic) IBOutlet ChipView *playerOrange;
 
 @end

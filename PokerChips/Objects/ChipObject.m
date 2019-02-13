@@ -10,58 +10,58 @@
 
 @implementation ChipObject
 
-@synthesize red, blue, green, black, purple;
+@synthesize red, blue, yellow, green, orange;
 
 - (id)init {
     red = 0;
     blue = 0;
+    yellow = 0;
     green = 0;
-    black = 0;
-    purple = 0;
+    orange = 0;
     
     return self;
 }
 
-- (id)initWithRed:(double)r blue:(double)b green:(double)g black:(double)bl purple:(double)p {
+- (id)initWithRed:(double)r blue:(double)b yellow:(double)g green:(double)bl orange:(double)p {
     red = r;
     blue = b;
-    green = g;
-    black = bl;
-    purple = p;
+    yellow = g;
+    green = bl;
+    orange = p;
     
     return self;
 }
 
-- (void)addChipsWithRed:(double)r blue:(double)b green:(double)g black:(double)bl purple:(double)p {
+- (void)addChipsWithRed:(double)r blue:(double)b yellow:(double)g green:(double)bl orange:(double)p {
     red += r;
     blue += b;
-    green += g;
-    black += bl;
-    purple += p;
+    yellow += g;
+    green += bl;
+    orange += p;
 }
 
-- (void)removeChipsWithRed:(double)r blue:(double)b green:(double)g black:(double)bl purple:(double)p {
+- (void)removeChipsWithRed:(double)r blue:(double)b yellow:(double)g green:(double)bl orange:(double)p {
     red -= r;
     blue -= b;
-    green -= g;
-    black -= bl;
-    purple -= p;
+    yellow -= g;
+    green -= bl;
+    orange -= p;
 }
 
-- (void)setAllChipsWithRed:(double)r blue:(double)b green:(double)g black:(double)bl purple:(double)p {
+- (void)setAllChipsWithRed:(double)r blue:(double)b yellow:(double)g green:(double)bl orange:(double)p {
     red = r;
     blue = b;
-    green = g;
-    black = bl;
-    purple = p;
+    yellow = g;
+    green = bl;
+    orange = p;
 }
 
 - (void)resetChips {
     red = 0;
     blue = 0;
+    yellow = 0;
     green = 0;
-    black = 0;
-    purple = 0;
+    orange = 0;
 }
 
 @end

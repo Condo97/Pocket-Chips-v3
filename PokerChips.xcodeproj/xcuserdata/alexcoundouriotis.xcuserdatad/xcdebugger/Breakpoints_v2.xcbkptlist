@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PokerChips/Popups/QRViewController.m"
-            timestampString = "554173296.557384"
+            filePath = "PokerChips/BetViewController.m"
+            timestampString = "571717633.2208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-manualCode:"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
+            landmarkName = "-winButton:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

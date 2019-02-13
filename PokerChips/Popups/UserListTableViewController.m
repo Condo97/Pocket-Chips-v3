@@ -26,6 +26,8 @@
         [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"PadFelt"]]];
     
     self.nh = [NetworkHandler sharedInstance];
+    
+    [self setTitle:self.gameName];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,27 +51,9 @@
     
     [cell.redChips setText:[NSString stringWithFormat:@"%ld", (long)((PlayerObject *)self.playerObjectArray[indexPath.row]).chip.red]];
     [cell.blueChips setText:[NSString stringWithFormat:@"%ld", (long)((PlayerObject *)self.playerObjectArray[indexPath.row]).chip.blue]];
-    [cell.greenChips setText:[NSString stringWithFormat:@"%ld", (long)((PlayerObject *)self.playerObjectArray[indexPath.row]).chip.green]];
-    [cell.blackChips setText:[NSString stringWithFormat:@"%ld", (long)((PlayerObject *)self.playerObjectArray[indexPath.row]).chip.black]];
-    [cell.purpleChips setText:[NSString stringWithFormat:@"%ld", (long)((PlayerObject *)self.playerObjectArray[indexPath.row]).chip.purple]];
-    
-    UIImageView *background;
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        if(((PlayerObject *)self.playerObjectArray[indexPath.row]).loggedIn)
-            background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Cell"]];
-        else
-            background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CellLoggedOut"]];
-        [background setFrame:CGRectMake(15, 15, self.view.frame.size.width - 30, cell.frame.size.height - 30)];
-    } else {
-        if(((PlayerObject *)self.playerObjectArray[indexPath.row]).loggedIn)
-            background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PadHomeButtons"]];
-        else
-            background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PadHomeButtonsDark"]];
-        [background setFrame:CGRectMake((cell.frame.size.width - WIDTH + 30) / 2, 15, WIDTH - 30, cell.frame.size.height - 30)];
-    }
-    
-    [cell addSubview:background];
-    [cell sendSubviewToBack:background];
+    [cell.greenChips setText:[NSString stringWithFormat:@"%ld", (long)((PlayerObject *)self.playerObjectArray[indexPath.row]).chip.yellow]];
+    [cell.blackChips setText:[NSString stringWithFormat:@"%ld", (long)((PlayerObject *)self.playerObjectArray[indexPath.row]).chip.green]];
+    [cell.purpleChips setText:[NSString stringWithFormat:@"%ld", (long)((PlayerObject *)self.playerObjectArray[indexPath.row]).chip.orange]];
 
     return cell;
 }

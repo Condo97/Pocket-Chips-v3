@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ena-fb-rYK">
-    <device id="ipad9_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ena-fb-rYK">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,14 +11,14 @@
             <objects>
                 <viewController id="2nt-QO-VFV" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tzP-nU-xp9">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PadHome" translatesAutoresizingMaskIntoConstraints="NO" id="lTr-f9-Tks">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="954"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOG-91-mvu">
-                                <rect key="frame" x="209" y="420" width="350" height="200"/>
+                                <rect key="frame" x="209" y="417" width="350" height="200"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PadHomeButtons" translatesAutoresizingMaskIntoConstraints="NO" id="wXA-2w-VXs">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
@@ -137,7 +130,7 @@ CiA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5l3-Hl-bre" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="331" y="101"/>
+            <point key="canvasLocation" x="258.59375" y="59.179687499999993"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ou5-8D-jW2">
@@ -145,7 +138,7 @@ CiA
                 <navigationController id="Gzj-1o-hIr" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="tPi-8v-VgH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8nF-VQ-VGC">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -154,7 +147,7 @@ CiA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8D-IL-y7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-702" y="-1090"/>
+            <point key="canvasLocation" x="-548.4375" y="-638.671875"/>
         </scene>
         <!--User Creation View Controller-->
         <scene sceneID="57Z-dx-7D8">
@@ -165,10 +158,10 @@ CiA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PadHome" translatesAutoresizingMaskIntoConstraints="NO" id="ZNC-gI-TBs">
-                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="70" width="768" height="954"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pocket Chips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWd-Bl-niy" customClass="CustomLabel">
-                                <rect key="frame" x="180" y="113" width="408.5" height="84"/>
+                                <rect key="frame" x="180" y="119" width="408" height="84"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="70"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -248,7 +241,7 @@ CiA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Lh-LD-SnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="331" y="-1090"/>
+            <point key="canvasLocation" x="258.59375" y="-638.671875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Di-Z5-g0F">
@@ -256,7 +249,7 @@ CiA
                 <navigationController id="f9Z-Kd-iYf" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="SHV-w6-kAy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wef-Kk-tQ3">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -265,7 +258,7 @@ CiA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFo-rK-bpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1757" y="-320"/>
+            <point key="canvasLocation" x="1372.65625" y="-187.5"/>
         </scene>
         <!--Scan View Controller-->
         <scene sceneID="9RV-VR-MjI">
@@ -276,10 +269,10 @@ CiA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PadHome" translatesAutoresizingMaskIntoConstraints="NO" id="w3c-dn-cpK">
-                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="70" width="768" height="954"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Game QR Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b64-jE-pjU" customClass="CustomLabel">
-                                <rect key="frame" x="155" y="113" width="458" height="59"/>
+                                <rect key="frame" x="155" y="119" width="458" height="59"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="49"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -407,14 +400,14 @@ CiA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHt-vh-vFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="OEv-U2-yjk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2674" y="-15"/>
+            <point key="canvasLocation" x="2089.0625" y="-8.7890625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fXY-8g-cTZ">
             <objects>
                 <navigationController id="Ena-fb-rYK" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="DSz-dE-sOq">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -423,7 +416,7 @@ CiA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8KZ-H4-gRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-702" y="101"/>
+            <point key="canvasLocation" x="-548.4375" y="59.179687499999993"/>
         </scene>
         <!--Blank Popup View Controller-->
         <scene sceneID="AKb-64-1EU">
@@ -483,7 +476,7 @@ CiA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqh-ll-adG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2908" y="-773"/>
+            <point key="canvasLocation" x="2271.875" y="-452.92968749999994"/>
         </scene>
         <!--Manual Entry View Controller-->
         <scene sceneID="kKd-oM-NVu">
@@ -570,7 +563,7 @@ CiA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7c8-FC-Rks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2440" y="-773"/>
+            <point key="canvasLocation" x="1906.25" y="-452.92968749999994"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WJh-ST-0JN">
@@ -578,7 +571,7 @@ CiA
                 <navigationController id="yEX-qQ-2XC" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="wUv-kO-oF1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GvY-xp-EiT">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -587,7 +580,7 @@ CiA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKg-sk-rQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="2453"/>
+            <point key="canvasLocation" x="520.3125" y="1437.3046875"/>
         </scene>
         <!--Settings-->
         <scene sceneID="0D0-0b-OYa">
@@ -713,14 +706,14 @@ CiA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I42-Eo-utc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1757" y="4177"/>
+            <point key="canvasLocation" x="1372.65625" y="2447.4609375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="whG-gM-BZn">
             <objects>
                 <navigationController id="Vq9-jl-OUm" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9UE-jp-ZFX">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -729,7 +722,7 @@ CiA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRQ-mM-Okn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="4177"/>
+            <point key="canvasLocation" x="520.3125" y="2447.4609375"/>
         </scene>
         <!--New Game-->
         <scene sceneID="dVe-IF-LQq">
@@ -750,7 +743,7 @@ CiA
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="nameField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sqQ-p5-tkD">
-                                                    <rect key="frame" x="20" y="12" width="728" height="30"/>
+                                                    <rect key="frame" x="20" y="12.5" width="728" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1017,21 +1010,21 @@ CiA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vex-s8-Jgo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1757" y="2453"/>
+            <point key="canvasLocation" x="1372.65625" y="1437.3046875"/>
         </scene>
         <!--Bet View Controller-->
         <scene sceneID="73R-qI-ifL">
             <objects>
                 <viewController id="DEp-3F-2b4" customClass="BetViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zg1-9w-ggE">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PadBet" translatesAutoresizingMaskIntoConstraints="NO" id="Spg-6n-rBA">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="954"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MuD-gZ-lQO">
-                                <rect key="frame" x="184" y="380" width="400" height="300"/>
+                                <rect key="frame" x="184" y="377" width="400" height="300"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PadToBet" translatesAutoresizingMaskIntoConstraints="NO" id="HsX-35-ZkT">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
@@ -1068,7 +1061,7 @@ CiA
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="chip" destination="oFG-AM-rKh" id="2mg-Tv-5tj"/>
-                                                    <outlet property="chipLabel" destination="jNt-ci-lg8" id="Nfj-K8-bdN"/>
+                                                    <outlet property="chipPrice" destination="jNt-ci-lg8" id="Nfj-K8-bdN"/>
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1G-g7-MSK" customClass="ChipView">
@@ -1100,7 +1093,7 @@ CiA
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="chip" destination="Z53-za-Jn3" id="cT1-6D-uuv"/>
-                                                    <outlet property="chipLabel" destination="B5o-bt-Pjb" id="yjO-fB-RCy"/>
+                                                    <outlet property="chipPrice" destination="B5o-bt-Pjb" id="yjO-fB-RCy"/>
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfD-dS-e3v" customClass="ChipView">
@@ -1132,7 +1125,7 @@ CiA
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="chip" destination="vPk-LU-3ma" id="Eeu-Ca-kcD"/>
-                                                    <outlet property="chipLabel" destination="zpD-PP-2bb" id="X6n-yM-EMf"/>
+                                                    <outlet property="chipPrice" destination="zpD-PP-2bb" id="X6n-yM-EMf"/>
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="273-Ma-XHP" customClass="ChipView">
@@ -1164,7 +1157,7 @@ CiA
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="chip" destination="Cd8-gn-BVE" id="1ma-Rx-Fgj"/>
-                                                    <outlet property="chipLabel" destination="dAU-r6-8Yy" id="fb0-8G-jRi"/>
+                                                    <outlet property="chipPrice" destination="dAU-r6-8Yy" id="fb0-8G-jRi"/>
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiK-nv-EcY" customClass="ChipView">
@@ -1196,11 +1189,11 @@ CiA
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="chip" destination="9qc-AP-3kk" id="yQk-PA-UeD"/>
-                                                    <outlet property="chipLabel" destination="VTd-XE-eLX" id="oSc-8q-p3U"/>
+                                                    <outlet property="chipPrice" destination="VTd-XE-eLX" id="oSc-8q-p3U"/>
                                                 </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Bet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3X-R6-xCb">
-                                                <rect key="frame" x="150" y="129.5" width="101" height="42"/>
+                                                <rect key="frame" x="149.5" y="129" width="101" height="42"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                 <color key="textColor" white="1" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1245,7 +1238,7 @@ CiA
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-mk-57v">
-                                <rect key="frame" x="559" y="292.5" width="150" height="75"/>
+                                <rect key="frame" x="559" y="289.5" width="150" height="75"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PadHomeButtons" translatesAutoresizingMaskIntoConstraints="NO" id="cGO-C4-LSG">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="75"/>
@@ -1276,7 +1269,7 @@ CiA
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1G-7B-pOL">
-                                <rect key="frame" x="59" y="292.5" width="150" height="75"/>
+                                <rect key="frame" x="59" y="289.5" width="150" height="75"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PadHomeButtons" translatesAutoresizingMaskIntoConstraints="NO" id="317-Rs-JDf">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="75"/>
@@ -1307,13 +1300,13 @@ CiA
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htx-Kj-wJd">
-                                <rect key="frame" x="0.0" y="792" width="768" height="168"/>
+                                <rect key="frame" x="0.0" y="786" width="768" height="168"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EsB-nm-BxO" customClass="ChipView">
-                                        <rect key="frame" x="25.5" y="21" width="124.5" height="125"/>
+                                        <rect key="frame" x="25" y="21.5" width="125" height="125"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip0" translatesAutoresizingMaskIntoConstraints="NO" id="38S-hR-ZQc">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="125"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.05000000074505806" translatesAutoresizingMaskIntoConstraints="NO" id="7Ag-50-JZw">
                                                 <rect key="frame" x="41.5" y="41.5" width="42" height="42"/>
@@ -1338,14 +1331,14 @@ CiA
                                         </constraints>
                                         <connections>
                                             <outlet property="chip" destination="38S-hR-ZQc" id="VHx-8z-eaw"/>
-                                            <outlet property="chipLabel" destination="7Ag-50-JZw" id="Px5-uU-8FL"/>
+                                            <outlet property="chipPrice" destination="7Ag-50-JZw" id="Px5-uU-8FL"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Am-R1-beO" customClass="ChipView">
-                                        <rect key="frame" x="321.5" y="21" width="125" height="125"/>
+                                        <rect key="frame" x="321.5" y="21.5" width="125" height="125"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip2" translatesAutoresizingMaskIntoConstraints="NO" id="7E7-Pr-IsG">
-                                                <rect key="frame" x="-0.5" y="0.0" width="125" height="125"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.05000000074505806" translatesAutoresizingMaskIntoConstraints="NO" id="jPA-uT-sty">
                                                 <rect key="frame" x="41.5" y="41.5" width="42" height="42"/>
@@ -1370,14 +1363,14 @@ CiA
                                         </constraints>
                                         <connections>
                                             <outlet property="chip" destination="7E7-Pr-IsG" id="IGd-hr-mjl"/>
-                                            <outlet property="chipLabel" destination="jPA-uT-sty" id="kXW-0d-5GI"/>
+                                            <outlet property="chipPrice" destination="jPA-uT-sty" id="kXW-0d-5GI"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZE-jc-iHb" customClass="ChipView">
-                                        <rect key="frame" x="617.5" y="21" width="125" height="125.5"/>
+                                        <rect key="frame" x="618" y="21.5" width="125" height="125"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip4" translatesAutoresizingMaskIntoConstraints="NO" id="sEb-zE-D9U">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.05000000074505806" translatesAutoresizingMaskIntoConstraints="NO" id="WH7-66-DUO">
                                                 <rect key="frame" x="41.5" y="41.5" width="42" height="42"/>
@@ -1402,17 +1395,17 @@ CiA
                                         </constraints>
                                         <connections>
                                             <outlet property="chip" destination="sEb-zE-D9U" id="wEg-RB-xyS"/>
-                                            <outlet property="chipLabel" destination="WH7-66-DUO" id="0Dt-eH-qhm"/>
+                                            <outlet property="chipPrice" destination="WH7-66-DUO" id="0Dt-eH-qhm"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYu-rb-prL" customClass="ChipView">
-                                        <rect key="frame" x="467.5" y="21" width="125" height="125.5"/>
+                                        <rect key="frame" x="467.5" y="21.5" width="125.5" height="125"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip3" translatesAutoresizingMaskIntoConstraints="NO" id="lcH-KJ-R24">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="125"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.05000000074505806" translatesAutoresizingMaskIntoConstraints="NO" id="jR6-ac-V9n">
-                                                <rect key="frame" x="41" y="41.5" width="42" height="42"/>
+                                                <rect key="frame" x="41.5" y="41.5" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="3jf-sB-PdK"/>
                                                     <constraint firstAttribute="width" constant="42" id="qXi-dG-f4g"/>
@@ -1434,14 +1427,14 @@ CiA
                                         </constraints>
                                         <connections>
                                             <outlet property="chip" destination="lcH-KJ-R24" id="izf-ht-G9n"/>
-                                            <outlet property="chipLabel" destination="jR6-ac-V9n" id="gQ8-7G-yQw"/>
+                                            <outlet property="chipPrice" destination="jR6-ac-V9n" id="gQ8-7G-yQw"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPS-M5-AVE" customClass="ChipView">
-                                        <rect key="frame" x="175" y="21" width="125.5" height="125.5"/>
+                                        <rect key="frame" x="175" y="21.5" width="125.5" height="125"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip1" translatesAutoresizingMaskIntoConstraints="NO" id="0Nv-2w-dri">
-                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="125.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="125"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.05000000074505806" translatesAutoresizingMaskIntoConstraints="NO" id="9jo-Tz-c59">
                                                 <rect key="frame" x="42" y="41.5" width="42" height="42"/>
@@ -1466,7 +1459,7 @@ CiA
                                         </constraints>
                                         <connections>
                                             <outlet property="chip" destination="0Nv-2w-dri" id="hFw-G9-EOJ"/>
-                                            <outlet property="chipLabel" destination="9jo-Tz-c59" id="RWK-PQ-0oF"/>
+                                            <outlet property="chipPrice" destination="9jo-Tz-c59" id="RWK-PQ-0oF"/>
                                         </connections>
                                     </view>
                                 </subviews>
@@ -1500,7 +1493,7 @@ CiA
                                                 <rect key="frame" x="0.0" y="0.0" width="137" height="137"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.050000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="YCF-Tb-cP2">
-                                                <rect key="frame" x="47.5" y="48" width="42" height="42"/>
+                                                <rect key="frame" x="47.5" y="47.5" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="eDf-KY-EDn"/>
                                                     <constraint firstAttribute="height" constant="42" id="qkW-4t-1I7"/>
@@ -1522,17 +1515,17 @@ CiA
                                         </constraints>
                                         <connections>
                                             <outlet property="chip" destination="7RH-EO-9Lg" id="gYE-3F-RTz"/>
-                                            <outlet property="chipLabel" destination="YCF-Tb-cP2" id="3HN-fx-0R5"/>
+                                            <outlet property="chipPrice" destination="YCF-Tb-cP2" id="3HN-fx-0R5"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7C5-eK-y6W" customClass="ChipView">
-                                        <rect key="frame" x="315.5" y="105.5" width="137" height="136.5"/>
+                                        <rect key="frame" x="315.5" y="105" width="137" height="137"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip2" translatesAutoresizingMaskIntoConstraints="NO" id="bpX-zW-q1Y">
-                                                <rect key="frame" x="-0.5" y="0.0" width="137" height="136.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="137" height="137"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.05000000074505806" translatesAutoresizingMaskIntoConstraints="NO" id="HeF-By-mOr">
-                                                <rect key="frame" x="48" y="47.5" width="42" height="42"/>
+                                                <rect key="frame" x="47.5" y="47.5" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="Md9-3K-4bT"/>
                                                     <constraint firstAttribute="height" constant="42" id="dk5-nz-71m"/>
@@ -1554,7 +1547,7 @@ CiA
                                         </constraints>
                                         <connections>
                                             <outlet property="chip" destination="bpX-zW-q1Y" id="akA-ul-BbS"/>
-                                            <outlet property="chipLabel" destination="HeF-By-mOr" id="Sql-wX-sMc"/>
+                                            <outlet property="chipPrice" destination="HeF-By-mOr" id="Sql-wX-sMc"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lq4-J5-9aJ" customClass="ChipView">
@@ -1564,7 +1557,7 @@ CiA
                                                 <rect key="frame" x="0.0" y="0.0" width="137" height="137"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.05000000074505806" translatesAutoresizingMaskIntoConstraints="NO" id="2Ce-Tr-mD3">
-                                                <rect key="frame" x="48" y="48" width="42" height="42"/>
+                                                <rect key="frame" x="47.5" y="47.5" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="cnd-hf-b6y"/>
                                                     <constraint firstAttribute="width" constant="42" id="okp-QT-lZy"/>
@@ -1586,17 +1579,17 @@ CiA
                                         </constraints>
                                         <connections>
                                             <outlet property="chip" destination="41T-1q-k05" id="CkM-DS-xkm"/>
-                                            <outlet property="chipLabel" destination="2Ce-Tr-mD3" id="430-bt-3aG"/>
+                                            <outlet property="chipPrice" destination="2Ce-Tr-mD3" id="430-bt-3aG"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3X-km-d8I" customClass="ChipView">
-                                        <rect key="frame" x="444.5" y="73.5" width="136.5" height="136.5"/>
+                                        <rect key="frame" x="444.5" y="73" width="136.5" height="137"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip3" translatesAutoresizingMaskIntoConstraints="NO" id="Mdm-Yn-uQA">
-                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="136.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="137"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.05000000074505806" translatesAutoresizingMaskIntoConstraints="NO" id="XQf-W7-E4c">
-                                                <rect key="frame" x="47" y="47.5" width="42" height="42"/>
+                                                <rect key="frame" x="47.5" y="47.5" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="eeW-Dq-MBs"/>
                                                     <constraint firstAttribute="height" constant="42" id="hbo-Ph-cY3"/>
@@ -1618,17 +1611,17 @@ CiA
                                         </constraints>
                                         <connections>
                                             <outlet property="chip" destination="Mdm-Yn-uQA" id="EDs-aQ-IPh"/>
-                                            <outlet property="chipLabel" destination="XQf-W7-E4c" id="DD2-Ok-b9w"/>
+                                            <outlet property="chipPrice" destination="XQf-W7-E4c" id="DD2-Ok-b9w"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ru-5D-B48" customClass="ChipView">
-                                        <rect key="frame" x="187" y="73.5" width="136.5" height="136.5"/>
+                                        <rect key="frame" x="187" y="73" width="136.5" height="137"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip1" translatesAutoresizingMaskIntoConstraints="NO" id="hRI-rZ-yjp">
-                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="136.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="137"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.05000000074505806" translatesAutoresizingMaskIntoConstraints="NO" id="Rv8-eL-CUe">
-                                                <rect key="frame" x="47.5" y="47.5" width="42" height="42"/>
+                                                <rect key="frame" x="47" y="47.5" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="TuW-k2-pgW"/>
                                                     <constraint firstAttribute="height" constant="42" id="adz-V8-N4u"/>
@@ -1650,11 +1643,11 @@ CiA
                                         </constraints>
                                         <connections>
                                             <outlet property="chip" destination="hRI-rZ-yjp" id="gNZ-nf-uTV"/>
-                                            <outlet property="chipLabel" destination="Rv8-eL-CUe" id="ciS-Fi-pUi"/>
+                                            <outlet property="chipPrice" destination="Rv8-eL-CUe" id="ciS-Fi-pUi"/>
                                         </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVg-79-2hh">
-                                        <rect key="frame" x="357" y="49" width="55" height="42"/>
+                                        <rect key="frame" x="356.5" y="49" width="55" height="42"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1684,7 +1677,7 @@ CiA
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNA-N3-TOa">
-                                <rect key="frame" x="292" y="754" width="184" height="30"/>
+                                <rect key="frame" x="292" y="748" width="184" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hNA-N3-TOa" secondAttribute="height" multiplier="92:15" priority="999" id="Ccl-GJ-Ee4"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="p75-5Z-2Mk"/>
@@ -1698,7 +1691,7 @@ CiA
                                 </connections>
                             </button>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4C-JA-xFj">
-                                <rect key="frame" x="234" y="295" width="300" height="370"/>
+                                <rect key="frame" x="234" y="292" width="300" height="370"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="370" id="KtL-nv-4IW"/>
                                     <constraint firstAttribute="width" constant="300" id="TV6-uc-2rW"/>
@@ -1708,7 +1701,7 @@ CiA
                                 </connections>
                             </containerView>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Puc-6d-Nhn">
-                                <rect key="frame" x="234" y="270" width="300" height="420"/>
+                                <rect key="frame" x="234" y="267" width="300" height="420"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="091-GA-AnB"/>
                                     <constraint firstAttribute="height" constant="420" id="MYA-E8-6pt"/>
@@ -1746,70 +1739,54 @@ CiA
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="diL-cB-hYw"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ett-J0-abb">
-                        <rightBarButtonItems>
-                            <barButtonItem image="QR" id="H5R-uG-QeS">
-                                <connections>
-                                    <action selector="qrCodeButton:" destination="DEp-3F-2b4" id="hmI-DW-mIz"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem image="Profile" id="Xfh-SZ-VlY">
-                                <connections>
-                                    <action selector="profileButton:" destination="DEp-3F-2b4" id="sFH-Er-QRo"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ett-J0-abb"/>
                     <connections>
                         <outlet property="addChipsView" destination="Puc-6d-Nhn" id="iKo-i6-fJA"/>
+                        <outlet property="betBlue" destination="d1G-g7-MSK" id="cBu-G4-T0D"/>
                         <outlet property="betChipsView" destination="MuD-gZ-lQO" id="Ii7-MT-WOa"/>
+                        <outlet property="betGreen" destination="273-Ma-XHP" id="HS6-ya-yQL"/>
+                        <outlet property="betOrange" destination="QfD-dS-e3v" id="5TD-vn-nry"/>
+                        <outlet property="betRed" destination="3V0-Jg-c3r" id="vqw-gW-JpJ"/>
+                        <outlet property="betYellow" destination="OiK-nv-EcY" id="hPg-px-XQP"/>
                         <outlet property="dealerBlack" destination="XQf-W7-E4c" id="y93-o4-Mks"/>
-                        <outlet property="dealerBlue" destination="Rv8-eL-CUe" id="8Cx-Ng-yyO"/>
                         <outlet property="dealerGreen" destination="HeF-By-mOr" id="Bk4-kY-b6p"/>
                         <outlet property="dealerPurple" destination="2Ce-Tr-mD3" id="P9N-9B-MiT"/>
-                        <outlet property="dealerRed" destination="YCF-Tb-cP2" id="MfP-lq-CEh"/>
-                        <outlet property="padBetBlue" destination="d1G-g7-MSK" id="cBu-G4-T0D"/>
-                        <outlet property="padBetGray" destination="273-Ma-XHP" id="HS6-ya-yQL"/>
-                        <outlet property="padBetGreen" destination="OiK-nv-EcY" id="hPg-px-XQP"/>
-                        <outlet property="padBetPurple" destination="QfD-dS-e3v" id="5TD-vn-nry"/>
-                        <outlet property="padBetRed" destination="3V0-Jg-c3r" id="vqw-gW-JpJ"/>
-                        <outlet property="padPlayerBlue" destination="oPS-M5-AVE" id="svU-za-YHq"/>
-                        <outlet property="padPlayerGray" destination="FYu-rb-prL" id="PlW-8M-aa3"/>
-                        <outlet property="padPlayerGreen" destination="1Am-R1-beO" id="hOh-p1-qZ6"/>
-                        <outlet property="padPlayerPurple" destination="EZE-jc-iHb" id="6kM-Zc-mks"/>
-                        <outlet property="padPlayerRed" destination="EsB-nm-BxO" id="nkt-QY-kY1"/>
+                        <outlet property="playerBlue" destination="oPS-M5-AVE" id="svU-za-YHq"/>
                         <outlet property="playerChipsView" destination="htx-Kj-wJd" id="L8G-mc-Znp"/>
+                        <outlet property="playerGreen" destination="FYu-rb-prL" id="PlW-8M-aa3"/>
+                        <outlet property="playerOrange" destination="EZE-jc-iHb" id="6kM-Zc-mks"/>
+                        <outlet property="playerRed" destination="EsB-nm-BxO" id="nkt-QY-kY1"/>
+                        <outlet property="playerYellow" destination="1Am-R1-beO" id="hOh-p1-qZ6"/>
                         <outlet property="potBlack" destination="b3X-km-d8I" id="RAK-9O-vCo"/>
                         <outlet property="potBlue" destination="8ru-5D-B48" id="LYI-dx-OuN"/>
                         <outlet property="potChipsView" destination="maF-40-CWY" id="Ouc-9U-cGb"/>
                         <outlet property="potGreen" destination="7C5-eK-y6W" id="Mza-o9-3Uw"/>
                         <outlet property="potPurple" destination="Lq4-J5-9aJ" id="POR-eJ-hXc"/>
                         <outlet property="potRed" destination="Jed-vh-W4y" id="RIg-K8-Zqo"/>
-                        <outlet property="profileButton" destination="Xfh-SZ-VlY" id="vcg-ps-INg"/>
                         <outlet property="qrCodeView" destination="l4C-JA-xFj" id="dJT-rs-MdC"/>
                         <segue destination="6IG-oX-KlW" kind="modal" identifier="usersSegue" id="DwH-al-bVM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mp9-cc-a96" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2674" y="1622"/>
+            <point key="canvasLocation" x="2089.0625" y="950.39062499999989"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2lK-zn-eVr">
             <objects>
                 <viewController id="Y3a-w6-5yH" customClass="QRViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TaE-cm-LNx">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="TaE-cm-LNx">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="370"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap anywhere to dismiss" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jr5-h3-sA7">
-                                <rect key="frame" x="16" y="323" width="225" height="47"/>
+                                <rect key="frame" x="16" y="322.5" width="225" height="47.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan code in app to join game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7en-2G-1vD">
-                                <rect key="frame" x="16" y="20" width="268" height="27.5"/>
+                                <rect key="frame" x="16" y="20" width="269" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1855,7 +1832,7 @@ CiA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKZ-2y-FWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3341" y="1295"/>
+            <point key="canvasLocation" x="2610.15625" y="758.7890625"/>
         </scene>
         <!--Add Chips View Controller-->
         <scene sceneID="dhz-hS-BZG">
@@ -1916,7 +1893,7 @@ CiA
                                 </connections>
                             </stepper>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZLW-Uu-Nsg">
-                                <rect key="frame" x="79" y="86" width="103" height="30"/>
+                                <rect key="frame" x="79" y="85.5" width="103" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1928,7 +1905,7 @@ CiA
                                 </connections>
                             </stepper>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LBa-Xf-jd4">
-                                <rect key="frame" x="79" y="148" width="103" height="30"/>
+                                <rect key="frame" x="79" y="148.5" width="103" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1940,7 +1917,7 @@ CiA
                                 </connections>
                             </stepper>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="roe-yh-PIM">
-                                <rect key="frame" x="79" y="211" width="103" height="30"/>
+                                <rect key="frame" x="79" y="211.5" width="103" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1952,7 +1929,7 @@ CiA
                                 </connections>
                             </stepper>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6dO-ug-WId">
-                                <rect key="frame" x="79" y="274" width="103" height="30"/>
+                                <rect key="frame" x="79" y="274.5" width="103" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1964,7 +1941,7 @@ CiA
                                 </connections>
                             </stepper>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13t-Gp-Cv0">
-                                <rect key="frame" x="79" y="337" width="103" height="30"/>
+                                <rect key="frame" x="79" y="337.5" width="103" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -2048,28 +2025,28 @@ CiA
                         <viewLayoutGuide key="safeArea" id="ng2-Ed-g02"/>
                     </view>
                     <connections>
-                        <outlet property="blackField" destination="6dO-ug-WId" id="AsX-KA-bwf"/>
-                        <outlet property="blackStepper" destination="Ziu-Sd-3cF" id="sw7-qn-Fwx"/>
                         <outlet property="blueField" destination="LBa-Xf-jd4" id="L6g-6G-u3O"/>
                         <outlet property="blueStepper" destination="HtD-AH-vAv" id="oqq-FP-Nsi"/>
-                        <outlet property="greenField" destination="roe-yh-PIM" id="dpp-dE-Mza"/>
-                        <outlet property="greenStepper" destination="FpT-AQ-iyC" id="pPt-Qe-y6a"/>
-                        <outlet property="purpleField" destination="13t-Gp-Cv0" id="sp2-OL-j9E"/>
-                        <outlet property="purpleStepper" destination="D5i-HU-gqg" id="EIh-80-mox"/>
+                        <outlet property="greenField" destination="6dO-ug-WId" id="AsX-KA-bwf"/>
+                        <outlet property="greenStepper" destination="Ziu-Sd-3cF" id="sw7-qn-Fwx"/>
+                        <outlet property="orangeField" destination="13t-Gp-Cv0" id="sp2-OL-j9E"/>
+                        <outlet property="orangeStepper" destination="D5i-HU-gqg" id="EIh-80-mox"/>
                         <outlet property="redField" destination="ZLW-Uu-Nsg" id="RGN-5h-kmy"/>
                         <outlet property="redStepper" destination="fkX-y3-jj9" id="53o-6D-RUr"/>
+                        <outlet property="yellowField" destination="roe-yh-PIM" id="dpp-dE-Mza"/>
+                        <outlet property="yellowStepper" destination="FpT-AQ-iyC" id="pPt-Qe-y6a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75r-uk-hIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3341" y="1924"/>
+            <point key="canvasLocation" x="2610.15625" y="1127.34375"/>
         </scene>
         <!--Load Game-->
         <scene sceneID="7fc-jh-t6i">
             <objects>
                 <tableViewController id="q16-Rc-8aj" customClass="LoadGameTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="125" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1Pb-PA-X1C">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.286752075" green="0.51864665750000005" blue="0.0039630075920000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
@@ -2100,14 +2077,14 @@ CiA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJj-56-9Sx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1313" y="-2260"/>
+            <point key="canvasLocation" x="1025.78125" y="-1324.21875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RFg-ym-EgX">
             <objects>
                 <navigationController id="iva-sQ-knr" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="aHG-nN-fdA">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -2116,7 +2093,7 @@ CiA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9D5-MN-3NO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="331" y="-2260"/>
+            <point key="canvasLocation" x="258.59375" y="-1324.21875"/>
         </scene>
         <!--Players in Game-->
         <scene sceneID="kP1-4X-c5U">
@@ -2295,7 +2272,7 @@ CiA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ff8-S0-wbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3575" y="2893"/>
+            <point key="canvasLocation" x="2792.96875" y="1695.1171875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WlG-D5-eiN">
@@ -2303,7 +2280,7 @@ CiA
                 <navigationController id="6IG-oX-KlW" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="XNq-dc-m3O"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zsD-lt-7xM">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -2312,17 +2289,15 @@ CiA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFR-QU-ekw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2674" y="2893"/>
+            <point key="canvasLocation" x="2089.0625" y="1695.1171875"/>
         </scene>
     </scenes>
     <resources>
-        <image name="PadBet" width="1024" height="1366"/>
-        <image name="PadHome" width="1024" height="1366"/>
-        <image name="PadHomeButtons" width="349" height="199"/>
-        <image name="PadScan" width="349" height="349"/>
-        <image name="PadToBet" width="699" height="499"/>
-        <image name="Profile" width="32" height="32"/>
-        <image name="QR" width="32" height="32"/>
+        <image name="PadBet" width="2048" height="2732"/>
+        <image name="PadHome" width="2048" height="2732"/>
+        <image name="PadHomeButtons" width="698" height="398"/>
+        <image name="PadScan" width="698" height="698"/>
+        <image name="PadToBet" width="1398" height="998"/>
         <image name="chip0" width="1024" height="1024"/>
         <image name="chip0Minus" width="1024" height="1024"/>
         <image name="chip1" width="1024" height="1024"/>

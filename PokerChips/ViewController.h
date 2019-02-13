@@ -12,6 +12,7 @@
 #import "LoadGameTableViewController.h"
 #import "SettingsTableViewController.h"
 #import "CustomLabel.h"
+#import "RoundedView.h"
 @import GoogleMobileAds;
 
 @interface ViewController : UIViewController <NetworkHandlerDataSource, UITextFieldDelegate, GADBannerViewDelegate, GADInterstitialDelegate>
@@ -21,6 +22,9 @@
 @property (strong, nonatomic) GADInterstitial *interstitial;
 
 - (IBAction)unwindToMainNoScan:(UIStoryboardSegue *)segue;
+@property (weak, nonatomic) IBOutlet UIButton *removeAdsButton;
+@property (weak, nonatomic) IBOutlet UILabel *restorePurchasesLabel;
+@property (weak, nonatomic) IBOutlet RoundedView *bottomView;
 
 @end
 

@@ -24,9 +24,9 @@
     
     [self.redField setDelegate:self];
     [self.blueField setDelegate:self];
+    [self.yellowField setDelegate:self];
     [self.greenField setDelegate:self];
-    [self.blackField setDelegate:self];
-    [self.purpleField setDelegate:self];
+    [self.orangeField setDelegate:self];
     
     self.nh = [NetworkHandler sharedInstance];
 }
@@ -34,6 +34,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.redValue setText:[NSString stringWithFormat:@"$%@", self.chipValues[0]]];
+    [self.blueValue setText:[NSString stringWithFormat:@"$%@", self.chipValues[1]]];
+    [self.yellowValue setText:[NSString stringWithFormat:@"$%@", self.chipValues[2]]];
+    [self.greenValue setText:[NSString stringWithFormat:@"$%@", self.chipValues[3]]];
+    [self.orangeValue setText:[NSString stringWithFormat:@"$%@", self.chipValues[4]]];
 }
 
 - (IBAction)redStepper:(UIStepper *)sender {
@@ -45,15 +54,15 @@
 }
 
 - (IBAction)greenStepper:(UIStepper *)sender {
-    [self.greenField setText:[NSString stringWithFormat:@"%ld", (long)sender.value]];
+    [self.yellowField setText:[NSString stringWithFormat:@"%ld", (long)sender.value]];
 }
 
 - (IBAction)blackStepper:(UIStepper *)sender {
-    [self.blackField setText:[NSString stringWithFormat:@"%ld", (long)sender.value]];
+    [self.greenField setText:[NSString stringWithFormat:@"%ld", (long)sender.value]];
 }
 
 - (IBAction)purpleStepper:(UIStepper *)sender {
-    [self.purpleField setText:[NSString stringWithFormat:@"%ld", (long)sender.value]];
+    [self.orangeField setText:[NSString stringWithFormat:@"%ld", (long)sender.value]];
 }
 
 - (IBAction)cancelButton:(id)sender {
@@ -61,7 +70,7 @@
 }
 
 - (IBAction)saveButton:(id)sender {
-    [self.delegate saveChipsWithRed:(long)self.redField.text.intValue blue:(long)self.blueField.text.intValue green:(long)self.greenField.text.intValue black:(long)self.blackField.text.intValue purple:(long)self.purpleField.text.intValue];
+    [self.delegate saveChipsWithRed:(long)self.redField.text.intValue blue:(long)self.blueField.text.intValue yellow:(long)self.yellowField.text.intValue green:(long)self.greenField.text.intValue orange:(long)self.orangeField.text.intValue];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string  {

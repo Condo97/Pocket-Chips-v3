@@ -16,6 +16,12 @@
     [self.view.layer setCornerRadius:14.0];
     [self.view setClipsToBounds:YES];
     
+    NSArray *values0 = [[NSArray alloc] initWithObjects:@"0.25", @"0.50", @"1", @"5", @"10", nil];
+    NSArray *values1 = [[NSArray alloc] initWithObjects:@"1", @"5", @"10", @"25", @"100", nil];
+    NSArray *values2 = [[NSArray alloc] initWithObjects:@"1", @"10", @"25", @"100", @"500", nil];
+    NSArray *values3 = [[NSArray alloc] initWithObjects:@"5", @"25", @"100", @"500", @"1000", nil];
+    self.chipValuesForSelector = [[NSArray alloc] initWithObjects:values0, values1, values2, values3, nil];
+    
     [self.redField setDelegate:self];
     [self.blueField setDelegate:self];
     [self.greenField setDelegate:self];
@@ -23,11 +29,22 @@
     [self.purpleField setDelegate:self];
     
     self.nh = [NetworkHandler sharedInstance];
+    
+    [self chipValueChanged:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)chipValueChanged:(id)sender {
+    NSArray<NSString *> *chipValues = self.chipValuesForSelector[self.chipValueSelector.selectedSegmentIndex];
+    [self.redValue setText:[NSString stringWithFormat:@"$%@", chipValues[0]]];
+    [self.blueValue setText:[NSString stringWithFormat:@"$%@", chipValues[1]]];
+    [self.yellowValue setText:[NSString stringWithFormat:@"$%@", chipValues[2]]];
+    [self.greenValue setText:[NSString stringWithFormat:@"$%@", chipValues[3]]];
+    [self.orangeValue setText:[NSString stringWithFormat:@"$%@", chipValues[4]]];
 }
 
 - (IBAction)redStepper:(UIStepper *)sender {
@@ -73,7 +90,7 @@
 }
 
 - (void)createGameWithName:(NSString *)name red:(long)red blue:(long)blue green:(long)green black:(long)black purple:(long)purple {
-    NSString *response = [NSString stringWithFormat:@"ng:%@:%ld:%ld:%ld:%ld:%ld\n", name, red, blue, green, black, purple];
+    NSString *response = [NSString stringWithFormat:@"ng:%@:%ld:%ld:%ld:%ld:%ld:%@:%@:%@:%@:%@\n", name, red, blue, green, black, purple, self.chipValuesForSelector[self.chipValueSelector.selectedSegmentIndex][0], self.chipValuesForSelector[self.chipValueSelector.selectedSegmentIndex][1], self.chipValuesForSelector[self.chipValueSelector.selectedSegmentIndex][2], self.chipValuesForSelector[self.chipValueSelector.selectedSegmentIndex][3], self.chipValuesForSelector[self.chipValueSelector.selectedSegmentIndex][4]];
     NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
     [self.nh writeData:data];
 }

@@ -11,7 +11,9 @@
 @interface GameObject : NSObject
 
 @property (strong, nonatomic) NSString *identifier, *name;
+@property (strong, nonatomic) NSArray<NSString *> *players;
 
 - (id)initWithIdentifier:(NSString *)identifier andName:(NSString *)name;
+- (id)initWithIdentifier:(NSString *)identifier andName:(NSString *)name andPlayers:(NSArray<NSString *> *)players;
 
 @end
