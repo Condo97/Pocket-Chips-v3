@@ -105,8 +105,6 @@
     
     self.nh = [NetworkHandler sharedInstance];
     
-    [self.nh setDelegate:self];
-    
     NSString *response = [NSString stringWithFormat:@"na:%@\n", self.gameId];
     NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
     [self.nh writeData:data];
@@ -154,6 +152,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self.nh setDelegate:self];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(resumedFromBackground)
                                                  name:UIApplicationWillEnterForegroundNotification
@@ -198,7 +197,7 @@
     else [self.betTotal setText:[NSString stringWithFormat:@"$%.02f", betTotal]];
     
     double potTotal = self.potChips.red * self.chipValues[0].doubleValue + self.potChips.blue * self.chipValues[1].doubleValue + self.potChips.yellow * self.chipValues[2].doubleValue + self.potChips.green * self.chipValues[3].doubleValue + self.potChips.orange * self.chipValues[4].doubleValue;
-    if((int)potTotal == potTotal) [self.potTotal setText:[NSString stringWithFormat:@"$%.f", betTotal]];
+    if((int)potTotal == potTotal) [self.potTotal setText:[NSString stringWithFormat:@"$%.f", potTotal]];
     else [self.potTotal setText:[NSString stringWithFormat:@"$%.02f", potTotal]];
     
     //Pot chips

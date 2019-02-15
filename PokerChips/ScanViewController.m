@@ -187,10 +187,10 @@
     if([components[0] isEqualToString:@"vg"]) {
         if([components[1] isEqualToString:@"1"]) {
             [self setSentResponse:YES];
+            [self.cs stopRunning];
             NSString *response = [NSString stringWithFormat:@"jg:%@:%@\n", self.userId, self.gameId];
             NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
             [self.nh writeData:data];
-            [self.cs stopRunning];
             [self dismissViewControllerAnimated:YES completion:nil];
         } else {
             UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Invalid Game ID" message:@"Sorry it's so long! Please make sure it's spelled correctly." preferredStyle:UIAlertControllerStyleAlert];

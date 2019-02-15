@@ -43,7 +43,6 @@
     
     self.nh = [NetworkHandler sharedInstance];
     
-    
     if([[NSUserDefaults standardUserDefaults] valueForKey:@"userId"] == nil) {
         [self performSegueWithIdentifier:@"createUserSegue" sender:nil];
     } else {
@@ -77,12 +76,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.nh = [NetworkHandler sharedInstance];
     [self.nh setDelegate:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.nh setDelegate:self];
     
     if([[KFKeychain loadObjectForKey:@"adsRemoved"] isEqualToString:@"YES"])
         self.shouldShowAds = NO;
