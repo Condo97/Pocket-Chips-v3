@@ -50,23 +50,22 @@
     }
 }
 
-
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    if([[NSUserDefaults standardUserDefaults] valueForKey:@"userId"] != nil) {
-        NSString *output = [NSString stringWithFormat:@"lo:%@\n", [[NSUserDefaults standardUserDefaults] stringForKey:@"userId"]];
-        NSData *data = [output dataUsingEncoding:NSASCIIStringEncoding];
-        [[NetworkHandler sharedInstance] writeData:data];
-        [(UINavigationController *)self.window.rootViewController popToRootViewControllerAnimated:NO];
-    }
+//    if([[NSUserDefaults standardUserDefaults] valueForKey:@"userId"] != nil) {
+//        NSString *output = [NSString stringWithFormat:@"lo:%@\n", [[NSUserDefaults standardUserDefaults] stringForKey:@"userId"]];
+//        NSData *data = [output dataUsingEncoding:NSASCIIStringEncoding];
+//        [[NetworkHandler sharedInstance] writeData:data];
+//        [(UINavigationController *)self.window.rootViewController popToRootViewControllerAnimated:NO];
+//    }
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     
     [self.nh setDelegate:self];
-    
+
     [[NetworkHandler sharedInstance] initNetworkCommunication:(CFStringRef)SOCKET_IP_ADDRESS withPort:1234];
-    
+
     if([[NSUserDefaults standardUserDefaults] valueForKey:@"userId"] != nil) {
         NSString *response = [NSString stringWithFormat:@"li:%@\n", [[NSUserDefaults standardUserDefaults] stringForKey:@"userId"]];
         NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
@@ -77,15 +76,15 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     
-    [self.nh setDelegate:self];
-    
-    [[NetworkHandler sharedInstance] initNetworkCommunication:(CFStringRef)SOCKET_IP_ADDRESS withPort:1234];
-    
-    if([[NSUserDefaults standardUserDefaults] valueForKey:@"userId"] != nil) {
-        NSString *response = [NSString stringWithFormat:@"li:%@\n", [[NSUserDefaults standardUserDefaults] stringForKey:@"userId"]];
-        NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
-        [[NetworkHandler sharedInstance] writeData:data];
-    }
+//    [self.nh setDelegate:self];
+//    
+//    [[NetworkHandler sharedInstance] initNetworkCommunication:(CFStringRef)SOCKET_IP_ADDRESS withPort:1234];
+//    
+//    if([[NSUserDefaults standardUserDefaults] valueForKey:@"userId"] != nil) {
+//        NSString *response = [NSString stringWithFormat:@"li:%@\n", [[NSUserDefaults standardUserDefaults] stringForKey:@"userId"]];
+//        NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
+//        [[NetworkHandler sharedInstance] writeData:data];
+//    }
 }
 
 

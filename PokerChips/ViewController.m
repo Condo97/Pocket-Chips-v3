@@ -34,7 +34,7 @@
     
     self.finishedScanning = NO;
     
-    [[StoreKitManager sharedManager] resetKeychainForTesting];
+    [[StoreKitManager sharedManager] removeAdsForTesting];
     
     self.gameObjects = [[NSMutableArray alloc] init];
     self.groupOf16 = 0;
@@ -330,9 +330,11 @@
     UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Change Nickname" message:nil preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *save = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         UITextField *textField = ac.textFields.firstObject;
-        NSString *response = [NSString stringWithFormat:@"eun:%@:%@\n", [[NSUserDefaults standardUserDefaults] valueForKey:@"userId"], textField.text];
-        NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
-        [self.nh writeData:data];
+        if(![textField.text isEqualToString:@""]) {
+            NSString *response = [NSString stringWithFormat:@"eun:%@:%@\n", [[NSUserDefaults standardUserDefaults] valueForKey:@"userId"], textField.text];
+            NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
+            [self.nh writeData:data];
+        }
     }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
     [ac addTextFieldWithConfigurationHandler:^(UITextField *tf) {

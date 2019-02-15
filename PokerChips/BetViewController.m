@@ -152,6 +152,19 @@
     self.appeared = YES;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(resumedFromBackground)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:[UIApplication sharedApplication]];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -536,11 +549,17 @@
         if([message containsString:@"&"]) {
             playersList = [message componentsSeparatedByString:@"&"][0];
             NSArray<NSString *> *thirdParse = [[message componentsSeparatedByString:@"&"][1] componentsSeparatedByString:@":"];
-            self.chipValues[0] = thirdParse[0];
-            self.chipValues[1] = thirdParse[1];
-            self.chipValues[2] = thirdParse[2];
-            self.chipValues[3] = thirdParse[3];
-            self.chipValues[4] = thirdParse[4];
+            self.chipValues[0] = [NSString stringWithFormat:@"%.2f", thirdParse[0].doubleValue];
+            self.chipValues[1] = [NSString stringWithFormat:@"%.2f", thirdParse[1].doubleValue];
+            self.chipValues[2] = [NSString stringWithFormat:@"%.2f", thirdParse[2].doubleValue];
+            self.chipValues[3] = [NSString stringWithFormat:@"%.2f", thirdParse[3].doubleValue];
+            self.chipValues[4] = [NSString stringWithFormat:@"%.2f", thirdParse[4].doubleValue];
+            
+            if(thirdParse[0].doubleValue == thirdParse[0].intValue) self.chipValues[0] = [NSString stringWithFormat:@"%d", thirdParse[0].intValue];
+            if(thirdParse[1].doubleValue == thirdParse[1].intValue) self.chipValues[1] = [NSString stringWithFormat:@"%d", thirdParse[1].intValue];
+            if(thirdParse[2].doubleValue == thirdParse[2].intValue) self.chipValues[2] = [NSString stringWithFormat:@"%d", thirdParse[2].intValue];
+            if(thirdParse[3].doubleValue == thirdParse[3].intValue) self.chipValues[3] = [NSString stringWithFormat:@"%d", thirdParse[3].intValue];
+            if(thirdParse[4].doubleValue == thirdParse[4].intValue) self.chipValues[4] = [NSString stringWithFormat:@"%d", thirdParse[4].intValue];
         } else playersList = message;
         
         NSArray *firstParse = [playersList componentsSeparatedByString:@"|"];
@@ -645,6 +664,11 @@
         UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:@"All players must be logged in to add chips!\nConnect more people by tapping the QR button on the upper right." preferredStyle:UIAlertControllerStyleAlert];
         [ac addAction:[UIAlertAction actionWithTitle:@"Done" style:UIAlertActionStyleCancel handler:nil]];
         [self presentViewController:ac animated:YES completion:nil];
+    } else if([[message componentsSeparatedByString:@":"][0] isEqualToString:@"pl"]) {
+        NSArray<NSString *> *args = [message componentsSeparatedByString:@":"];
+        self.playerId = args[1];
+        self.playerChips = [[ChipObject alloc] initWithRed:args[3].doubleValue blue:args[4].doubleValue yellow:args[5].doubleValue green:args[6].doubleValue orange:args[7].doubleValue];
+        self.potChips = [[ChipObject alloc] initWithRed:args[8].doubleValue blue:args[9].doubleValue yellow:args[10].doubleValue green:args[11].doubleValue orange:args[12].doubleValue];
     }
     
     [self updateView];
@@ -686,6 +710,12 @@
     if(count <= 1)
         return NO;
     return YES;
+}
+
+- (void)resumedFromBackground {
+    NSString *response = [NSString stringWithFormat:@"jg:%@:%@\n", [[NSUserDefaults standardUserDefaults] stringForKey:@"userId"], self.gameId];
+    NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
+    [self.nh writeData:data];
 }
 
 @end

@@ -32,7 +32,7 @@
     [self.outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     [self.inputStream open];
     [self.outputStream open];
-    NSStreamStatus *socketStatus = [self.outputStream streamStatus];
+    NSStreamStatus socketStatus = [self.outputStream streamStatus];
     int status = socketStatus;
     NSLog(@"Stream Status is %i", status);
     
@@ -55,6 +55,7 @@
 - (NSStreamStatus)writeData:(NSData *)data {
     NSLog(@"%ld",(long)[self.outputStream write:[data bytes] maxLength:[data length]]);
     NSLog(@"%lu",(unsigned long)[data length]);
+    NSLog(@"Sending: %@", [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding]);
     NSStreamStatus *socketStatus = [self.outputStream streamStatus];
     int status = socketStatus;
     NSLog(@"Stream Status is %i", status);
@@ -82,6 +83,11 @@
 - (void)closeStream {
     [self.inputStream close];
     [self.outputStream close];
+}
+
+- (void)openStream {
+    [self.inputStream open];
+    [self.outputStream open];
 }
 
 - (void)stream:(NSStream *)theStream handleEvent:(NSStreamEvent)streamEvent {
