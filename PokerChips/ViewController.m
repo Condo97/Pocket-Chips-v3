@@ -33,9 +33,7 @@
     [super viewDidLoad];
     
     self.finishedScanning = NO;
-    
-    [[StoreKitManager sharedManager] removeAdsForTesting];
-    
+        
     self.gameObjects = [[NSMutableArray alloc] init];
     self.groupOf16 = 0;
     
