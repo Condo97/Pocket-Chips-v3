@@ -136,7 +136,7 @@
     [KFKeychain saveObject:@"NO" forKey:@"adsRemoved"];
 }
 
-- (void) buyAllRingsForTesting {
+- (void) removeAdsForTesting {
     [KFKeychain saveObject:@"YES" forKey:@"adsRemoved"];
 }
 

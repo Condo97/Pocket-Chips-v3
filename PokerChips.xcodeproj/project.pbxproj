@@ -296,6 +296,8 @@
 				BB5A42721FFB2DBD00109A92 /* CustomLabel.m */,
 				BBDE46682213841900E383E9 /* LoadTableViewCell.h */,
 				BBDE46692213841900E383E9 /* LoadTableViewCell.m */,
+				BB960F181FB7A69B00109898 /* UserTableViewCell.h */,
+				BB960F191FB7A69B00109898 /* UserTableViewCell.m */,
 			);
 			path = "Custom UI Elements";
 			sourceTree = "<group>";
@@ -346,8 +348,6 @@
 				BB782EE21FAFBCFD00CFA34E /* ChipObject.m */,
 				BB960F0D1FB67DB400109898 /* AuthenticationObject.h */,
 				BB960F0E1FB67DB400109898 /* AuthenticationObject.m */,
-				BB960F181FB7A69B00109898 /* UserTableViewCell.h */,
-				BB960F191FB7A69B00109898 /* UserTableViewCell.m */,
 				BB960F1B1FB7A71B00109898 /* PlayerObject.h */,
 				BB960F1C1FB7A71B00109898 /* PlayerObject.m */,
 				BB960F1E1FB7CB7900109898 /* GameObject.h */,
@@ -845,7 +845,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acapplications.pocket-chips";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -864,7 +864,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acapplications.pocket-chips";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

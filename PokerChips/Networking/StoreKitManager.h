@@ -26,6 +26,6 @@
 - (void) restorePurchases;
 
 - (void) resetKeychainForTesting;
-- (void) buyAllRingsForTesting;
+- (void) removeAdsForTesting;
 
 @end

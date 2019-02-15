@@ -38,10 +38,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKu-N8-Ahb" customClass="RoundedView">
-                                <rect key="frame" x="14" y="333" width="386" height="230"/>
+                                <rect key="frame" x="14" y="348" width="386" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zic-8c-Krn" customClass="CustomButton">
-                                        <rect key="frame" x="21" y="7" width="344" height="67.333333333333329"/>
+                                        <rect key="frame" x="21" y="7.0000000000000036" width="344" height="57.333333333333343"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <state key="normal" title="Create Game">
@@ -52,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhw-sy-Lpk" customClass="CustomButton">
-                                        <rect key="frame" x="21" y="81.333333333333314" width="344" height="67.333333333333314"/>
+                                        <rect key="frame" x="21" y="71.333333333333314" width="344" height="57.333333333333343"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <state key="normal" title="Join">
@@ -63,7 +63,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jb-AJ-eeo" customClass="CustomButton">
-                                        <rect key="frame" x="21" y="155.66666666666669" width="344" height="67.333333333333314"/>
+                                        <rect key="frame" x="21" y="135.66666666666669" width="344" height="57.333333333333343"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <state key="normal" title="Load Game">
@@ -76,7 +76,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="0KR-sz-QGQ"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="230" id="0KR-sz-QGQ"/>
                                     <constraint firstItem="zic-8c-Krn" firstAttribute="height" secondItem="Nhw-sy-Lpk" secondAttribute="height" id="93U-We-DHq"/>
                                     <constraint firstItem="0Jb-AJ-eeo" firstAttribute="width" secondItem="Nhw-sy-Lpk" secondAttribute="width" id="Bi2-Tc-3PE"/>
                                     <constraint firstItem="Nhw-sy-Lpk" firstAttribute="centerX" secondItem="sKu-N8-Ahb" secondAttribute="centerX" id="HxI-0M-LEe"/>
@@ -89,6 +89,7 @@
                                     <constraint firstItem="0Jb-AJ-eeo" firstAttribute="leading" secondItem="sKu-N8-Ahb" secondAttribute="leading" constant="21" id="e3e-hN-sTg"/>
                                     <constraint firstItem="0Jb-AJ-eeo" firstAttribute="top" secondItem="Nhw-sy-Lpk" secondAttribute="bottom" constant="7" id="fYd-yk-3Wo"/>
                                     <constraint firstItem="Nhw-sy-Lpk" firstAttribute="leading" secondItem="sKu-N8-Ahb" secondAttribute="leading" constant="21" id="gte-iU-lIX"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="inG-pt-gyQ"/>
                                     <constraint firstAttribute="bottom" secondItem="0Jb-AJ-eeo" secondAttribute="bottom" constant="7" id="tk8-Sl-UlY"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -101,10 +102,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iE0-JA-RaN" customClass="RoundedView">
-                                <rect key="frame" x="14" y="584" width="386" height="155.66666666666663"/>
+                                <rect key="frame" x="14" y="569" width="386" height="135.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzA-0p-jdD">
-                                        <rect key="frame" x="21" y="7" width="344" height="67.333333333333329"/>
+                                        <rect key="frame" x="21" y="7.0000000000000036" width="344" height="57.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <state key="normal" title="Remove Ads">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,13 +115,14 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or restore purchases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nO-jb-Nu1">
-                                        <rect key="frame" x="139" y="54.333333333333371" width="108" height="14"/>
+                                        <rect key="frame" x="139" y="44.333333333333371" width="108" height="14"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQV-6H-L5q">
-                                        <rect key="frame" x="21" y="81.333333333333371" width="344" height="67.333333333333314"/>
+                                        <rect key="frame" x="21" y="71.333333333333371" width="344" height="57.333333333333343"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <state key="normal" title="Change Nickname">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -264,6 +266,7 @@ Cg
                             <constraint firstItem="sKu-N8-Ahb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="ccK-q0-4l7"/>
                             <constraint firstItem="S79-vt-CxG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kPg-VO-clR"/>
                             <constraint firstItem="sKu-N8-Ahb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kcA-7i-BPZ"/>
+                            <constraint firstItem="sKu-N8-Ahb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sxX-wo-jvQ" secondAttribute="bottom" constant="14" id="vUe-Qw-KUh"/>
                             <constraint firstItem="iE0-JA-RaN" firstAttribute="top" secondItem="sKu-N8-Ahb" secondAttribute="bottom" constant="21" id="yVF-lt-pg9"/>
                             <constraint firstItem="rd4-ij-w0R" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="zKh-Qf-83e"/>
                         </constraints>
@@ -290,7 +293,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134.78260869565219" y="161.38392857142856"/>
+            <point key="canvasLocation" x="133.125" y="160.56338028169014"/>
         </scene>
         <!--Scan-->
         <scene sceneID="l6v-28-o9N">
@@ -1493,7 +1496,7 @@ no login required!</string>
         <scene sceneID="Lkh-zr-UD0">
             <objects>
                 <viewController id="EHu-3l-4Jr" customClass="QRViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Drs-AF-oDH">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Drs-AF-oDH">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="370"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1721,6 +1724,7 @@ no login required!</string>
                                     <outlet property="greenChips" destination="nus-6O-JUX" id="ZGc-LW-8Vw"/>
                                     <outlet property="purpleChips" destination="r4n-O3-kcq" id="1aG-Ie-UcM"/>
                                     <outlet property="redChips" destination="iec-0P-fvp" id="0nm-Xf-nYR"/>
+                                    <outlet property="roundedView" destination="2tH-3P-jLR" id="ipc-g4-O1d"/>
                                     <outlet property="username" destination="qAM-Xe-syz" id="gi2-OS-0Pp"/>
                                 </connections>
                             </tableViewCell>
@@ -1742,8 +1746,12 @@ no login required!</string>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Ac3-kr-27Y" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMain:" id="4a1-sj-MNg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcz-nx-RS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ac3-kr-27Y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5711.594202898551" y="161.38392857142856"/>
         </scene>
@@ -1902,7 +1910,7 @@ no login required!</string>
                                     <action selector="saveButton:" destination="fgw-Ib-CPh" eventType="touchUpInside" id="URh-dd-eYc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qiv-X2-Lx5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qiv-X2-Lx5">
                                 <rect key="frame" x="34" y="83.666666666666671" width="19" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="cxk-zg-gkT"/>
@@ -1912,7 +1920,7 @@ no login required!</string>
                                 <color key="textColor" red="0.72065967321395874" green="0.16619414091110229" blue="0.12540730834007263" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iXm-z6-rra">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iXm-z6-rra">
                                 <rect key="frame" x="34" y="146.66666666666666" width="19" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="6cy-AZ-exj"/>
@@ -1922,7 +1930,7 @@ no login required!</string>
                                 <color key="textColor" red="0.11822766810655594" green="0.25292423367500305" blue="0.75298762321472168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C4a-jY-y4l">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C4a-jY-y4l">
                                 <rect key="frame" x="34" y="209.66666666666666" width="19" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="GCd-gZ-wWy"/>
@@ -1932,7 +1940,7 @@ no login required!</string>
                                 <color key="textColor" red="0.83040398359298706" green="0.78145986795425415" blue="0.25470644235610962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NlO-Wz-cHd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NlO-Wz-cHd">
                                 <rect key="frame" x="34" y="272.66666666666669" width="19" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="P9H-1H-Wmh"/>
@@ -1942,7 +1950,7 @@ no login required!</string>
                                 <color key="textColor" red="0.36054599285125732" green="0.77344435453414917" blue="0.23905342817306519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ng5-nk-Nz9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ng5-nk-Nz9">
                                 <rect key="frame" x="34" y="335.66666666666669" width="19" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="19" id="cXB-Q6-wdA"/>

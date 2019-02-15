@@ -122,6 +122,18 @@
     
     self.appeared = NO;
     
+    double parallelPlayerChips[] = {self.playerChips.red, self.playerChips.blue, self.playerChips.yellow, self.playerChips.green, self.playerChips.orange};
+    for(int i = 0; i < self.playerChipsArray.count; i++) {
+        ChipView *chip = self.playerChipsArray[i];
+        if(parallelPlayerChips[i] == 0) {
+            [chip.chip setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chip%dSelected", i]]];
+            
+            [UIView animateWithDuration:0.05 animations:^{
+                [chip setTransform:CGAffineTransformMakeScale(0.9, 0.9)];
+            }];
+        }
+    }
+    
     [self updateView];
 }
 

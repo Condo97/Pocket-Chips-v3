@@ -34,6 +34,8 @@
     ManualEntryViewController *mevc = self.childViewControllers[1];
     [mevc setDelegate:self];
     
+    [[NetworkHandler sharedInstance] setDelegate:self];
+    
     self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissHelpView)];
     [self.view addGestureRecognizer:self.tap];
     [self.tap setEnabled:NO];
@@ -163,6 +165,8 @@
 - (void)joinGameManually:(NSString *)gameId {
     [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
     
+    self.gameId = gameId;
+    
     [UIView animateWithDuration:0.25 animations:^ {
         [self.manualEntryBlur setAlpha:0.0];
         [self.manualEntryView setAlpha:0.0];
@@ -171,14 +175,29 @@
         [self.manualEntryView setHidden:YES];
         
         if(gameId.length != 0) {
+            NSString *response = [NSString stringWithFormat:@"vg:%@:%@\n", self.userId, self.gameId];
+            NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
+            [self.nh writeData:data];
+        }
+    }];
+}
+
+- (void)messageReceived:(NSString *)message {
+    NSArray *components = [message componentsSeparatedByString:@":"];
+    if([components[0] isEqualToString:@"vg"]) {
+        if([components[1] isEqualToString:@"1"]) {
             [self setSentResponse:YES];
-            NSString *response = [NSString stringWithFormat:@"jg:%@:%@\n", self.userId, gameId];
+            NSString *response = [NSString stringWithFormat:@"jg:%@:%@\n", self.userId, self.gameId];
             NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
             [self.nh writeData:data];
             [self.cs stopRunning];
             [self dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Invalid Game ID" message:@"Sorry it's so long! Please make sure it's spelled correctly." preferredStyle:UIAlertControllerStyleAlert];
+            [ac addAction:[UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleCancel handler:nil]];
+            [self presentViewController:ac animated:YES completion:nil];
         }
-    }];
+    }
 }
 
 @end

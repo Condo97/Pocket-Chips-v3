@@ -54,6 +54,8 @@
     [cell.greenChips setText:[NSString stringWithFormat:@"%ld", (long)((PlayerObject *)self.playerObjectArray[indexPath.row]).chip.yellow]];
     [cell.blackChips setText:[NSString stringWithFormat:@"%ld", (long)((PlayerObject *)self.playerObjectArray[indexPath.row]).chip.green]];
     [cell.purpleChips setText:[NSString stringWithFormat:@"%ld", (long)((PlayerObject *)self.playerObjectArray[indexPath.row]).chip.orange]];
+    
+    if(!((PlayerObject *)self.playerObjectArray[indexPath.row]).loggedIn) [cell.roundedView setTheBackgroundColorLater:[UIColor colorWithWhite:1 alpha:.2]];
 
     return cell;
 }
@@ -65,8 +67,7 @@
         NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
         [self.nh writeData:data];
         
-        [(UINavigationController *)self.view.window.rootViewController popToRootViewControllerAnimated:NO];
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self performSegueWithIdentifier:@"unwindToMain" sender:self];
     }];
     UIAlertAction *no = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleCancel handler:nil];
     

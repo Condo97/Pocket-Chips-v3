@@ -12,7 +12,7 @@
 #import "Defines.pch"
 #import "ManualEntryViewController.h"
 
-@interface ScanViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate, ManualEntryViewControllerDelegate>
+@interface ScanViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate, ManualEntryViewControllerDelegate, NetworkHandlerDataSource>
 
 @property (weak, nonatomic) IBOutlet UIView *preview;
 @property (strong, nonatomic) NetworkHandler *nh;

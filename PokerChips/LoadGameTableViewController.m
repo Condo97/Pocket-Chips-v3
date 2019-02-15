@@ -55,63 +55,31 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        LoadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-        [cell.gameName setText:@"Currently in no games."];
+    LoadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    NSString *players = @"";
+    
+    if(self.gameObjects.count != 0) {
+        [cell.gameName setText:(self.gameObjects[indexPath.row]).name];
         
-        if(self.gameObjects.count != 0) {
-            [cell.gameName setText:(self.gameObjects[indexPath.row]).name];
-            
-            NSString *players = @"";
-            if(self.gameObjects[indexPath.row].players.count >= 1) players = [NSString stringWithFormat:@"With %@", self.gameObjects[indexPath.row].players[0]];
-            if(self.gameObjects[indexPath.row].players.count >= 2) players = [NSString stringWithFormat:@"%@, %@", players, self.gameObjects[indexPath.row].players[1]];
-            if(self.gameObjects[indexPath.row].players.count >= 3) players = [NSString stringWithFormat:@"%@, %@", players, self.gameObjects[indexPath.row].players[2]];
-            if(self.gameObjects[indexPath.row].players.count >= 1) players = [NSString stringWithFormat:@"%@.", players];
-            
-            [cell.usersList setText:players];
-        } else {
-            [cell.usersList setText:@""];
-            [cell.tapToLoad setText:@"Create or join a game!"];
-        }
+        if(self.gameObjects[indexPath.row].players.count >= 1) players = [NSString stringWithFormat:@"With %@", self.gameObjects[indexPath.row].players[0]];
+        if(self.gameObjects[indexPath.row].players.count >= 2) players = [NSString stringWithFormat:@"%@, %@", players, self.gameObjects[indexPath.row].players[1]];
+        if(self.gameObjects[indexPath.row].players.count >= 3) players = [NSString stringWithFormat:@"%@, %@", players, self.gameObjects[indexPath.row].players[2]];
+        if(self.gameObjects[indexPath.row].players.count >= 1) players = [NSString stringWithFormat:@"%@.", players];
         
-        return cell;
+        [cell.usersList setText:players];
+        
     } else {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-                
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake((cell.frame.size.width - WIDTH + 50) / 2, 25, WIDTH - 50, HEIGHT - 25)];
-        [label setText:@"Currently in no games."];
-        [label setTextAlignment:NSTextAlignmentCenter];
-        [label setFont:[UIFont systemFontOfSize:27.0 weight:UIFontWeightSemibold]];
-        [label setAdjustsFontSizeToFitWidth:YES];
-        [label setMinimumScaleFactor:0.01];
-        [label setTextColor:[UIColor whiteColor]];
-        
-        UIImageView *background;
-        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-            background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Cell"]];
-        } else {
-            background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PadHomeButtons"]];
-        }
-        
-        [background setFrame:CGRectMake((cell.frame.size.width - WIDTH) / 2, 15, WIDTH, cell.frame.size.height - 30)];
-        
-        [cell addSubview:background];
-        [cell addSubview:label];
-        
-        if(self.gameObjects.count != 0) {
-            UILabel *clickHereLabel = [[UILabel alloc] initWithFrame:CGRectMake((cell.frame.size.width - WIDTH) / 2, cell.frame.size.height - 75, WIDTH, 75)];
-            [clickHereLabel setTextColor:[UIColor whiteColor]];
-            [clickHereLabel setTextAlignment:NSTextAlignmentCenter];
-            [clickHereLabel setText:@"(Tap to load)"];
-            [clickHereLabel setFont:[UIFont systemFontOfSize:11.0 weight:UIFontWeightRegular]];
-            
-            [label setText:((GameObject *)self.gameObjects[indexPath.row]).name];
-            
-            [cell addSubview:clickHereLabel];
-        }
-        
-        return cell;
+        [cell.gameName setText:@"Currently in no games."];
+        [cell.tapToLoad setText:@"Create or join a game!"];
+        [cell.usersList setText:@""];
     }
+    
+    if(([players isEqualToString:@""] || self.gameObjects.count == 0) && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        [cell.usersList removeFromSuperview];
+        [cell layoutIfNeeded];
+    }
+    
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -34,13 +34,15 @@
     
     self.finishedScanning = NO;
     
+    [[StoreKitManager sharedManager] resetKeychainForTesting];
+    
     self.gameObjects = [[NSMutableArray alloc] init];
     self.groupOf16 = 0;
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[self imageWithImage:[UIImage imageNamed:@"Background"] convertToSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.height)]]];
     
     self.nh = [NetworkHandler sharedInstance];
-    [self.nh setDelegate:self];
+    
     
     if([[NSUserDefaults standardUserDefaults] valueForKey:@"userId"] == nil) {
         [self performSegueWithIdentifier:@"createUserSegue" sender:nil];
@@ -71,6 +73,11 @@
 //        NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
 //        [self.nh writeData:data];
 //    }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.nh setDelegate:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
