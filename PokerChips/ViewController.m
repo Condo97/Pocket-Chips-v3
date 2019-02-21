@@ -33,7 +33,6 @@
     [super viewDidLoad];
     
     self.finishedScanning = NO;
-        
     self.gameObjects = [[NSMutableArray alloc] init];
     self.groupOf16 = 0;
     
