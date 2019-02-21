@@ -42,21 +42,16 @@
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    if([[NSUserDefaults standardUserDefaults] valueForKey:@"userId"] != nil) {
+    
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+   if([[NSUserDefaults standardUserDefaults] valueForKey:@"userId"] != nil) {
         NSString *output = [NSString stringWithFormat:@"lo:%@\n", [[NSUserDefaults standardUserDefaults] stringForKey:@"userId"]];
         NSData *data = [output dataUsingEncoding:NSASCIIStringEncoding];
         [[NetworkHandler sharedInstance] writeData:data];
         [(UINavigationController *)self.window.rootViewController popToRootViewControllerAnimated:NO];
     }
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-//    if([[NSUserDefaults standardUserDefaults] valueForKey:@"userId"] != nil) {
-//        NSString *output = [NSString stringWithFormat:@"lo:%@\n", [[NSUserDefaults standardUserDefaults] stringForKey:@"userId"]];
-//        NSData *data = [output dataUsingEncoding:NSASCIIStringEncoding];
-//        [[NetworkHandler sharedInstance] writeData:data];
-//        [(UINavigationController *)self.window.rootViewController popToRootViewControllerAnimated:NO];
-//    }
 }
 
 
