@@ -1977,6 +1977,13 @@ no login required!</string>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="exit"/>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7d9-QE-PxG">
+                                                <rect key="frame" x="300.5" y="11" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="7d9-QE-PxG" secondAttribute="height" multiplier="1:1" id="flx-KF-FoR"/>
+                                                </constraints>
+                                                <state key="normal" image="Profile"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1984,9 +1991,12 @@ no login required!</string>
                                             <constraint firstAttribute="bottom" secondItem="Mw8-Pb-HJZ" secondAttribute="bottom" id="35Y-C6-DLm"/>
                                             <constraint firstItem="z4f-g8-yPF" firstAttribute="top" secondItem="URd-5v-aXT" secondAttribute="top" constant="14" id="7hD-MV-8m0"/>
                                             <constraint firstItem="uYg-28-3tA" firstAttribute="centerX" secondItem="URd-5v-aXT" secondAttribute="centerX" multiplier="0.5" id="AFM-Ma-VSh"/>
+                                            <constraint firstItem="7d9-QE-PxG" firstAttribute="top" secondItem="URd-5v-aXT" secondAttribute="top" constant="11" id="CAJ-uL-rXi"/>
                                             <constraint firstItem="uYg-28-3tA" firstAttribute="top" secondItem="URd-5v-aXT" secondAttribute="top" constant="2" id="F9W-3y-OZU"/>
                                             <constraint firstAttribute="width" secondItem="URd-5v-aXT" secondAttribute="height" multiplier="6.583:1" id="OGz-bK-hoI"/>
                                             <constraint firstAttribute="bottom" secondItem="Oft-ps-Nkh" secondAttribute="bottom" id="P91-Pq-OCe"/>
+                                            <constraint firstItem="7d9-QE-PxG" firstAttribute="centerX" secondItem="URd-5v-aXT" secondAttribute="centerX" multiplier="1.85" id="Q83-lP-cB7"/>
+                                            <constraint firstAttribute="bottom" secondItem="7d9-QE-PxG" secondAttribute="bottom" constant="11" id="Udj-y5-2Y7"/>
                                             <constraint firstItem="G2j-4k-G8d" firstAttribute="height" secondItem="nH4-dI-xg0" secondAttribute="height" id="cz5-HS-dXc"/>
                                             <constraint firstItem="Mw8-Pb-HJZ" firstAttribute="top" secondItem="URd-5v-aXT" secondAttribute="top" constant="2" id="d1M-96-XuU"/>
                                             <constraint firstItem="z4f-g8-yPF" firstAttribute="centerX" secondItem="URd-5v-aXT" secondAttribute="centerX" multiplier="0.15" id="fth-3H-oxp"/>
@@ -2008,12 +2018,31 @@ no login required!</string>
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8r-fb-jNR">
+                                                <rect key="frame" x="-3.5" y="7" width="58" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="H8r-fb-jNR" secondAttribute="height" multiplier="23:15" id="BbM-Gr-qAR"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1G-ly-g6a">
+                                                <rect key="frame" x="296.5" y="7" width="38" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="m1G-ly-g6a" secondAttribute="height" multiplier="1:1" id="Zbh-en-vfY"/>
+                                                </constraints>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="m1G-ly-g6a" firstAttribute="top" secondItem="WVl-gc-Vb5" secondAttribute="top" constant="7" id="1uc-Kj-8Ai"/>
                                             <constraint firstItem="wia-Bh-dYO" firstAttribute="centerX" secondItem="WVl-gc-Vb5" secondAttribute="centerX" id="7V4-K5-4TX"/>
                                             <constraint firstAttribute="width" secondItem="WVl-gc-Vb5" secondAttribute="height" multiplier="6.583:1" id="GjN-ay-V4B"/>
+                                            <constraint firstItem="H8r-fb-jNR" firstAttribute="centerX" secondItem="WVl-gc-Vb5" secondAttribute="centerX" multiplier="0.15" id="JWs-ka-7vy"/>
+                                            <constraint firstItem="m1G-ly-g6a" firstAttribute="centerX" secondItem="WVl-gc-Vb5" secondAttribute="centerX" multiplier="1.85" id="h8m-pp-waZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="H8r-fb-jNR" secondAttribute="bottom" constant="7" id="hJV-vo-DgZ"/>
+                                            <constraint firstItem="H8r-fb-jNR" firstAttribute="top" secondItem="WVl-gc-Vb5" secondAttribute="top" constant="7" id="pkQ-7W-Y9K"/>
                                             <constraint firstItem="wia-Bh-dYO" firstAttribute="centerY" secondItem="WVl-gc-Vb5" secondAttribute="centerY" id="see-Ej-FtH"/>
+                                            <constraint firstAttribute="bottom" secondItem="m1G-ly-g6a" secondAttribute="bottom" constant="7" id="u4L-LZ-rvy"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZS-bn-ayh" customClass="RoundedView">
@@ -2022,11 +2051,35 @@ no login required!</string>
                                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlankBackground" translatesAutoresizingMaskIntoConstraints="NO" id="u8S-CL-zJc">
                                                 <rect key="frame" x="0.0" y="0.0" width="333" height="233"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$250" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5o-Mm-dDR">
+                                                <rect key="frame" x="142" y="7" width="49.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$250" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lep-yl-PlZ">
+                                                <rect key="frame" x="58.5" y="7" width="49.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$250" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqX-xv-3kP">
+                                                <rect key="frame" x="225" y="7" width="49.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="u8S-CL-zJc" firstAttribute="leading" secondItem="EZS-bn-ayh" secondAttribute="leading" id="AUC-S3-KFt"/>
+                                            <constraint firstItem="H5o-Mm-dDR" firstAttribute="top" secondItem="EZS-bn-ayh" secondAttribute="top" constant="7" id="KF3-hI-IgQ"/>
+                                            <constraint firstItem="H5o-Mm-dDR" firstAttribute="centerX" secondItem="EZS-bn-ayh" secondAttribute="centerX" id="Mx1-gQ-5fJ"/>
+                                            <constraint firstItem="yqX-xv-3kP" firstAttribute="top" secondItem="EZS-bn-ayh" secondAttribute="top" constant="7" id="TNx-8V-S0h"/>
                                             <constraint firstItem="u8S-CL-zJc" firstAttribute="top" secondItem="EZS-bn-ayh" secondAttribute="top" id="WFo-B2-ZpA"/>
+                                            <constraint firstItem="Lep-yl-PlZ" firstAttribute="centerX" secondItem="EZS-bn-ayh" secondAttribute="centerX" multiplier="0.5" id="XsP-pu-LwX"/>
+                                            <constraint firstItem="Lep-yl-PlZ" firstAttribute="top" secondItem="EZS-bn-ayh" secondAttribute="top" constant="7" id="dKJ-aC-xnj"/>
+                                            <constraint firstItem="yqX-xv-3kP" firstAttribute="centerX" secondItem="EZS-bn-ayh" secondAttribute="centerX" multiplier="1.5" id="e4b-pi-Eao"/>
                                             <constraint firstItem="u8S-CL-zJc" firstAttribute="centerX" secondItem="EZS-bn-ayh" secondAttribute="centerX" id="iIR-TM-glm"/>
                                             <constraint firstItem="u8S-CL-zJc" firstAttribute="centerY" secondItem="EZS-bn-ayh" secondAttribute="centerY" id="lTj-vk-V3b"/>
                                         </constraints>
