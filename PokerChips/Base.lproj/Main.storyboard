@@ -469,6 +469,7 @@ Cg
                         <outlet property="preview" destination="Hxu-xm-ZVd" id="8i0-ov-W8G"/>
                         <segue destination="eM4-Ih-SpI" kind="unwind" identifier="exitToMainSegue" unwindAction="unwindToMain:" id="Is5-xx-XSs"/>
                         <segue destination="Wdc-Au-gDL" kind="modal" identifier="betSegue" id="e2K-fj-s6U"/>
+                        <segue destination="eM4-Ih-SpI" kind="unwind" identifier="unwindToMainNoScan" unwindAction="unwindToMainNoScan:" id="70w-2R-U94"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5i-jA-gnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1496,7 +1497,7 @@ no login required!</string>
         <scene sceneID="Lkh-zr-UD0">
             <objects>
                 <viewController id="EHu-3l-4Jr" customClass="QRViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Drs-AF-oDH">
+                    <view key="view" contentMode="scaleToFill" id="Drs-AF-oDH">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="370"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -2992,7 +2993,7 @@ no login required!</string>
         <image name="pot-background" width="235.67999267578125" height="162"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wYR-Gc-USo"/>
+        <segue reference="e2K-fj-s6U"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.28627450980392155" green="0.51764705882352935" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

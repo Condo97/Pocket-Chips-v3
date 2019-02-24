@@ -561,6 +561,7 @@ no login required!</string>
                         <outlet property="helpView" destination="H9G-d0-eI1" id="Dlx-rZ-olT"/>
                         <outlet property="manualEntryView" destination="DGc-6l-xlS" id="UQo-DK-ALS"/>
                         <outlet property="preview" destination="Fnb-cb-U97" id="97h-qy-E7V"/>
+                        <segue destination="uve-MF-VZs" kind="unwind" identifier="unwindToMainNoScan" unwindAction="unwindToMainNoScan:" id="sxB-el-e7G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHt-vh-vFp" userLabel="First Responder" sceneMemberID="firstResponder"/>

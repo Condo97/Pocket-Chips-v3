@@ -7,6 +7,7 @@
 //
 
 #import "ScanViewController.h"
+#import "ViewController.h"
 
 @interface ScanViewController ()
 
@@ -97,9 +98,9 @@
     if(metadataObjects != nil && metadataObjects.count > 0) {
         for(int i = 0; i < metadataObjects.count; i++) {
             if([metadataObjects[i].type isEqualToString:AVMetadataObjectTypeQRCode] && !self.sentResponse) {
-                self.gameId = [metadataObjects[i] stringValue];
+                NSString *tempGameID = [metadataObjects[i] stringValue];
                 
-                if([self.gameId containsString:@"ga"]) {
+                if([tempGameID containsString:@"ga"]) {
                     dispatch_async(dispatch_get_main_queue(), ^ {
                         CALayer *imageLayer = [[CALayer alloc] init];
                         [imageLayer setFrame:self.preview.bounds];
@@ -107,11 +108,14 @@
                         [self.preview.layer addSublayer:imageLayer];
                     });
                     
-                    NSString *response = [NSString stringWithFormat:@"jg:%@:%@\n", self.userId, self.gameId];
-                    NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
-                    [self.nh writeData:data];
-                    [self.cs stopRunning];
-                    [self dismissViewControllerAnimated:YES completion:nil];
+//                    NSString *response = [NSString stringWithFormat:@"jg:%@:%@\n", self.userId, self.gameId];
+                    //                    NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
+                    //                    [self.nh writeData:data];
+                    //                    [self.cs stopRunning];
+                    //                    [self dismissViewControllerAnimated:YES completion:nil];
+                    
+                    self.gameId = tempGameID;
+                    [self performSegueWithIdentifier:@"unwindToMainNoScan" sender:self];
                     [self setSentResponse:YES];
                 }
             }
@@ -188,15 +192,21 @@
         if([components[1] isEqualToString:@"1"]) {
             [self setSentResponse:YES];
             [self.cs stopRunning];
-            NSString *response = [NSString stringWithFormat:@"jg:%@:%@\n", self.userId, self.gameId];
-            NSData *data = [response dataUsingEncoding:NSASCIIStringEncoding];
-            [self.nh writeData:data];
-            [self dismissViewControllerAnimated:YES completion:nil];
+            [self performSegueWithIdentifier:@"unwindToMainNoScan" sender:self];
         } else {
             UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Invalid Game ID" message:@"Sorry it's so long! Please make sure it's spelled correctly." preferredStyle:UIAlertControllerStyleAlert];
             [ac addAction:[UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleCancel handler:nil]];
             [self presentViewController:ac animated:YES completion:nil];
         }
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"unwindToMainNoScan"]) {
+        NSString *jgMessage = [NSString stringWithFormat:@"jg:%@:%@\n", self.userId, self.gameId];
+        ViewController *vc = segue.destinationViewController;
+        [vc setJgMessage:jgMessage];
+        [vc setShouldExecuteJG:YES];
     }
 }
 
