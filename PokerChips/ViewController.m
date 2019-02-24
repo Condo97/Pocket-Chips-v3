@@ -32,6 +32,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.shouldExecuteJG = NO;
+    self.jgMessage = @"";
+    
     self.finishedScanning = NO;
     self.gameObjects = [[NSMutableArray alloc] init];
     self.groupOf16 = 0;
@@ -85,22 +88,28 @@
     else
         self.shouldShowAds = YES;
     
-    if(self.finishedScanning) {
-        if(self.shouldShowAds) {
-            
-            if([self.interstitial isReady])
-                [self.interstitial presentFromRootViewController:self];
-            else
-                [self performSegueWithIdentifier:@"betSegue" sender:nil];
-        } else
-            [self performSegueWithIdentifier:@"betSegue" sender:nil];
-        
-        self.finishedScanning = NO;
-    }
-    
+//    if(self.finishedScanning) {
+//        if(self.shouldShowAds) {
+//            
+//            if([self.interstitial isReady])
+//                [self.interstitial presentFromRootViewController:self];
+//            else
+//                [self performSegueWithIdentifier:@"betSegue" sender:nil];
+//        } else
+//            [self performSegueWithIdentifier:@"betSegue" sender:nil];
+//        
+//        self.finishedScanning = NO;
+//    }
+//    
     self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-0561860165633355/3985395636"];
     [self.interstitial loadRequest:[GADRequest request]];
     [self.interstitial setDelegate:self];
+    
+    if(self.shouldExecuteJG && ![self.jgMessage isEqualToString:@""]) {
+        NSData *data = [self.jgMessage dataUsingEncoding:NSASCIIStringEncoding];
+        [self.nh writeData:data];
+        self.shouldExecuteJG = NO;
+    }
 }
 
 - (IBAction)createGame:(id)sender {
@@ -130,7 +139,7 @@
 
 - (IBAction)joinGame:(id)sender {
     BOOL isSimulator = NO;
-    self.finishedScanning = YES;
+//    self.finishedScanning = YES;
     
     if(isSimulator) {
         NSString *gameId = @"ga6FF5F942508601F60155B3585A68FA2BA839BEFE8BCB64A77FDA0C88AEAB";
@@ -306,6 +315,7 @@
 }
 
 - (IBAction)unwindToMainNoScan:(UIStoryboardSegue *)segue {
+    self.finishedScanning = NO;
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

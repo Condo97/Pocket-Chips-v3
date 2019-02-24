@@ -24,7 +24,7 @@
     
     [self.nh setDelegate:self];
     
-    [[NetworkHandler sharedInstance] initNetworkCommunication:(CFStringRef)SOCKET_IP_ADDRESS withPort:1234];
+    [[NetworkHandler sharedInstance] initNetworkCommunication:(CFStringRef)SOCKET_IP_ADDRESS withPort:PORT];
     
     if([[NSUserDefaults standardUserDefaults] valueForKey:@"userId"] != nil) {
         NSString *response = [NSString stringWithFormat:@"li:%@\n", [[NSUserDefaults standardUserDefaults] stringForKey:@"userId"]];
@@ -59,7 +59,7 @@
     
     [self.nh setDelegate:self];
 
-    [[NetworkHandler sharedInstance] initNetworkCommunication:(CFStringRef)SOCKET_IP_ADDRESS withPort:1234];
+    [[NetworkHandler sharedInstance] initNetworkCommunication:(CFStringRef)SOCKET_IP_ADDRESS withPort:PORT];
 
     if([[NSUserDefaults standardUserDefaults] valueForKey:@"userId"] != nil) {
         NSString *response = [NSString stringWithFormat:@"li:%@\n", [[NSUserDefaults standardUserDefaults] stringForKey:@"userId"]];

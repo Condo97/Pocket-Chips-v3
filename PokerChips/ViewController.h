@@ -26,5 +26,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *restorePurchasesLabel;
 @property (weak, nonatomic) IBOutlet RoundedView *bottomView;
 
+@property (nonatomic) BOOL shouldExecuteJG;
+@property (strong, nonatomic) NSString *jgMessage;
+
 @end
 
