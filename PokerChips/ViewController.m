@@ -21,6 +21,7 @@
 @property (strong, nonatomic) ChipObject *playerChips, *potChips;
 @property (strong, nonatomic) GADBannerView *bannerAd;
 @property (strong, nonatomic) NSMutableArray<GameObject *> *gameObjects;
+@property (strong, nonatomic) NSMutableArray<NSString *> *chipValues;
 
 @property (nonatomic) BOOL shouldShowAds, finishedScanning;
 @property (nonatomic) int groupOf16;
@@ -31,6 +32,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.chipValues = [[NSMutableArray alloc] initWithCapacity:5];
+    self.chipValues[0] = @"1";
+    self.chipValues[1] = @"5";
+    self.chipValues[2] = @"10";
+    self.chipValues[3] = @"25";
+    self.chipValues[4] = @"100";
     
     self.shouldExecuteJG = NO;
     self.jgMessage = @"";
@@ -189,6 +197,13 @@
         self.playerChips = [[ChipObject alloc] initWithRed:args[3].doubleValue blue:args[4].doubleValue yellow:args[5].doubleValue green:args[6].doubleValue orange:args[7].doubleValue];
         self.potChips = [[ChipObject alloc] initWithRed:args[8].doubleValue blue:args[9].doubleValue yellow:args[10].doubleValue green:args[11].doubleValue orange:args[12].doubleValue];
         
+        NSString *values = [message componentsSeparatedByString:@"&"][1];
+        for(int i = 0; i <= 4; i++) {
+            double value = [values componentsSeparatedByString:@":"][i].doubleValue;
+            self.chipValues[i] = [NSString stringWithFormat:@"%.2f", value];
+            if(value == (int)value) self.chipValues[i] = [NSString stringWithFormat:@"%d", (int)value];
+        }
+        
         if(!self.finishedScanning) {
             if(self.shouldShowAds) {
                 if([self.interstitial isReady]) {
@@ -280,6 +295,7 @@
         [bvc setPlayerId:self.playerId];
         [bvc setPlayerChips:self.playerChips];
         [bvc setPotChips:self.potChips];
+        [bvc setChipValues:self.chipValues];
     } else if([segue.identifier isEqualToString:@"loadSegue"]) {
         UINavigationController *nav = [segue destinationViewController];
         LoadGameTableViewController *lgtvc = (LoadGameTableViewController *)nav.topViewController;

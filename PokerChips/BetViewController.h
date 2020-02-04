@@ -18,6 +18,7 @@
 
 @property (strong, nonatomic) NSString *gameId, *playerId;
 @property (strong, nonatomic) ChipObject *playerChips, *potChips, *chipsToBet;
+@property (strong, nonatomic) NSMutableArray<NSString *> *chipValues;
 
 @property (strong, nonatomic) IBOutlet UIView *potView;
 @property (weak, nonatomic) IBOutlet UIButton *qrCodeButton;

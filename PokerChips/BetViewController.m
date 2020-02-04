@@ -17,7 +17,6 @@
 
 @property (strong, nonatomic) NSMutableArray *playerObjectArray, *chipCountArray;
 @property (strong, nonatomic) NSMutableArray<ChipView *> *potChipsArray;
-@property (strong, nonatomic) NSMutableArray<NSString *> *chipValues;
 @property (strong, nonatomic) NSArray<ChipView *> *playerChipsArray, *betChipsArray;
 @property (strong, nonatomic) NetworkHandler *nh;
 @property (strong, nonatomic) UIVisualEffectView *blur, *addChipsBlur;
@@ -51,12 +50,6 @@
     [self.profileButton setTintColor:[UIColor whiteColor]];
     
     self.aca = @"";
-    self.chipValues = [[NSMutableArray alloc] initWithCapacity:5];
-    self.chipValues[0] = @"1";
-    self.chipValues[1] = @"5";
-    self.chipValues[2] = @"10";
-    self.chipValues[3] = @"25";
-    self.chipValues[4] = @"100";
     
     self.potChipsArray = [[NSMutableArray alloc] init];
     self.playerChipsArray = [NSArray arrayWithObjects:self.playerRed, self.playerBlue, self.playerYellow, self.playerGreen, self.playerOrange, nil];
