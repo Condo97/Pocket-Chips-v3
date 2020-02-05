@@ -11,6 +11,6 @@
 
 //#define SOCKET_IP_ADDRESS @"172.16.20.114"
 //#define SOCKET_IP_ADDRESS @"localhost"
-#define SOCKET_IP_ADDRESS @"159.89.241.52"
+#define SOCKET_IP_ADDRESS @"157.230.66.31"
 
 #endif
