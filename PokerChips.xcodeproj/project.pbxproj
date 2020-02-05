@@ -49,10 +49,13 @@
 		BB9AD1CF20F80FBB008F1914 /* ChipView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9AD1CE20F80FBB008F1914 /* ChipView.m */; };
 		BBCD09621FAD195800013527 /* NetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCD09611FAD195700013527 /* NetworkHandler.m */; };
 		BBCD09661FAD242700013527 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCD09651FAD242700013527 /* ScanViewController.m */; };
-		BBD6450D20F54F7700E3EA8C /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD6450C20F54F7700E3EA8C /* GoogleMobileAds.framework */; };
 		BBDE466A2213841900E383E9 /* LoadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDE46692213841900E383E9 /* LoadTableViewCell.m */; };
 		BBEEB067220B913400C3709B /* ChipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBEEB066220B913400C3709B /* ChipView.xib */; };
 		BBF297A91FB57374000BAB28 /* UserCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF297A81FB57374000BAB28 /* UserCreationViewController.m */; };
+		BBFFE36B23EA5986002FE8B5 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFFE36123EA58E9002FE8B5 /* GoogleMobileAds.framework */; };
+		BBFFE37023EA5A81002FE8B5 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFFE36D23EA5A81002FE8B5 /* GoogleAppMeasurement.framework */; };
+		BBFFE37223EA5A81002FE8B5 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFFE36E23EA5A81002FE8B5 /* nanopb.framework */; };
+		BBFFE37423EA5A81002FE8B5 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFFE36F23EA5A81002FE8B5 /* GoogleUtilities.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,12 +159,15 @@
 		BBCD09611FAD195700013527 /* NetworkHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkHandler.m; sourceTree = "<group>"; };
 		BBCD09641FAD242700013527 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		BBCD09651FAD242700013527 /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
-		BBD6450C20F54F7700E3EA8C /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		BBDE46682213841900E383E9 /* LoadTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadTableViewCell.h; sourceTree = "<group>"; };
 		BBDE46692213841900E383E9 /* LoadTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadTableViewCell.m; sourceTree = "<group>"; };
 		BBEEB066220B913400C3709B /* ChipView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChipView.xib; sourceTree = "<group>"; };
 		BBF297A71FB57374000BAB28 /* UserCreationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserCreationViewController.h; sourceTree = "<group>"; };
 		BBF297A81FB57374000BAB28 /* UserCreationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserCreationViewController.m; sourceTree = "<group>"; };
+		BBFFE36123EA58E9002FE8B5 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.54.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		BBFFE36D23EA5A81002FE8B5 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.54.0/GoogleAppMeasurement.framework"; sourceTree = "<group>"; };
+		BBFFE36E23EA5A81002FE8B5 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = nanopb.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.54.0/nanopb.framework"; sourceTree = "<group>"; };
+		BBFFE36F23EA5A81002FE8B5 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.54.0/GoogleUtilities.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +175,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBD6450D20F54F7700E3EA8C /* GoogleMobileAds.framework in Frameworks */,
+				BBFFE36B23EA5986002FE8B5 /* GoogleMobileAds.framework in Frameworks */,
 				BB5603621FC7602C006965F3 /* StoreKit.framework in Frameworks */,
+				BBFFE37223EA5A81002FE8B5 /* nanopb.framework in Frameworks */,
+				BBFFE37423EA5A81002FE8B5 /* GoogleUtilities.framework in Frameworks */,
+				BBFFE37023EA5A81002FE8B5 /* GoogleAppMeasurement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +203,10 @@
 		4EF6A6DA157F62AB0060C09A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BBD6450C20F54F7700E3EA8C /* GoogleMobileAds.framework */,
+				BBFFE36D23EA5A81002FE8B5 /* GoogleAppMeasurement.framework */,
+				BBFFE36F23EA5A81002FE8B5 /* GoogleUtilities.framework */,
+				BBFFE36E23EA5A81002FE8B5 /* nanopb.framework */,
+				BBFFE36123EA58E9002FE8B5 /* GoogleMobileAds.framework */,
 				BB5603611FC7602C006965F3 /* StoreKit.framework */,
 			);
 			name = Frameworks;
@@ -835,7 +847,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 68;
 				DEVELOPMENT_TEAM = WNCN9TJFT3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -845,6 +857,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.1.3;
+				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acapplications.pocket-chips";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -856,7 +869,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 68;
 				DEVELOPMENT_TEAM = WNCN9TJFT3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -866,6 +879,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.1.3;
+				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acapplications.pocket-chips";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

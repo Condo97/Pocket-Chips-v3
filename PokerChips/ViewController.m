@@ -108,7 +108,7 @@
         self.shouldExecuteJG = NO;
     }
     
-    self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-0561860165633355/3985395636"];
+    self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-0561860165633355/3985395636" ];
     [self.interstitial loadRequest:[GADRequest request]];
     [self.interstitial setDelegate:self];
 }
