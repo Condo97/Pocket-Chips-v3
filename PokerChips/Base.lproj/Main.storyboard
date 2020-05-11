@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bwN-M5-uYz">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bwN-M5-uYz">
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1501,12 +1501,13 @@ no login required!</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap anywhere to dismiss" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xaf-G9-vK2">
                                 <rect key="frame" x="16" y="322.66666666666669" width="225" height="47.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan code in app to join game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Os-uF-ige">
                                 <rect key="frame" x="16" y="44" width="269" height="3.6666666666666643"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5nO-oy-cVy">
@@ -1954,7 +1955,7 @@ no login required!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="JXj-e4-Ya1" firstAttribute="leading" secondItem="m2u-9l-GPb" secondAttribute="leading" constant="16" id="0FA-8o-N4p"/>
                             <constraint firstAttribute="trailing" secondItem="uMZ-ae-clQ" secondAttribute="trailing" constant="16" id="0zU-ST-eKf"/>
@@ -2056,7 +2057,6 @@ no login required!</string>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQo-Yn-20O">
                                 <rect key="frame" x="16" y="125.99999999999999" width="268" height="208.66666666666663"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="268" id="8Mw-lk-F7j"/>
                                 </constraints>
@@ -2065,6 +2065,7 @@ no login required!</string>
 2. Tap on the QR Code button on the top right of their screen
 
 3. Close this window and line up the QR code that appears between the arrows</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -2078,7 +2079,7 @@ no login required!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="AQo-Yn-20O" firstAttribute="top" secondItem="9E5-HH-6Mg" secondAttribute="bottom" constant="9" id="BcK-6a-cDU"/>
                             <constraint firstAttribute="bottomMargin" secondItem="bW1-9T-MhF" secondAttribute="bottom" id="FkD-uf-1RF"/>
@@ -2157,7 +2158,7 @@ no login required!</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="zN1-nI-QY5" firstAttribute="centerY" secondItem="oT2-sl-dV9" secondAttribute="centerY" id="3iB-fD-kIP"/>
                             <constraint firstItem="zN1-nI-QY5" firstAttribute="top" secondItem="EI7-xp-v5M" secondAttribute="bottom" constant="9" id="5Vb-Ho-PsA"/>
@@ -2477,7 +2478,7 @@ no login required!</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="iHC-SI-DXE" secondAttribute="trailing" constant="16" id="1Tl-51-DRp"/>
                             <constraint firstItem="F1C-Go-CTd" firstAttribute="centerY" secondItem="Jwj-x1-3yt" secondAttribute="centerY" id="1t8-UM-LRT"/>
@@ -2952,6 +2953,10 @@ no login required!</string>
             <point key="canvasLocation" x="2405.5999999999999" y="158.77061469265368"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="e2K-fj-s6U"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.28627450980392155" green="0.51764705882352935" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="Background" width="1080" height="1920"/>
         <image name="BlankBackground" width="1080" height="1920"/>
@@ -2970,8 +2975,4 @@ no login required!</string>
         <image name="exit" width="500" height="500"/>
         <image name="pot-background" width="327.33334350585938" height="225"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="e2K-fj-s6U"/>
-    </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.28627450980392155" green="0.51764705882352935" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ena-fb-rYK">
-    <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ena-fb-rYK">
+    <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -603,7 +603,6 @@ no login required!</string>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mu8-Fx-yn0">
                                 <rect key="frame" x="16" y="82" width="268" height="252.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="268" id="G7l-8r-WPp"/>
                                 </constraints>
@@ -612,6 +611,7 @@ no login required!</string>
 2. Tap on the QR Code button on the top right of their screen
 
 3. Close this window and line up the QR code that appears between the arrows</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -625,7 +625,7 @@ no login required!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="5KC-IM-EwD" secondAttribute="bottom" id="9ox-o9-seQ"/>
                             <constraint firstItem="LAf-qc-vDM" firstAttribute="top" secondItem="xKL-87-0uy" secondAttribute="topMargin" constant="20" id="Iud-bL-zpM"/>
@@ -704,7 +704,7 @@ no login required!</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="M9P-nG-RNB" firstAttribute="leading" secondItem="fkv-Mf-Yo4" secondAttribute="leading" constant="16" id="7Fw-yt-NSV"/>
                             <constraint firstItem="LbU-Oo-RPE" firstAttribute="top" secondItem="aRo-gV-NWy" secondAttribute="bottom" constant="9" id="9B2-2C-bKw"/>
@@ -765,7 +765,7 @@ no login required!</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfj-a6-8Q6">
-                                                    <rect key="frame" x="20" y="47" width="672" height="30"/>
+                                                    <rect key="frame" x="20" y="47" width="794" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -773,7 +773,7 @@ no login required!</string>
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Nickname:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drt-2b-uWg">
-                                                    <rect key="frame" x="40" y="18" width="632" height="21"/>
+                                                    <rect key="frame" x="40" y="18" width="754" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="ZIy-m6-8Ng"/>
                                                     </constraints>
@@ -805,7 +805,7 @@ no login required!</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaJ-GM-VGu">
-                                                    <rect key="frame" x="285.5" y="11" width="141" height="33"/>
+                                                    <rect key="frame" x="346.5" y="11" width="141" height="33"/>
                                                     <state key="normal" title="Remove Ads ($0.99)"/>
                                                     <connections>
                                                         <action selector="removeAds:" destination="0gn-eG-F5B" eventType="touchUpInside" id="BhF-HU-Mb5"/>
@@ -827,7 +827,7 @@ no login required!</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qH-eK-MLq">
-                                                    <rect key="frame" x="291.5" y="11" width="129" height="33"/>
+                                                    <rect key="frame" x="352.5" y="11" width="129" height="33"/>
                                                     <state key="normal" title="Restore Purchases"/>
                                                     <connections>
                                                         <action selector="removeAds:" destination="0gn-eG-F5B" eventType="touchUpInside" id="n2E-dK-qYS"/>
@@ -906,7 +906,7 @@ no login required!</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="nameField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sqQ-p5-tkD">
-                                                    <rect key="frame" x="20" y="10.5" width="672" height="34"/>
+                                                    <rect key="frame" x="20" y="10.5" width="794" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -934,7 +934,7 @@ no login required!</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="4Q0-kq-XYf">
-                                                    <rect key="frame" x="178" y="12" width="356" height="32"/>
+                                                    <rect key="frame" x="208.5" y="12" width="417" height="32"/>
                                                     <segments>
                                                         <segment title="Cheap"/>
                                                         <segment title="Standard"/>
@@ -968,7 +968,7 @@ no login required!</string>
                                                     </constraints>
                                                 </imageView>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1000000000" translatesAutoresizingMaskIntoConstraints="NO" id="C1f-pm-lB6">
-                                                    <rect key="frame" x="602" y="23" width="94" height="29"/>
+                                                    <rect key="frame" x="724" y="23" width="94" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="29" id="AwQ-Fi-5IK"/>
                                                         <constraint firstAttribute="width" constant="94" id="qS0-du-AqU"/>
@@ -978,7 +978,7 @@ no login required!</string>
                                                     </connections>
                                                 </stepper>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-Sa-ir5">
-                                                    <rect key="frame" x="82" y="20.5" width="511" height="34"/>
+                                                    <rect key="frame" x="82" y="20.5" width="633" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
@@ -1024,7 +1024,7 @@ no login required!</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1000000000" translatesAutoresizingMaskIntoConstraints="NO" id="g3c-qJ-2mg">
-                                                    <rect key="frame" x="602" y="23" width="94" height="29"/>
+                                                    <rect key="frame" x="724" y="23" width="94" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="29" id="s6F-7P-J5c"/>
                                                         <constraint firstAttribute="width" constant="94" id="zP7-TN-TX7"/>
@@ -1034,7 +1034,7 @@ no login required!</string>
                                                     </connections>
                                                 </stepper>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="syX-94-UcU">
-                                                    <rect key="frame" x="82" y="20.5" width="511" height="34"/>
+                                                    <rect key="frame" x="82" y="20.5" width="633" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
@@ -1074,7 +1074,7 @@ no login required!</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1000000000" translatesAutoresizingMaskIntoConstraints="NO" id="SbA-OM-BT3">
-                                                    <rect key="frame" x="602" y="23" width="94" height="29"/>
+                                                    <rect key="frame" x="724" y="23" width="94" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="94" id="XLd-ml-gFd"/>
                                                         <constraint firstAttribute="height" constant="29" id="Zig-HH-zQf"/>
@@ -1084,7 +1084,7 @@ no login required!</string>
                                                     </connections>
                                                 </stepper>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DNg-Qy-aIs">
-                                                    <rect key="frame" x="82" y="20.5" width="511" height="34"/>
+                                                    <rect key="frame" x="82" y="20.5" width="633" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
@@ -1118,7 +1118,7 @@ no login required!</string>
                                                     </constraints>
                                                 </imageView>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1000000000" translatesAutoresizingMaskIntoConstraints="NO" id="a7S-h4-DgL">
-                                                    <rect key="frame" x="602" y="23" width="94" height="29"/>
+                                                    <rect key="frame" x="724" y="23" width="94" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="94" id="VhF-cN-qRO"/>
                                                         <constraint firstAttribute="height" constant="29" id="lL8-MF-kgh"/>
@@ -1128,7 +1128,7 @@ no login required!</string>
                                                     </connections>
                                                 </stepper>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TXm-5d-pau">
-                                                    <rect key="frame" x="82" y="20.5" width="511" height="34"/>
+                                                    <rect key="frame" x="82" y="20.5" width="633" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
@@ -1168,7 +1168,7 @@ no login required!</string>
                                                     </constraints>
                                                 </imageView>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1000000000" translatesAutoresizingMaskIntoConstraints="NO" id="LSZ-H9-m4a">
-                                                    <rect key="frame" x="602" y="23" width="94" height="29"/>
+                                                    <rect key="frame" x="724" y="23" width="94" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="94" id="dUt-9P-uQ8"/>
                                                         <constraint firstAttribute="height" constant="29" id="zZw-8n-yE4"/>
@@ -1178,7 +1178,7 @@ no login required!</string>
                                                     </connections>
                                                 </stepper>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3vy-EG-slV">
-                                                    <rect key="frame" x="82" y="20.5" width="511" height="34"/>
+                                                    <rect key="frame" x="82" y="20.5" width="633" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
@@ -1998,12 +1998,13 @@ no login required!</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap anywhere to dismiss" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jr5-h3-sA7">
                                 <rect key="frame" x="16" y="322.5" width="225" height="47.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan code in app to join game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7en-2G-1vD">
                                 <rect key="frame" x="16" y="0.0" width="269" height="47.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XVq-jQ-hxV">
@@ -2215,7 +2216,7 @@ no login required!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ZLW-Uu-Nsg" firstAttribute="leading" secondItem="o0a-FG-0gx" secondAttribute="trailing" constant="8" id="1aN-3m-gFI"/>
                             <constraint firstItem="roe-yh-PIM" firstAttribute="centerY" secondItem="IOR-cT-DJp" secondAttribute="centerY" id="1he-Cd-PCr"/>
@@ -2654,6 +2655,7 @@ no login required!</string>
             <point key="canvasLocation" x="2089.0625" y="950.39062499999989"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.28627450980000002" green="0.51764705879999995" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="PadBet" width="1024" height="1366"/>
         <image name="PadFelt" width="1024" height="1366"/>
@@ -2672,5 +2674,4 @@ no login required!</string>
         <image name="pad-bet-panel" width="999" height="101"/>
         <image name="pad-pot-panel" width="999" height="700"/>
     </resources>
-    <color key="tintColor" red="0.28627450980000002" green="0.51764705879999995" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
